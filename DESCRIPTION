@@ -1,10 +1,13 @@
 Package: viridis
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Matplotlib Default Color Map
 Version: 0.1
 Date: 2015-07-16
-Author: Who wrote it
-Maintainer: Who to complain to <yourfault@somewhere.net>
-Description: More about what it does (maybe more than one line)
-License: What license is it under?
+Author: Simon Garnier <garnier@njit.edu>
+Maintainer: Simon Garnier <garnier@njit.edu>
+Description: This package brings the new Matplotlib default color map ('viridis') to R. This color map is designed in such a way that it will analytically be perfectly perceptually-uniform, both in regular form and also when converted to black-and-white. It is also designed to be perceived by readers with the most common form of color blindness.
+License: MIT + file LICENSE
 LazyData: TRUE
+Encoding: UTF-8
+Depends: R (>= 2.10)
+Suggests: ggplot2 (>= 1.0.1), hexbin (>= 1.27.0)
