@@ -1,6 +1,7 @@
 # viridis
 
-Matplotlib recently changed the default color map of their graph to `viridis`. 
+[Matplotlib](http://matplotlib.org/) recently [changed the default color map]
+(http://matplotlib.org/style_changes.html) of their graphs to `viridis`. 
 
 This color map is designed in such a way that it will analytically be perfectly 
 perceptually-uniform, both in regular form and also when converted to black-and-white. 
@@ -13,7 +14,7 @@ AND... it is now available for R!
 
 ---
 
-#### Look how pretty it is
+#### Look how pretty it is! 
 
 ![Sample image](https://raw.githubusercontent.com/sjmgarnier/viridis/master/img/sample.png)
 
