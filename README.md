@@ -43,7 +43,7 @@ Simon Garnier - [@sjmgarnier](https://twitter.com/sjmgarnier) - <garnier@njit.ed
 #### References
 
 `viridis` was created by Stéfan van der Walt ([@stefanv](https://github.com/stefanv))
-and Nathaniel Smith ([@njsmith](https://github.com/njsmith))
+and Nathaniel Smith ([@njsmith](https://github.com/njsmith)). 
 
 If you want to know more about the science behind the creation of `viridis`, you 
 can watch this [presentation of `viridis`](https://youtu.be/xAoljeRJ3lU) by its 
