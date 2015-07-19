@@ -40,9 +40,7 @@
 #' library(ggplot2)
 #' library(hexbin)
 #'
-#' dat <- within(data.frame(x = rnorm(10000), y = rnorm(10000)), {
-#'   Distance <- sqrt(x^2 + y^2)
-#' })
+#' dat <- data.frame(x = rnorm(10000), y = rnorm(10000))
 #'
 #' ggplot(dat, aes(x = x, y = y)) +
 #'   geom_hex() + coord_fixed() +
