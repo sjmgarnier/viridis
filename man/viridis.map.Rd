@@ -3,7 +3,7 @@
 \docType{data}
 \name{viridis.map}
 \alias{viridis.map}
-\title{Original 'viridis color map}
+\title{Original 'viridis' color map}
 \format{A data frame with 256 rows and 3 variables:
 \itemize{
   \item R: Red value

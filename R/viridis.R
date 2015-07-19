@@ -1,10 +1,4 @@
-#' viridis.
-#'
-#' @name viridis
-#' @docType package
-NULL
-
-#' Original 'viridis color map
+#' Original 'viridis' color map
 #'
 #' A dataset containing the original RGB values of the default Matplotlib color
 #'  map ('viridis'). Source: \url{https://github.com/BIDS/colormap/blob/master/option_d.py}.
@@ -58,12 +52,12 @@ NULL
 #'
 viridis <- function(n, alpha = 1) {
   loc <- seq(0, 1, length.out = 256)
-  R <- splinefun(x = loc, y = viridis.map$R)
-  G <- splinefun(x = loc, y = viridis.map$G)
-  B <- splinefun(x = loc, y = viridis.map$B)
+  R <- stats::splinefun(x = loc, y = viridis::viridis.map$R)
+  G <- stats::splinefun(x = loc, y = viridis::viridis.map$G)
+  B <- stats::splinefun(x = loc, y = viridis::viridis.map$B)
 
   loc <- seq(0, 1, length.out = n)
-  rgb(R(loc), G(loc), B(loc), alpha = alpha)
+  grDevices::rgb(R(loc), G(loc), B(loc), alpha = alpha)
 }
 
 
@@ -77,9 +71,9 @@ viridis <- function(n, alpha = 1) {
 #'
 viridisMap <- function(n = 256, alpha = 1) {
   loc <- seq(0, 1, length.out = 256)
-  R <- splinefun(x = loc, y = viridis.map$R)
-  G <- splinefun(x = loc, y = viridis.map$G)
-  B <- splinefun(x = loc, y = viridis.map$B)
+  R <- stats::splinefun(x = loc, y = viridis::viridis.map$R)
+  G <- stats::splinefun(x = loc, y = viridis::viridis.map$G)
+  B <- stats::splinefun(x = loc, y = viridis::viridis.map$B)
 
   loc <- seq(0, 1, length.out = n)
   data.frame(R = R(loc), G = G(loc), B = B(loc), alpha = alpha)
