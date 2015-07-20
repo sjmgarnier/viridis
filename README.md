@@ -21,8 +21,18 @@ AND... it is now available for R!
 ---
 
 #### Installation
-Installing `viridis` from this GitHub repository is pretty straightforward. 
-Simply copying the following lines of code in your R terminal should to install 
+
+`viridis 0.1` is now [available on CRAN](https://cran.r-project.org/web/packages/viridis/).  
+You can install it using RStudio package manager or by typing the following line
+in your R terminal:
+
+```{r}
+install.packages("viridis")
+library(viridis)
+```
+
+If you prefer to install the development version from this GitHub repository,
+simply copy the following lines of code in your R terminal and it should install 
 everything you need to use `viridis` on your computer: 
 
 ```{r}
