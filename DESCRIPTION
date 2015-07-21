@@ -14,6 +14,8 @@ Description: Port of the new Matplotlib default color map ('viridis') to R.
     perfectly perceptually-uniform, both in regular form and also when
     converted to black-and-white. It is also designed to be perceived by
     readers with the most common form of color blindness.
+URL: https://github.com/sjmgarnier/viridis
+BugReports: https://github.com/sjmgarnier/viridis/issues
 License: MIT + file LICENSE
 LazyData: TRUE
 Encoding: UTF-8
