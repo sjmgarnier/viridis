@@ -1,29 +1,3 @@
-<<<<<<< HEAD
-Package: viridis
-Type: Package
-Title: Matplotlib Default Color Map
-Version: 0.2
-Date: 2015-07-19
-Authors@R: c(
-      person("Simon", "Garnier", email = "garnier@njit.edu", role = c("aut", "cre")),
-      person("Noam", "Ross", email = "noam.ross@gmail.com", role = c("ctb", "cph"), comment = "Continuous scale"),
-      person("Bob", "Rudis", email = "bob@rudis.net", role = c("ctb", "cph"), comment = "Combined scales")
-  )
-Maintainer: Simon Garnier <garnier@njit.edu>
-Description: Port of the new Matplotlib default color map ('viridis') to R.
-    This color map is designed in such a way that it will analytically be
-    perfectly perceptually-uniform, both in regular form and also when
-    converted to black-and-white. It is also designed to be perceived by
-    readers with the most common form of color blindness.
-URL: https://github.com/sjmgarnier/viridis
-BugReports: https://github.com/sjmgarnier/viridis/issues
-License: MIT + file LICENSE
-LazyData: TRUE
-Encoding: UTF-8
-Depends: R (>= 2.10)
-Imports: stats (>= 3.2.1), grDevices (>= 3.2.1), ggplot2 (>= 1.0.1)
-Suggests: hexbin (>= 1.27.0), scales, MASS
-=======
 Package: viridis
 Type: Package
 Title: Matplotlib Default Color Map
@@ -47,4 +21,3 @@ Depends: R (>= 2.10)
 Imports: stats (>= 3.2.1), grDevices (>= 3.2.1), ggplot2 (>= 1.0.1)
 Suggests: hexbin (>= 1.27.0), scales, MASS, knitr, dichromat, colorspace
 VignetteBuilder: knitr
->>>>>>> pr/8
