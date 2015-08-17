@@ -18,6 +18,6 @@ License: MIT + file LICENSE
 LazyData: TRUE
 Encoding: UTF-8
 Depends: R (>= 2.10)
-Imports: stats (>= 3.2.1), grDevices (>= 3.2.1), ggplot2 (>= 1.0.1)
+Imports: stats, grDevices, ggplot2 (>= 1.0.1)
 Suggests: hexbin (>= 1.27.0), scales, MASS, knitr, dichromat, colorspace
 VignetteBuilder: knitr
