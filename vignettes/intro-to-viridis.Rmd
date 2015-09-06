@@ -14,7 +14,7 @@ Nathaniel Smith and Stéfan van der Walt [presented](https://www.youtube.com/wat
 
 You can also find out a tad more about [their other designs](http://bids.github.io/colormap/) (a.k.a. the runner-ups), including _Parula_ which is a proprietary MATLAB color map.
 
-Simon Garnier (@[sjmgarnier](https://twitter.com/sjmgarnier)) (the author of this package) took Nathaniel & Stéfan's work and turned it into [an R package](https://cran.r-project.org/web/packages/viridis/index.html).
+Simon Garnier (@[sjmgarnier](https://twitter.com/sjmgarnier)) (the author of this package) took Nathaniel & Stéfan's work and turned it into [an R package](https://cran.r-project.org/package=viridis).
 
 Noam Ross (@[noamross](https://twitter.com/noamross)) & Bob Ruis (@[hrbrmstr](https://twitter.com/hrbrmstr)) piled on shortly thereafter to add some ggplot color `scale_` functions.
 
