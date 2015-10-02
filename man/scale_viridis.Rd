@@ -5,9 +5,9 @@
 \alias{scale_fill_viridis}
 \title{Viridis color scales}
 \usage{
-scale_color_viridis(..., alpha = 1, discrete = FALSE)
+scale_color_viridis(..., alpha = 1, discrete = FALSE, option = "D")
 
-scale_fill_viridis(..., alpha = 1, discrete = FALSE)
+scale_fill_viridis(..., alpha = 1, discrete = FALSE, option = "D")
 }
 \arguments{
 \item{...}{parameters to \code{discrete_scale} or \code{scale_fill_gradientn}}
@@ -15,6 +15,10 @@ scale_fill_viridis(..., alpha = 1, discrete = FALSE)
 \item{alpha}{pass through parameter to \code{viridis}}
 
 \item{discrete}{generate a discrete palette? (default: \code{FALSE} - generate continuous palette)}
+
+\item{option}{A character string indicating the colormap option to use. Four
+options are available: "magma" (or "A"), "inferno" (or "B"), "plasma" (or "C"),
+and "viridis" (or "D", the default option).}
 }
 \description{
 Uses the viridis color scale.
@@ -50,14 +54,25 @@ ggplot(dat, aes(x = x, y = y)) +
   geom_hex() + coord_fixed() +
   scale_fill_viridis() + theme_bw()
 
+library(ggplot2)
 library(MASS)
-data(geyser, "MASS")
+library(gridExtra)
+
+data("geyser", package="MASS")
 
 ggplot(geyser, aes(x = duration, y = waiting)) +
   xlim(0.5, 6) + ylim(40, 110) +
   stat_density2d(aes(fill = ..level..), geom="polygon") +
-  scale_fill_viridis() +
-  theme_bw()
+  theme_bw() +
+  theme(panel.grid=element_blank()) -> gg
+
+grid.arrange(
+  gg + scale_fill_viridis(option="A") + labs(x="Virdis A", y=NULL),
+  gg + scale_fill_viridis(option="B") + labs(x="Virdis B", y=NULL),
+  gg + scale_fill_viridis(option="C") + labs(x="Virdis C", y=NULL),
+  gg + scale_fill_viridis(option="D") + labs(x="Virdis D", y=NULL),
+  ncol=2, nrow=2
+)
 }
 \author{
 Noam Ross \email{noam.ross@gmail.com} / \href{https://twitter.com/noamross}{@noamross} (continuous version),
