@@ -5,15 +5,19 @@
 \alias{viridisMap}
 \title{Matplotlib 'viridis' color map}
 \usage{
-viridis(n, alpha = 1)
+viridis(n, alpha = 1, option = "D")
 
-viridisMap(n = 256, alpha = 1)
+viridisMap(n = 256, alpha = 1, option = "D")
 }
 \arguments{
 \item{n}{The number of colors (\eqn{\ge 1}) to be in the palette.}
 
 \item{alpha}{The alpha transparency, a number in [0,1], see argument alpha in
 \code{\link[grDevices]{hsv}}.}
+
+\item{option}{A character string indicating the colormap option to use. Four
+options are available: "magma" (or "A"), "inferno" (or "B"), "plasma" (or "C"),
+and "viridis" (or "D", the default option).}
 }
 \value{
 \code{viridis} returns a character vector, \code{cv}, of color hex
@@ -47,14 +51,14 @@ dat <- data.frame(x = rnorm(10000), y = rnorm(10000))
 
 ggplot(dat, aes(x = x, y = y)) +
   geom_hex() + coord_fixed() +
-  scale_fill_gradientn(colours = viridis(256))
+  scale_fill_gradientn(colours = viridis(256, option = "D"))
 
 # using code from RColorBrewer to demo the palette
 n = 200
 image(
-  1:n,1,as.matrix(1:n)
-  ,col=viridis(n)
-  ,xlab="viridis n",ylab="",xaxt="n",yaxt="n",bty="n"
+  1:n, 1, as.matrix(1:n),
+  col = viridis(n, option = "D"),
+  xlab = "viridis n", ylab = "", xaxt = "n", yaxt = "n", bty = "n"
 )
 }
 \author{

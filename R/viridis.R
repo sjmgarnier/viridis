@@ -3,11 +3,12 @@
 #' A dataset containing the original RGB values of the default Matplotlib color
 #'  map ('viridis'). Source: \url{https://github.com/BIDS/colormap/blob/master/option_d.py}.
 #'
-#' @format A data frame with 256 rows and 3 variables:
+#' @format A data frame with 1024 rows and 4 variables:
 #' \itemize{
 #'   \item R: Red value
 #'   \item G: Green value
 #'   \item B: Blue value
+#'   \item opt: The colormap "option" (A: magma; B: inferno; C: plasma; D: viridis)
 #' }
 "viridis.map"
 
@@ -25,6 +26,10 @@
 #'
 #' @param alpha	The alpha transparency, a number in [0,1], see argument alpha in
 #' \code{\link[grDevices]{hsv}}.
+#'
+#' @param option A character string indicating the colormap option to use. Four
+#' options are available: "magma" (or "A"), "inferno" (or "B"), "plasma" (or "C"),
+#' and "viridis" (or "D", the default option).
 #'
 #' @return \code{viridis} returns a character vector, \code{cv}, of color hex
 #' codes. This can be used either to create a user-defined color palette for
@@ -44,22 +49,28 @@
 #'
 #' ggplot(dat, aes(x = x, y = y)) +
 #'   geom_hex() + coord_fixed() +
-#'   scale_fill_gradientn(colours = viridis(256))
-#' 
+#'   scale_fill_gradientn(colours = viridis(256, option = "D"))
+#'
 #' # using code from RColorBrewer to demo the palette
 #' n = 200
 #' image(
-#'   1:n,1,as.matrix(1:n)
-#'   ,col=viridis(n)
-#'   ,xlab="viridis n",ylab="",xaxt="n",yaxt="n",bty="n"
+#'   1:n, 1, as.matrix(1:n),
+#'   col = viridis(n, option = "D"),
+#'   xlab = "viridis n", ylab = "", xaxt = "n", yaxt = "n", bty = "n"
 #' )
 #' @export
 #'
-viridis <- function(n, alpha = 1) {
+viridis <- function(n, alpha = 1, option = "D") {
+  option <- switch(option,
+                   A = "A", magma = "A",
+                   B = "B", inferno = "B",
+                   C = "C", plasma = "C",
+                   D = "D", viridis = "D")
+  map <- viridis::viridis.map[viridis::viridis.map$opt == option, ]
   loc <- seq(0, 1, length.out = 256)
-  R <- stats::splinefun(x = loc, y = viridis::viridis.map$R)
-  G <- stats::splinefun(x = loc, y = viridis::viridis.map$G)
-  B <- stats::splinefun(x = loc, y = viridis::viridis.map$B)
+  R <- stats::splinefun(x = loc, y = map$R)
+  G <- stats::splinefun(x = loc, y = map$G)
+  B <- stats::splinefun(x = loc, y = map$B)
 
   loc <- seq(0, 1, length.out = n)
   grDevices::rgb(R(loc), G(loc), B(loc), alpha = alpha)
@@ -74,11 +85,17 @@ viridis <- function(n, alpha = 1) {
 #' \code{n = 256} by default, which corresponds to the data from the original
 #' 'viridis' color map in Matplotlib.
 #'
-viridisMap <- function(n = 256, alpha = 1) {
+viridisMap <- function(n = 256, alpha = 1, option = "D") {
+  option <- switch(option,
+                   A = "A", magma = "A",
+                   B = "B", inferno = "B",
+                   C = "C", plasma = "C",
+                   D = "D", viridis = "D")
+  map <- viridis::viridis.map[viridis::viridis.map$opt == option, ]
   loc <- seq(0, 1, length.out = 256)
-  R <- stats::splinefun(x = loc, y = viridis::viridis.map$R)
-  G <- stats::splinefun(x = loc, y = viridis::viridis.map$G)
-  B <- stats::splinefun(x = loc, y = viridis::viridis.map$B)
+  R <- stats::splinefun(x = loc, y = map$R)
+  G <- stats::splinefun(x = loc, y = map$G)
+  B <- stats::splinefun(x = loc, y = map$B)
 
   loc <- seq(0, 1, length.out = n)
   data.frame(R = R(loc), G = G(loc), B = B(loc), alpha = alpha)

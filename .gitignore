@@ -12,3 +12,4 @@ vignettes/*.pdf
 .Rproj.user
 .RData
 inst/doc
+cran_graphs.R
