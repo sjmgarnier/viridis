@@ -4,10 +4,14 @@
 \alias{viridis_pal}
 \title{Viridis palette (discrete)}
 \usage{
-viridis_pal(alpha = 1)
+viridis_pal(alpha = 1, option = "D")
 }
 \arguments{
 \item{alpha}{pass through parameter to \code{viridis}}
+
+\item{option}{A character string indicating the colormap option to use. Four
+options are available: "magma" (or "A"), "inferno" (or "B"), "plasma" (or "C"),
+and "viridis" (or "D", the default option).}
 }
 \description{
 Viridis palette (discrete)

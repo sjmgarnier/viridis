@@ -5,14 +5,17 @@
 #' See \link[viridis]{viridis} for more information on the color scale.
 #'
 #' @param alpha pass through parameter to \code{viridis}
+#' @param option A character string indicating the colormap option to use. Four
+#' options are available: "magma" (or "A"), "inferno" (or "B"), "plasma" (or "C"),
+#' and "viridis" (or "D", the default option).
 #' @author Bob Rudis \email{bob@@rudis.net}
 #' @export
 #' @examples
 #' library(scales)
 #' show_col(viridis_pal()(10))
-viridis_pal <- function(alpha=1) {
+viridis_pal <- function(alpha=1, option="D") {
   function(n) {
-    viridis(n, alpha)
+    viridis(n, alpha, option)
   }
 }
 
@@ -20,11 +23,11 @@ viridis_pal <- function(alpha=1) {
 #' @rdname scale_viridis
 #' @importFrom ggplot2 scale_fill_gradientn scale_color_gradientn discrete_scale
 #' @export
-scale_color_viridis <- function(..., alpha=1, discrete=FALSE) {
+scale_color_viridis <- function(..., alpha=1, discrete=FALSE, option="D") {
   if (discrete) {
-    discrete_scale("colour", "viridis", viridis_pal(alpha), ...)
+    discrete_scale("colour", "viridis", viridis_pal(alpha, option), ...)
   } else {
-    scale_color_gradientn(colours = viridis(256, alpha), ...)
+    scale_color_gradientn(colours = viridis(256, alpha, option), ...)
   }
 }
 
@@ -42,10 +45,14 @@ scale_color_viridis <- function(..., alpha=1, discrete=FALSE) {
 #' @param ... parameters to \code{discrete_scale} or \code{scale_fill_gradientn}
 #' @param alpha pass through parameter to \code{viridis}
 #' @param discrete generate a discrete palette? (default: \code{FALSE} - generate continuous palette)
+#' @param option A character string indicating the colormap option to use. Four
+#' options are available: "magma" (or "A"), "inferno" (or "B"), "plasma" (or "C"),
+#' and "viridis" (or "D", the default option).
 #' @rdname scale_viridis
 #' @author Noam Ross \email{noam.ross@@gmail.com} / \href{https://twitter.com/noamross}{@@noamross} (continuous version),
 #'         Bob Rudis \email{bob@@rudis.net} / \href{https://twitter.com/hrbrmstr}{@@hrbrmstr} (combined version)
 #' @importFrom ggplot2 scale_fill_gradientn scale_color_gradientn discrete_scale
+#' @importFrom gridExtra grid.arrange
 #' @export
 #' @examples
 #' library(ggplot2)
@@ -70,18 +77,29 @@ scale_color_viridis <- function(..., alpha=1, discrete=FALSE) {
 #'   geom_hex() + coord_fixed() +
 #'   scale_fill_viridis() + theme_bw()
 #'
+#' library(ggplot2)
 #' library(MASS)
-#' data(geyser, "MASS")
+#' library(gridExtra)
+#'
+#' data("geyser", package="MASS")
 #'
 #' ggplot(geyser, aes(x = duration, y = waiting)) +
 #'   xlim(0.5, 6) + ylim(40, 110) +
 #'   stat_density2d(aes(fill = ..level..), geom="polygon") +
-#'   scale_fill_viridis() +
-#'   theme_bw()
-scale_fill_viridis <- function (..., alpha=1, discrete=FALSE) {
+#'   theme_bw() +
+#'   theme(panel.grid=element_blank()) -> gg
+#'
+#' grid.arrange(
+#'   gg + scale_fill_viridis(option="A") + labs(x="Virdis A", y=NULL),
+#'   gg + scale_fill_viridis(option="B") + labs(x="Virdis B", y=NULL),
+#'   gg + scale_fill_viridis(option="C") + labs(x="Virdis C", y=NULL),
+#'   gg + scale_fill_viridis(option="D") + labs(x="Virdis D", y=NULL),
+#'   ncol=2, nrow=2
+#' )
+scale_fill_viridis <- function (..., alpha=1, discrete=FALSE, option="D") {
   if (discrete) {
-    discrete_scale("fill", "viridis", viridis_pal(alpha), ...)
+    discrete_scale("fill", "viridis", viridis_pal(alpha, option), ...)
   } else {
-    scale_fill_gradientn(colours = viridis(256, alpha), ...)
+    scale_fill_gradientn(colours = viridis(256, alpha, option), ...)
   }
 }
