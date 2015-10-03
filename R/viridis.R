@@ -38,7 +38,11 @@
 #'
 #' @author Simon Garnier: \email{garnier@@njit.edu}, \href{https://twitter.com/sjmgarnier}{@@sjmgarnier}
 #'
-#' @details Semi-transparent colors (\eqn{0 < alpha < 1}) are supported only on some
+#' @details \code{magma()}, \code{plasma()}, and \code{inferno()} are convenience
+#' functions for the other colormap options, which are useful the scale must
+#' be passed as a function name.
+#'
+#' Semi-transparent colors (\eqn{0 < alpha < 1}) are supported only on some
 #' devices: see \code{\link[grDevices]{rgb}}.
 #'
 #' @examples
@@ -100,3 +104,23 @@ viridisMap <- function(n = 256, alpha = 1, option = "D") {
   loc <- seq(0, 1, length.out = n)
   data.frame(R = R(loc), G = G(loc), B = B(loc), alpha = alpha)
 }
+
+#' @rdname viridis
+#' @export
+magma = function(n, alpha = 1) {
+  viridis(n, alpha, option = "magma")
+}
+
+#' @rdname viridis
+#' @export
+inferno = function(n, alpha = 1) {
+  viridis(n, alpha, option = "inferno")
+}
+
+#' @rdname viridis
+#' @export
+plasma = function(n, alpha = 1) {
+  viridis(n, alpha, option = "plasma")
+}
+
+
