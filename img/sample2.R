@@ -29,12 +29,12 @@ base_graph <- ggplot(choropleth, aes(long, lat, group = group)) +
   theme(axis.line = element_blank(), axis.text = element_blank(),
         axis.ticks = element_blank(), axis.title = element_blank())
 
-optA <- base_graph + scale_fill_viridis("", option = "A") + ggtitle("viridis option A")
-optB <- base_graph + scale_fill_viridis("", option = "B") + ggtitle("viridis option B")
-optC <- base_graph + scale_fill_viridis("", option = "C") + ggtitle("viridis option C")
-optD <- base_graph + scale_fill_viridis("", option = "D") + ggtitle("viridis option D")
+optA <- base_graph + scale_fill_viridis("", option = "A") + ggtitle("option A aka 'magma'")
+optB <- base_graph + scale_fill_viridis("", option = "B") + ggtitle("option B aka 'inferno'")
+optC <- base_graph + scale_fill_viridis("", option = "C") + ggtitle("option C aka 'plasma'")
+optD <- base_graph + scale_fill_viridis("", option = "D") + ggtitle("option D aka 'viridis'")
 
-png("sample2.png", width = 2048, height = 1536, res = 150)
+png("img/sample2.png", width = 2048, height = 1536, res = 150)
 ggdraw() +
   draw_plot(optA, 0, 0.5, 0.5, 0.5) +
   draw_plot(optB, 0.5, 0.5, 0.5, 0.5) +
