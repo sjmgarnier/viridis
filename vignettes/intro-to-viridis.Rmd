@@ -26,14 +26,21 @@ Use the color scales in this package to make plots that are pretty,
 better represent your data, easier to read by those with colorblindness, and
 print well in grey scale.
 
+Install **viridis** like any R package:
+
+```
+install.packages("viridis")
+library(viridis)
+```
+
 For base plots, use the `viridis()` function to generate a palette:
 
 ```{r setup, include=FALSE}
+library(viridis)
 knitr::opts_chunk$set(echo = TRUE, fig.retina=2, fig.width=7, fig.height=5)
 ```
 
 ```{r tldr_base, message=FALSE}
-library(viridis)
 x <- y <- seq(-8*pi, 8*pi, len = 40)
 r <- sqrt(outer(x^2, y^2, "+"))
 filled.contour(cos(r^2)*exp(-r/(2*pi)), 
@@ -55,16 +62,15 @@ ggplot(data.frame(x = rnorm(10000), y = rnorm(10000)), aes(x = x, y = y)) +
 
 The [**viridis**](https://cran.r-project.org/web/packages/viridis/) package
 brings to R color scales created by [Stéfan van der Walt](https://github.com/stefanv) and [Nathaniel Smith](https://github.com/njsmith) for the Python **matplotlib** library.
-These color scales are designed to:
 
-- Be **Perceptually uniform**, meaning that values close to each other have similar-appearing colors and values far away from each other have more different-appearing colors, consistently across the range of values,
-- Cover a **wide perceptual ranges**, using as much of the perceptual space as possible
-so as to make differences easy to see,
-- Appear **robust to colorblindness**, so that the above properties hold true for people with
-most form of colorblindness, as well as in grey scale printing, and
-- Be **pretty**, oh so pretty
+These color scales are designed to be:
 
-If you are interested in the science behind creating these color scales, van
+- **Colorful**, spanning as wide a palette as possible so as to make differences easy to see,
+- **Perceptually uniform**, meaning that values close to each other have similar-appearing colors and values far away from each other have more different-appearing colors, consistently across the range of values,
+- **Robust to colorblindness**, so that the above properties hold true for people with common forms of colorblindness, as well as in grey scale printing, and
+- **Pretty**, oh so pretty
+
+If you want to know more about the science behind creating these color scales, van
 der Walt and Smith's [talk at SciPy 2015](https://www.youtube.com/watch?list=PLYx7XA2nY5Gcpabmu61kKcToLz0FapmHu&v=xAoljeRJ3lU) (YouTube) is quite interesting. On the project [website](http://bids.github.io/colormap/) you will find more details and a Python tool for creating other scales with similar properties.
 
 # The Color Scales
@@ -121,7 +127,8 @@ It is immediately clear that the "rainbow" palette is not perceptually uniform;
 there are several "kinks" where the apparent color changes quickly over a short
 range of values.  This is also true, though less so, for the "heat" colors.
 The other scales are more perceptually uniform, but "viridis" stands out for its
-large *perceptual range*. It makes full use of the available color space.
+large *perceptual range*. It makes as much use of the available color space as
+possible while maintaining uniformity.
 
 Now, let's compare these as they might appear under various forms of colorblindness,
 which can be simulated using the **[dichromat](https://cran.rstudio.com/web/packages/dichromat/index.html)** package:
@@ -182,8 +189,8 @@ We can see that in these cases, "rainbow" is quite problematic - it is not
 perceptually consistent across its range.  "Heat" washes
 out at bright colors, as do the brewer scales to a lesser extent. The ggplot scale
 does not wash out, but it has a low perceptual range - there's not much contrast
-between low and high values.  The "viridis" and "magma" scales do better by
-these measures.
+between low and high values.  The "viridis" and "magma" scales do better - they cover a wide perceptual range in brightness in brightness and blue-yellow, and do not rely as much on red-green contrast. They do less well
+under tritanopia (blue-blindness), but this is an extrememly rare form of colorblindness.
 
 # Usage
 
