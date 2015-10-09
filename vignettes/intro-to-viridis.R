@@ -1,8 +1,8 @@
 ## ----setup, include=FALSE------------------------------------------------
+library(viridis)
 knitr::opts_chunk$set(echo = TRUE, fig.retina=2, fig.width=7, fig.height=5)
 
 ## ----tldr_base, message=FALSE--------------------------------------------
-library(viridis)
 x <- y <- seq(-8*pi, 8*pi, len = 40)
 r <- sqrt(outer(x^2, y^2, "+"))
 filled.contour(cos(r^2)*exp(-r/(2*pi)), 
