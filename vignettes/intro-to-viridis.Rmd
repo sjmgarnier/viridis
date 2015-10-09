@@ -60,7 +60,7 @@ ggplot(data.frame(x = rnorm(10000), y = rnorm(10000)), aes(x = x, y = y)) +
 
 # Introduction
 
-The [**viridis**](https://cran.r-project.org/web/packages/viridis/) package
+The [**viridis**](https://cran.r-project.org/package=viridis) package
 brings to R color scales created by [Stéfan van der Walt](https://github.com/stefanv) and [Nathaniel Smith](https://github.com/njsmith) for the Python **matplotlib** library.
 
 These color scales are designed to be:
@@ -131,7 +131,7 @@ large *perceptual range*. It makes as much use of the available color space as
 possible while maintaining uniformity.
 
 Now, let's compare these as they might appear under various forms of colorblindness,
-which can be simulated using the **[dichromat](https://cran.rstudio.com/web/packages/dichromat/index.html)** package:
+which can be simulated using the **[dichromat](https://cran.r-project.org/package=viridis)** package:
 
 ### Green-Blind (Deuteranopia)
 
