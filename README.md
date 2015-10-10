@@ -1,5 +1,8 @@
 # viridis
 
+[![rstudio mirror downloads](http://cranlogs.r-pkg.org/badges/viridis)](https://github.com/metacran/cranlogs.app)
+[![cran version](http://www.r-pkg.org/badges/version/viridis)](http://cran.rstudio.com/web/packages/viridis)
+
 [Matplotlib](http://matplotlib.org/) recently [introduced new color maps]
 (http://matplotlib.org/style_changes.html) for their graphs. They are called
 `viridis`, `magma`, `inferno`, and `plasma`. `viridis` was made the new default 
