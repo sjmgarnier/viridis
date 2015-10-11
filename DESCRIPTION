@@ -9,11 +9,13 @@ Authors@R: c(
       person("Bob", "Rudis", email = "bob@rudis.net", role = c("ctb", "cph"), comment = "Combined scales")
   )
 Maintainer: Simon Garnier <garnier@njit.edu>
-Description: Port of the new Matplotlib default color map ('viridis') to R.
-    This color map is designed in such a way that it will analytically be
-    perfectly perceptually-uniform, both in regular form and also when
-    converted to black-and-white. It is also designed to be perceived by
-    readers with the most common form of color blindness.
+Description: Port of the new 'matplotlib' color maps ('viridis' - the default -,
+    'magma', 'plasma' and 'inferno') to R. 'matplotlib' <http://matplotlib.org/>
+    is a popular plotting library for python. These color maps are designed in
+    such a way that they will analytically be perfectly perceptually-uniform,
+    both in regular form and also when converted to black-and-white. They are
+    also designed to be perceived by readers with the most common form of color
+    blindness.
 License: MIT + file LICENSE
 LazyData: TRUE
 Encoding: UTF-8
