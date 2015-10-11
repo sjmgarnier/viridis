@@ -1,8 +1,8 @@
 Package: viridis
 Type: Package
 Title: Matplotlib Default Color Map
-Version: 0.3
-Date: 2015-10-02
+Version: 0.3.1
+Date: 2015-10-11
 Authors@R: c(
       person("Simon", "Garnier", email = "garnier@njit.edu", role = c("aut", "cre")),
       person("Noam", "Ross", email = "noam.ross@gmail.com", role = c("ctb", "cph"), comment = "Continuous scale"),
