@@ -19,7 +19,7 @@ LazyData: TRUE
 Encoding: UTF-8
 Depends: R (>= 2.10)
 Imports: stats, grDevices, ggplot2 (>= 1.0.1), gridExtra
-Suggests: hexbin (>= 1.27.0), scales, MASS, knitr, dichromat, colorspace, rasterVis, httr
+Suggests: hexbin (>= 1.27.0), scales, MASS, knitr, dichromat, colorspace, rasterVis, httr, mapproj
 VignetteBuilder: knitr
 URL: https://github.com/sjmgarnier/viridis
 BugReports: https://github.com/sjmgarnier/viridis/issues
