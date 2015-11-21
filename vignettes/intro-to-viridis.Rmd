@@ -131,7 +131,7 @@ large *perceptual range*. It makes as much use of the available color space as
 possible while maintaining uniformity.
 
 Now, let's compare these as they might appear under various forms of colorblindness,
-which can be simulated using the **[dichromat](https://cran.r-project.org/package=viridis)** package:
+which can be simulated using the **[dichromat](https://cran.r-project.org/package=dichromat)** package:
 
 ### Green-Blind (Deuteranopia)
 
