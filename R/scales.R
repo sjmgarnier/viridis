@@ -5,17 +5,25 @@
 #' See \link[viridis]{viridis} for more information on the color scale.
 #'
 #' @param alpha pass through parameter to \code{viridis}
+#'
+#' @param begin The (corrected) hue in [0,1] at which the viridis colormap begins.
+#'
+#' @param end The (corrected) hue in [0,1] at which the viridis colormap ends.
+#'
 #' @param option A character string indicating the colormap option to use. Four
 #' options are available: "magma" (or "A"), "inferno" (or "B"), "plasma" (or "C"),
 #' and "viridis" (or "D", the default option).
+#'
 #' @author Bob Rudis \email{bob@@rudis.net}
-#' @export
+#'
 #' @examples
 #' library(scales)
 #' show_col(viridis_pal()(10))
-viridis_pal <- function(alpha=1, option="D") {
+#'
+#' @export
+viridis_pal <- function(alpha = 1, begin = 0, end = 1, option= "D") {
   function(n) {
-    viridis(n, alpha, option)
+    viridis(n, alpha, begin, end, option)
   }
 }
 
@@ -23,11 +31,11 @@ viridis_pal <- function(alpha=1, option="D") {
 #' @rdname scale_viridis
 #' @importFrom ggplot2 scale_fill_gradientn scale_color_gradientn discrete_scale
 #' @export
-scale_color_viridis <- function(..., alpha=1, discrete=FALSE, option="D") {
+scale_color_viridis <- function(..., alpha = 1, begin = 0, end = 1, discrete = FALSE, option = "D") {
   if (discrete) {
-    discrete_scale("colour", "viridis", viridis_pal(alpha, option), ...)
+    discrete_scale("colour", "viridis", viridis_pal(alpha, begin, end, option), ...)
   } else {
-    scale_color_gradientn(colours = viridis(256, alpha, option), ...)
+    scale_color_gradientn(colours = viridis(256, alpha, begin, end, option), ...)
   }
 }
 
@@ -43,17 +51,28 @@ scale_color_viridis <- function(..., alpha=1, discrete=FALSE, option="D") {
 #' See \link[viridis]{viridis} for more information on the color scale.
 #'
 #' @param ... parameters to \code{discrete_scale} or \code{scale_fill_gradientn}
+#'
 #' @param alpha pass through parameter to \code{viridis}
+#'
+#' @param begin The (corrected) hue in [0,1] at which the viridis colormap begins.
+#'
+#' @param end The (corrected) hue in [0,1] at which the viridis colormap ends.
+#'
 #' @param discrete generate a discrete palette? (default: \code{FALSE} - generate continuous palette)
+#'
 #' @param option A character string indicating the colormap option to use. Four
 #' options are available: "magma" (or "A"), "inferno" (or "B"), "plasma" (or "C"),
 #' and "viridis" (or "D", the default option).
+#'
 #' @rdname scale_viridis
+#'
 #' @author Noam Ross \email{noam.ross@@gmail.com} / \href{https://twitter.com/noamross}{@@noamross} (continuous version),
 #'         Bob Rudis \email{bob@@rudis.net} / \href{https://twitter.com/hrbrmstr}{@@hrbrmstr} (combined version)
+#'
 #' @importFrom ggplot2 scale_fill_gradientn scale_color_gradientn discrete_scale
+#'
 #' @importFrom gridExtra grid.arrange
-#' @export
+#'
 #' @examples
 #' library(ggplot2)
 #'
@@ -96,10 +115,12 @@ scale_color_viridis <- function(..., alpha=1, discrete=FALSE, option="D") {
 #'   gg + scale_fill_viridis(option="D") + labs(x="Virdis D", y=NULL),
 #'   ncol=2, nrow=2
 #' )
-scale_fill_viridis <- function (..., alpha=1, discrete=FALSE, option="D") {
+#'
+#' @export
+scale_fill_viridis <- function(..., alpha = 1, begin = 0, end = 1, discrete = FALSE, option = "D") {
   if (discrete) {
-    discrete_scale("fill", "viridis", viridis_pal(alpha, option), ...)
+    discrete_scale("fill", "viridis", viridis_pal(alpha, begin, end, option), ...)
   } else {
-    scale_fill_gradientn(colours = viridis(256, alpha, option), ...)
+    scale_fill_gradientn(colours = viridis(256, alpha, begin, end, option), ...)
   }
 }
