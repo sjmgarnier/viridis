@@ -2,6 +2,7 @@
 % Please edit documentation in R/scales.R
 \name{scale_color_viridis}
 \alias{scale_color_viridis}
+\alias{scale_colour_viridis}
 \alias{scale_fill_viridis}
 \title{Viridis color scales}
 \usage{
