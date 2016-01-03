@@ -53,6 +53,16 @@ both in regular form and also when converted to black-and-white. It is also
 designed to be perceived by readers with the most common form of color blindness.
 }
 \details{
+\if{html}{Here are the color scales:
+
+  \out{<div style="text-align: center">}\figure{viridis-scales.png}{options: style="width:750px;max-width:90\%;"}\out{</div>}
+
+  }
+\if{latex}{Here are the color scales:
+
+  \out{\begin{center}}\figure{viridis-scales.png}\out{\end{center}}
+  }
+
 \code{magma()}, \code{plasma()}, and \code{inferno()} are convenience
 functions for the other colormap options, which are useful the scale must
 be passed as a function name.
