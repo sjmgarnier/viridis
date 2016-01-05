@@ -7,10 +7,10 @@
 \title{Viridis color scales}
 \usage{
 scale_color_viridis(..., alpha = 1, begin = 0, end = 1,
-  discrete = FALSE, option = "D")
+  discrete = FALSE, option = "D", direction = 1)
 
 scale_fill_viridis(..., alpha = 1, begin = 0, end = 1, discrete = FALSE,
-  option = "D")
+  option = "D", direction = 1)
 }
 \arguments{
 \item{...}{parameters to \code{discrete_scale} or \code{scale_fill_gradientn}}
@@ -26,6 +26,9 @@ scale_fill_viridis(..., alpha = 1, begin = 0, end = 1, discrete = FALSE,
 \item{option}{A character string indicating the colormap option to use. Four
 options are available: "magma" (or "A"), "inferno" (or "B"), "plasma" (or "C"),
 and "viridis" (or "D", the default option).}
+
+\item{direction}{Sets the order of colors in the scale. If 1, the default, colors
+are as output by \link[viridis]{viridis_pal}. If -1, the order of colors is reversed.}
 }
 \description{
 Uses the viridis color scale.

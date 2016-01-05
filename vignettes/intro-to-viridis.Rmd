@@ -263,16 +263,16 @@ Here are some examples of viridis being used in the wild:
 
 [James Curley](https://twitter.com/jalapic) uses **viridis** for matrix plots ([Code](https://gist.github.com/jalapic/9a1c069aa8cee4089c1e)):
 
-[![](https://pbs.twimg.com/media/CQWw9EgWsAAoUi0.png)](https://twitter.com/jalapic/status/650120284901634048/photo/1)
+[![](http://pbs.twimg.com/media/CQWw9EgWsAAoUi0.png)](https://twitter.com/jalapic/status/650120284901634048/photo/1)
 
-[Jeff Hollister](https://twitter.com/jhollist) uses the viridis as a discrete categorical scale ([Code](https://github.com/USEPA/LakeTrophicModelling/blob/master/vignettes/manuscript.Rmd#cbpalette---c0072b2999999f0e442d55e00)):
+[Jeff Hollister](https://twitter.com/jhollist) uses the viridis as a discrete categorical scale ([Code](http://github.com/USEPA/LakeTrophicModelling/blob/master/vignettes/manuscript.Rmd#cbpalette---c0072b2999999f0e442d55e00)):
 
 
-[![](https://github.com/USEPA/LakeTrophicModelling/blob/master/vignettes/manuscript_files/figure-latex/gis_probability_map-1.jpeg?raw=TRUE)](https://github.com/USEPA/LakeTrophicModelling/blob/master/vignettes/manuscript_files/figure-latex/gis_probability_map-1.jpeg)
+[![](http://github.com/USEPA/LakeTrophicModelling/blob/master/vignettes/manuscript_files/figure-latex/gis_probability_map-1.jpeg?raw=TRUE)](http://github.com/USEPA/LakeTrophicModelling/blob/master/vignettes/manuscript_files/figure-latex/gis_probability_map-1.jpeg)
 
 
 
 [Christopher Moore](https://twitter.com/lifedispersing) created these contour 
 plots of potential in a dynamic plankton-consumer model:
 
-[![](https://pbs.twimg.com/media/CQWTy7wWcAAa-gu.jpg)](https://twitter.com/lifedispersing/status/650088228016508928/photo/1)
+[![](http://pbs.twimg.com/media/CQWTy7wWcAAa-gu.jpg)](https://twitter.com/lifedispersing/status/650088228016508928/photo/1)

@@ -21,6 +21,16 @@ and "viridis" (or "D", the default option).}
 Viridis palette (discrete)
 }
 \details{
+\if{html}{Here is an example of a 20-element palette:
+
+  \out{<div style="text-align: center">}\figure{sample-palette.png}{options: style="width:474px;max-width:90\%;"}\out{</div>}
+
+  }
+\if{latex}{Here is an example of a 20-element palette:
+
+  \out{\begin{center}}\figure{samplepalette.pdf}\out{\end{center}}
+  }
+
 See \link[viridis]{viridis} for more information on the color scale.
 }
 \examples{
