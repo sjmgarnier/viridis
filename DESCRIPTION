@@ -2,7 +2,7 @@ Package: viridis
 Type: Package
 Title: Default Color Maps from 'matplotlib'
 Version: 0.3.3
-Date: 2016-01-05
+Date: 2016-01-30
 Authors@R: c(
       person("Simon", "Garnier", email = "garnier@njit.edu", role = c("aut", "cre")),
       person("Noam", "Ross", email = "noam.ross@gmail.com", role = c("ctb", "cph"), comment = "Continuous scale"),
