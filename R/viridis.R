@@ -93,7 +93,7 @@ viridis <- function(n, alpha = 1, begin = 0, end = 1, option = "D") {
 
   map <- viridis::viridis.map[viridis::viridis.map$opt == option, ]
   map_cols <- grDevices::rgb(map$R, map$G, map$B)
-  fn_cols <- grDevices::colorRamp(map_cols, space = "rgb", interpolate = "spline")
+  fn_cols <- grDevices::colorRamp(map_cols, space = "Lab", interpolate = "spline")
   cols <- fn_cols(seq(begin, end, length.out = n)) / 255
   grDevices::rgb(cols[, 1], cols[, 2], cols[, 3], alpha = alpha)
 }
