@@ -3,3 +3,4 @@
 img
 data-raw
 cran_graphs.R
+Dockerfile
