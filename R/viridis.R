@@ -112,14 +112,11 @@ viridisMap <- function(n = 256, alpha = 1, begin = 0, end = 1, option = "D") {
                    B = "B", inferno = "B",
                    C = "C", plasma = "C",
                    D = "D", viridis = "D")
-  map <- viridis::viridis.map[viridis::viridis.map$opt == option, ]
-  loc <- seq(0, 1, length.out = 256)
-  R <- stats::splinefun(x = loc, y = map$R)
-  G <- stats::splinefun(x = loc, y = map$G)
-  B <- stats::splinefun(x = loc, y = map$B)
-
-  loc <- seq(begin, end, length.out = n)
-  data.frame(R = R(loc), G = G(loc), B = B(loc), alpha = alpha)
+  map <- viridis::viridis.map[viridis::viridis.map$opt == "A", ]
+  map_cols <- grDevices::rgb(map$R, map$G, map$B)
+  fn_cols <- grDevices::colorRamp(map_cols, space = "Lab", interpolate = "spline")
+  cols <- fn_cols(seq(begin, end, length.out = n)) / 255
+  data.frame(R = cols[, 1], G = cols[, 2], B = cols[, 3], alpha = alpha)
 }
 
 #' @rdname viridis
