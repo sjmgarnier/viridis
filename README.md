@@ -1,8 +1,8 @@
 # viridis
 
 [![cran version](http://www.r-pkg.org/badges/version/viridis)](http://cran.rstudio.com/web/packages/viridis)
-[![rstudio mirror downloads](http://cranlogs.r-pkg.org/badges/viridis)](https://github.com/metacran/cranlogs.app)
-![](http://cranlogs.r-pkg.org/badges/grand-total/viridis?color=yellowgreen)
+[![rstudio mirror per-month downloads](http://cranlogs.r-pkg.org/badges/viridis)](https://github.com/metacran/cranlogs.app)
+[![rstudio mirror total downloads](http://cranlogs.r-pkg.org/badges/grand-total/viridis?color=yellowgreen)](https://github.com/metacran/cranlogs.app)
 
 
 [Matplotlib](http://matplotlib.org/) recently [introduced new color maps]
