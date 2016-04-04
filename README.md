@@ -27,7 +27,7 @@ AND... they are now available for R!
 
 #### Installation
 
-`viridis 0.3.3` is now [available on CRAN](https://cran.r-project.org/web/packages/viridis/).  
+`viridis 0.3.4` is now [available on CRAN](https://cran.r-project.org/package=viridis).  
 You can install it using RStudio package manager or by typing the following line
 in your R terminal:
 
