@@ -92,6 +92,7 @@ library(viridis)
 library(scales)
 library(colorspace)
 library(dichromat)
+library(rje) # for cubeHelix
 ```
 
 ```{r show_scales, echo=FALSE,fig.height=2.86}
@@ -104,6 +105,8 @@ img(rev(inferno(n_col)), "inferno")
 
 # Comparison
 
+
+
 Let's compare the viridis and magma scales against these other commonly used sequential color
 palettes in R:
 
@@ -111,14 +114,16 @@ palettes in R:
 - The default **ggplot2** palette
 - Sequential [colorbrewer](http://colorbrewer2.org/) palettes, both default blues and
   the more viridis-like yellow-green-blue
+- Dave Green's [`cubehelix'](https://www.mrao.cam.ac.uk/~dag/CUBEHELIX/) colour scheme (implemented in the [rje](https://cran.r-project.org/web/packages/rje/index.html) package).
 
 ```{r 01_normal, echo=FALSE}
-par(mfrow=c(7, 1), mar=rep(1, 4))
+par(mfrow=c(8, 1), mar=rep(1, 4))
 img(rev(rainbow(n_col)), "rainbow")
 img(rev(heat.colors(n_col)), "heat")
 img(rev(seq_gradient_pal(low = "#132B43", high = "#56B1F7", space = "Lab")(seq(0, 1, length=n_col))), "ggplot default")
 img(gradient_n_pal(brewer_pal(type="seq")(9))(seq(0, 1, length=n_col)), "brewer blues")
 img(gradient_n_pal(brewer_pal(type="seq", palette = "YlGnBu")(9))(seq(0, 1, length=n_col)), "brewer yellow-green-blue")
+img(rev(cubeHelix(n_col)), "cubeHelix")
 img(rev(viridis(n_col)), "viridis")
 img(rev(magma(n_col)), "magma")
 ```
@@ -136,12 +141,13 @@ which can be simulated using the **[dichromat](https://cran.r-project.org/packag
 ### Green-Blind (Deuteranopia)
 
 ```{r 02_deutan, echo=FALSE}
-par(mfrow=c(7, 1), mar=rep(1, 4))
+par(mfrow=c(8, 1), mar=rep(1, 4))
 img(dichromat(rev(rainbow(n_col)), "deutan"), "rainbow")
 img(dichromat(rev(heat.colors(n_col)), "deutan"), "heat")
 img(dichromat(rev(seq_gradient_pal(low = "#132B43", high = "#56B1F7", space = "Lab")(seq(0, 1, length=n_col))), "deutan"), "ggplot default")
 img(dichromat(gradient_n_pal(brewer_pal(type="seq")(9))(seq(0, 1, length=n_col)), "deutan"), "brewer blues")
 img(dichromat(gradient_n_pal(brewer_pal(type="seq", palette = "YlGnBu")(9))(seq(0, 1, length=n_col)), "deutan"), "brewer yellow-green-blue")
+img(dichromat(rev(cubeHelix(n_col)), "deutan"), "cubeHelix")
 img(dichromat(rev(viridis(n_col)), "deutan"), "viridis")
 img(dichromat(rev(magma(n_col)), "deutan"), "magma")
 ```
@@ -149,12 +155,13 @@ img(dichromat(rev(magma(n_col)), "deutan"), "magma")
 ### Red-Blind (Protanopia)
 
 ```{r 03_protan, echo=FALSE}
-par(mfrow=c(7, 1), mar=rep(1, 4))
+par(mfrow=c(8, 1), mar=rep(1, 4))
 img(dichromat(rev(rainbow(n_col)), "protan"), "rainbow")
 img(dichromat(rev(heat.colors(n_col)), "protan"), "heat")
 img(dichromat(rev(seq_gradient_pal(low = "#132B43", high = "#56B1F7", space = "Lab")(seq(0, 1, length=n_col))), "protan"), "ggplot default")
 img(dichromat(gradient_n_pal(brewer_pal(type="seq")(9))(seq(0, 1, length=n_col)), "protan"), "brewer blues")
 img(dichromat(gradient_n_pal(brewer_pal(type="seq", palette = "YlGnBu")(9))(seq(0, 1, length=n_col)), "protan"), "brewer yellow-green-blue")
+img(dichromat(rev(cubeHelix(n_col)), "protan"), "cubeHelix")
 img(dichromat(rev(viridis(n_col)), "protan"), "viridis")
 img(dichromat(rev(magma(n_col)), "protan"), "magma")
 ```
@@ -162,12 +169,13 @@ img(dichromat(rev(magma(n_col)), "protan"), "magma")
 ### Blue-Blind (Tritanopia)
 
 ```{r 04_tritan, echo=FALSE}
-par(mfrow=c(7, 1), mar=rep(1, 4))
+par(mfrow=c(8, 1), mar=rep(1, 4))
 img(dichromat(rev(rainbow(n_col)), "tritan"), "rainbow")
 img(dichromat(rev(heat.colors(n_col)), "tritan"), "heat")
 img(dichromat(rev(seq_gradient_pal(low = "#132B43", high = "#56B1F7", space = "Lab")(seq(0, 1, length=n_col))), "tritan"), "ggplot default")
 img(dichromat(gradient_n_pal(brewer_pal(type="seq")(9))(seq(0, 1, length=n_col)), "tritan"), "brewer blues")
 img(dichromat(gradient_n_pal(brewer_pal(type="seq", palette = "YlGnBu")(9))(seq(0, 1, length=n_col)), "tritan"), "brewer yellow-green-blue")
+img(dichromat(rev(cubeHelix(n_col)), "tritan"), "cubeHelix")
 img(dichromat(rev(viridis(n_col)), "tritan"), "viridis")
 img(dichromat(rev(magma(n_col)), "tritan"), "magma")
 ```
@@ -175,12 +183,13 @@ img(dichromat(rev(magma(n_col)), "tritan"), "magma")
 ### Desaturated
 
 ```{r 05_desatureated, echo=FALSE}
-par(mfrow=c(7, 1), mar=rep(1, 4))
+par(mfrow=c(8, 1), mar=rep(1, 4))
 img(desaturate(rev(rainbow(n_col))), "rainbow")
 img(desaturate(rev(heat.colors(n_col))), "heat")
 img(desaturate(rev(seq_gradient_pal(low = "#132B43", high = "#56B1F7", space = "Lab")(seq(0, 1, length=n_col)))), "ggplot default")
 img(desaturate(gradient_n_pal(brewer_pal(type="seq")(9))(seq(0, 1, length=n_col))), "brewer blues")
 img(desaturate(gradient_n_pal(brewer_pal(type="seq", palette = "YlGnBu")(9))(seq(0, 1, length=n_col))), "brewer yellow-green-blue")
+img(desaturate(rev(cubeHelix(n_col))), "cubeHelix")
 img(desaturate(rev(viridis(n_col))), "viridis")
 img(desaturate(rev(magma(n_col))), "magma")
 ```
