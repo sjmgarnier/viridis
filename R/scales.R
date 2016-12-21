@@ -42,12 +42,10 @@ viridis_pal <- function(alpha = 1, begin = 0, end = 1, option= "D") {
 
 #' @rdname scale_viridis
 #'
-#' @aliases scale_colour_viridis
-#'
 #' @importFrom ggplot2 scale_fill_gradientn scale_color_gradientn discrete_scale
 #'
 #' @export
-scale_color_viridis <- function(..., alpha = 1, begin = 0, end = 1,
+scale_colour_viridis <- function(..., alpha = 1, begin = 0, end = 1,
                                 discrete = FALSE, option = "D", direction = 1) {
 
   if (direction == -1) {
@@ -62,6 +60,13 @@ scale_color_viridis <- function(..., alpha = 1, begin = 0, end = 1,
     scale_color_gradientn(colours = viridis(256, alpha, begin, end, option), ...)
   }
 }
+
+#' @rdname scale_viridis
+#'
+#' @usage NULL
+#'
+#' @export
+scale_color_viridis <- scale_colour_viridis
 
 #' Viridis color scales
 #'
