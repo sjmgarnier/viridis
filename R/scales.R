@@ -14,13 +14,16 @@
 #'   \out{\begin{center}}\figure{samplepalette.pdf}\out{\end{center}}
 #'   }
 #'
-#' See \link[viridis]{viridis} for more information on the color scale.
+#' See \link[viridisLite]{viridis} for more information on the color scale.
 #'
 #' @param alpha pass through parameter to \code{viridis}
 #'
 #' @param begin The (corrected) hue in [0,1] at which the viridis colormap begins.
 #'
 #' @param end The (corrected) hue in [0,1] at which the viridis colormap ends.
+#'
+#' @param direction Sets the order of colors in the scale. If 1, the default, colors
+#' are ordered from darkest to lightest. If -1, the order of colors is reversed.
 #'
 #' @param option A character string indicating the colormap option to use. Four
 #' options are available: "magma" (or "A"), "inferno" (or "B"), "plasma" (or "C"),
@@ -32,10 +35,12 @@
 #' library(scales)
 #' show_col(viridis_pal()(10))
 #'
+#' @importFrom viridisLite viridis
+#'
 #' @export
-viridis_pal <- function(alpha = 1, begin = 0, end = 1, option= "D") {
+viridis_pal <- function(alpha = 1, begin = 0, end = 1, direction = 1, option= "D") {
   function(n) {
-    viridis(n, alpha, begin, end, option)
+    viridisLite::viridis(n, alpha, begin, end, direction, option)
   }
 }
 
@@ -47,19 +52,12 @@ viridis_pal <- function(alpha = 1, begin = 0, end = 1, option= "D") {
 #' @importFrom ggplot2 scale_fill_gradientn scale_color_gradientn discrete_scale
 #'
 #' @export
-scale_color_viridis <- function(..., alpha = 1, begin = 0, end = 1,
-                                discrete = FALSE, option = "D", direction = 1) {
-
-  if (direction == -1) {
-    tmp <- begin
-    begin <- end
-    end <- tmp
-  }
-
+scale_color_viridis <- function(..., alpha = 1, begin = 0, end = 1, direction = 1,
+                                discrete = FALSE, option = "D") {
   if (discrete) {
-    discrete_scale("colour", "viridis", viridis_pal(alpha, begin, end, option), ...)
+    discrete_scale("colour", "viridis", viridis_pal(alpha, begin, end, direction, option), ...)
   } else {
-    scale_color_gradientn(colours = viridis(256, alpha, begin, end, option), ...)
+    scale_color_gradientn(colours = viridisLite::viridis(256, alpha, begin, end, direction, option), ...)
   }
 }
 
@@ -72,7 +70,7 @@ scale_color_viridis <- function(..., alpha = 1, begin = 0, end = 1,
 #' Otherwise the function will return a \code{discrete_scale} with the plot-computed
 #' number of colors.
 #'
-#' See \link[viridis]{viridis} for more information on the color scale.
+#' See \link[viridisLite]{viridis} for more information on the color scale.
 #'
 #' @param ... parameters to \code{discrete_scale} or \code{scale_fill_gradientn}
 #'
@@ -82,14 +80,14 @@ scale_color_viridis <- function(..., alpha = 1, begin = 0, end = 1,
 #'
 #' @param end The (corrected) hue in [0,1] at which the viridis colormap ends.
 #'
+#' @param direction Sets the order of colors in the scale. If 1, the default, colors
+#' are as output by \link[viridis]{viridis_pal}. If -1, the order of colors is reversed.
+#'
 #' @param discrete generate a discrete palette? (default: \code{FALSE} - generate continuous palette)
 #'
 #' @param option A character string indicating the colormap option to use. Four
 #' options are available: "magma" (or "A"), "inferno" (or "B"), "plasma" (or "C"),
 #' and "viridis" (or "D", the default option).
-#'
-#' @param direction Sets the order of colors in the scale. If 1, the default, colors
-#' are as output by \link[viridis]{viridis_pal}. If -1, the order of colors is reversed.
 #'
 #' @rdname scale_viridis
 #'
@@ -144,19 +142,12 @@ scale_color_viridis <- function(..., alpha = 1, begin = 0, end = 1,
 #' )
 #'
 #' @export
-scale_fill_viridis <- function(..., alpha = 1, begin = 0, end = 1,
-                               discrete = FALSE, option = "D", direction = 1) {
-
-  if (direction == -1) {
-    tmp <- begin
-    begin <- end
-    end <- tmp
-  }
-
+scale_fill_viridis <- function(..., alpha = 1, begin = 0, end = 1, direction = 1,
+                               discrete = FALSE, option = "D") {
   if (discrete) {
-    discrete_scale("fill", "viridis", viridis_pal(alpha, begin, end, option), ...)
+    discrete_scale("fill", "viridis", viridis_pal(alpha, begin, end, direction, option), ...)
   } else {
-    scale_fill_gradientn(colours = viridis(256, alpha, begin, end, option), ...)
+    scale_fill_gradientn(colours = viridisLite::viridis(256, alpha, begin, end, direction, option), ...)
   }
 
 }

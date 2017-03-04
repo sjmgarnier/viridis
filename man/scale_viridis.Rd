@@ -6,11 +6,11 @@
 \alias{scale_fill_viridis}
 \title{Viridis color scales}
 \usage{
-scale_color_viridis(..., alpha = 1, begin = 0, end = 1,
-  discrete = FALSE, option = "D", direction = 1)
+scale_color_viridis(..., alpha = 1, begin = 0, end = 1, direction = 1,
+  discrete = FALSE, option = "D")
 
-scale_fill_viridis(..., alpha = 1, begin = 0, end = 1, discrete = FALSE,
-  option = "D", direction = 1)
+scale_fill_viridis(..., alpha = 1, begin = 0, end = 1, direction = 1,
+  discrete = FALSE, option = "D")
 }
 \arguments{
 \item{...}{parameters to \code{discrete_scale} or \code{scale_fill_gradientn}}
@@ -21,14 +21,14 @@ scale_fill_viridis(..., alpha = 1, begin = 0, end = 1, discrete = FALSE,
 
 \item{end}{The (corrected) hue in [0,1] at which the viridis colormap ends.}
 
+\item{direction}{Sets the order of colors in the scale. If 1, the default, colors
+are as output by \link[viridis]{viridis_pal}. If -1, the order of colors is reversed.}
+
 \item{discrete}{generate a discrete palette? (default: \code{FALSE} - generate continuous palette)}
 
 \item{option}{A character string indicating the colormap option to use. Four
 options are available: "magma" (or "A"), "inferno" (or "B"), "plasma" (or "C"),
 and "viridis" (or "D", the default option).}
-
-\item{direction}{Sets the order of colors in the scale. If 1, the default, colors
-are as output by \link[viridis]{viridis_pal}. If -1, the order of colors is reversed.}
 }
 \description{
 Uses the viridis color scale.
@@ -39,7 +39,7 @@ For \code{discrete == FALSE} (the default) all other arguments are as to
 Otherwise the function will return a \code{discrete_scale} with the plot-computed
 number of colors.
 
-See \link[viridis]{viridis} for more information on the color scale.
+See \link[viridisLite]{viridis} for more information on the color scale.
 }
 \examples{
 library(ggplot2)
@@ -89,4 +89,3 @@ grid.arrange(
 Noam Ross \email{noam.ross@gmail.com} / \href{https://twitter.com/noamross}{@noamross} (continuous version),
         Bob Rudis \email{bob@rudis.net} / \href{https://twitter.com/hrbrmstr}{@hrbrmstr} (combined version)
 }
-
