@@ -87,5 +87,5 @@ grid.arrange(
 }
 \author{
 Noam Ross \email{noam.ross@gmail.com} / \href{https://twitter.com/noamross}{@noamross} (continuous version),
-        Bob Rudis \email{bob@rudis.net} / \href{https://twitter.com/hrbrmstr}{@hrbrmstr} (combined version)
+        Bob Rudis \email{bob@rud.is} / \href{https://twitter.com/hrbrmstr}{@hrbrmstr} (combined version)
 }

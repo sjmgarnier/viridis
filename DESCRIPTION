@@ -6,7 +6,7 @@ Date: 2017-04-03
 Authors@R: c(
       person("Simon", "Garnier", email = "garnier@njit.edu", role = c("aut", "cre")),
       person("Noam", "Ross", email = "noam.ross@gmail.com", role = c("ctb", "cph"), comment = "Continuous scale"),
-      person("Bob", "Rudis", email = "bob@rudis.net", role = c("ctb", "cph"), comment = "Combined scales")
+      person("Bob", "Rudis", email = "bob@rud.is", role = c("ctb", "cph"), comment = "Combined scales")
   )
 Maintainer: Simon Garnier <garnier@njit.edu>
 Description: Port of the new 'matplotlib' color maps ('viridis' - the default
@@ -36,7 +36,11 @@ Suggests:
     colorspace,
     rasterVis,
     httr,
-    mapproj
+    mapproj,
+    vdiffr,
+    svglite    ,
+    testthat,
+    covr
 VignetteBuilder: knitr
 URL: https://github.com/sjmgarnier/viridis
 BugReports: https://github.com/sjmgarnier/viridis/issues
