@@ -4,7 +4,8 @@
 \alias{viridis_pal}
 \title{Viridis palette (discrete)}
 \usage{
-viridis_pal(alpha = 1, begin = 0, end = 1, option = "D")
+viridis_pal(alpha = 1, begin = 0, end = 1, direction = 1,
+  option = "D")
 }
 \arguments{
 \item{alpha}{pass through parameter to \code{viridis}}
@@ -12,6 +13,9 @@ viridis_pal(alpha = 1, begin = 0, end = 1, option = "D")
 \item{begin}{The (corrected) hue in [0,1] at which the viridis colormap begins.}
 
 \item{end}{The (corrected) hue in [0,1] at which the viridis colormap ends.}
+
+\item{direction}{Sets the order of colors in the scale. If 1, the default, colors
+are ordered from darkest to lightest. If -1, the order of colors is reversed.}
 
 \item{option}{A character string indicating the colormap option to use. Four
 options are available: "magma" (or "A"), "inferno" (or "B"), "plasma" (or "C"),
@@ -31,7 +35,7 @@ Viridis palette (discrete)
   \out{\begin{center}}\figure{samplepalette.pdf}\out{\end{center}}
   }
 
-See \link[viridis]{viridis} for more information on the color scale.
+See \link[viridisLite]{viridis} for more information on the color scale.
 }
 \examples{
 library(scales)
@@ -41,4 +45,3 @@ show_col(viridis_pal()(10))
 \author{
 Bob Rudis \email{bob@rudis.net}
 }
-
