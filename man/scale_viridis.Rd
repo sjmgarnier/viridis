@@ -9,11 +9,11 @@
 scale_color_viridis(..., alpha = 1, begin = 0, end = 1, direction = 1,
   discrete = FALSE, option = "D")
 
-scale_colour_viridis(..., alpha = 1, begin = 0, end = 1,
-  discrete = FALSE, option = "D", direction = 1)
+scale_colour_viridis(..., alpha = 1, begin = 0, end = 1, direction = 1,
+  discrete = FALSE, option = "D")
 
-scale_fill_viridis(..., alpha = 1, begin = 0, end = 1, discrete = FALSE,
-  option = "D", direction = 1)
+scale_fill_viridis(..., alpha = 1, begin = 0, end = 1, direction = 1,
+  discrete = FALSE, option = "D")
 }
 \arguments{
 \item{...}{parameters to \code{discrete_scale} or \code{scale_fill_gradientn}}
