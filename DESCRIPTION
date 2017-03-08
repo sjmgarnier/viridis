@@ -36,7 +36,8 @@ Suggests:
     colorspace,
     rasterVis,
     httr,
-    mapproj
+    mapproj,
+    rje
 VignetteBuilder: knitr
 URL: https://github.com/sjmgarnier/viridis
 BugReports: https://github.com/sjmgarnier/viridis/issues
