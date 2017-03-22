@@ -9,5 +9,8 @@ r:
  - release
  - devel
 
+r_github_packages:
+ - sjmgarnier/viridis
+
 after_success:
   - Rscript -e 'covr::codecov()'

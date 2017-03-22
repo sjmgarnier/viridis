@@ -40,8 +40,6 @@ Suggests:
     testthat,
     covr,
     rmarkdown
-Remotes:
-    sjmgarnier/viridisLite
 VignetteBuilder: knitr
 URL: https://github.com/sjmgarnier/viridis
 BugReports: https://github.com/sjmgarnier/viridis/issues
