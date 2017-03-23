@@ -61,6 +61,11 @@ scale_color_viridis <- function(..., alpha = 1, begin = 0, end = 1, direction = 
   }
 }
 
+#' @rdname scale_viridis
+#' @aliases scale_color_viridis
+#' @export
+scale_colour_viridis <- scale_color_viridis
+
 #' Viridis color scales
 #'
 #' Uses the viridis color scale.

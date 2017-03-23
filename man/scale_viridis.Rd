@@ -3,10 +3,15 @@
 \name{scale_color_viridis}
 \alias{scale_color_viridis}
 \alias{scale_colour_viridis}
+\alias{scale_colour_viridis}
+\alias{scale_color_viridis}
 \alias{scale_fill_viridis}
 \title{Viridis color scales}
 \usage{
 scale_color_viridis(..., alpha = 1, begin = 0, end = 1, direction = 1,
+  discrete = FALSE, option = "D")
+
+scale_colour_viridis(..., alpha = 1, begin = 0, end = 1, direction = 1,
   discrete = FALSE, option = "D")
 
 scale_fill_viridis(..., alpha = 1, begin = 0, end = 1, direction = 1,
