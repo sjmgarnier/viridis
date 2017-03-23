@@ -29,7 +29,7 @@
 #' options are available: "magma" (or "A"), "inferno" (or "B"), "plasma" (or "C"),
 #' and "viridis" (or "D", the default option).
 #'
-#' @author Bob Rudis \email{bob@@rudis.net}
+#' @author Bob Rudis \email{bob@@rud.is}
 #'
 #' @examples
 #' library(scales)
@@ -59,8 +59,9 @@ scale_color_viridis <- function(..., alpha = 1, begin = 0, end = 1, direction = 
   }
 }
 
-#' @export
 #' @rdname scale_viridis
+#' @aliases scale_color_viridis
+#' @export
 scale_colour_viridis <- scale_color_viridis
 
 #' Viridis color scales
@@ -94,7 +95,7 @@ scale_colour_viridis <- scale_color_viridis
 #' @rdname scale_viridis
 #'
 #' @author Noam Ross \email{noam.ross@@gmail.com} / \href{https://twitter.com/noamross}{@@noamross} (continuous version),
-#'         Bob Rudis \email{bob@@rudis.net} / \href{https://twitter.com/hrbrmstr}{@@hrbrmstr} (combined version)
+#'         Bob Rudis \email{bob@@rud.is} / \href{https://twitter.com/hrbrmstr}{@@hrbrmstr} (combined version)
 #'
 #' @importFrom ggplot2 scale_fill_gradientn scale_color_gradientn discrete_scale
 #'

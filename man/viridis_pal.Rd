@@ -43,5 +43,5 @@ show_col(viridis_pal()(10))
 
 }
 \author{
-Bob Rudis \email{bob@rudis.net}
+Bob Rudis \email{bob@rud.is}
 }
