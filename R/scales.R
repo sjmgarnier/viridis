@@ -154,3 +154,17 @@ scale_fill_viridis <- function(..., alpha = 1, begin = 0, end = 1, direction = 1
   }
 
 }
+
+
+#' @export
+viridisLite::viridis
+
+#' @export
+viridisLite::inferno
+
+#' @export
+viridisLite::magma
+
+#' @export
+viridisLite::plasma
+
