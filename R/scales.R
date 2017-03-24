@@ -156,15 +156,19 @@ scale_fill_viridis <- function(..., alpha = 1, begin = 0, end = 1, direction = 1
 }
 
 
+#' @importFrom viridisLite viridis
 #' @export
 viridisLite::viridis
 
+#' @importFrom viridisLite inferno
 #' @export
 viridisLite::inferno
 
+#' @importFrom viridisLite magma
 #' @export
 viridisLite::magma
 
+#' @importFrom viridisLite plasma
 #' @export
 viridisLite::plasma
 
