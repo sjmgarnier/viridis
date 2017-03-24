@@ -22,6 +22,8 @@ test_that("scales work correctly", {
 context("colorandfill")
 test_that("visual elements are correct", {
 
+  skip_on_cran()
+
   library(ggplot2)
   library(MASS)
   library(gridExtra)
