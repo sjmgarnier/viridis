@@ -51,7 +51,7 @@ devtools::install_github("sjmgarnier/viridis")
 library(viridis)
 ```
 
-See the [vignette](https://cran.r-project.org/web/packages/viridis/vignettes/intro-to-viridis.html) for more details.
+See the [vignette](https://cran.r-project.org/package=viridis/vignettes/intro-to-viridis.html) for more details.
 ---
 
 #### Maintainer(s)
