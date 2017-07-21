@@ -7,3 +7,4 @@ cran_graphs2.R
 Dockerfile
 ^\.travis\.yml$
 ^codecov\.yml$
+hex_logo
