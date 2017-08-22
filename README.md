@@ -8,7 +8,7 @@
 
 
 [Matplotlib](http://matplotlib.org/) recently [introduced new color maps]
-(http://matplotlib.org/style_changes.html) for their graphs. They are called
+(https://matplotlib.org/users/dflt_style_changes.html) for their graphs. They are called
 `viridis`, `magma`, `inferno`, and `plasma`. `viridis` was made the new default 
 color map of Matplotlib. 
 
