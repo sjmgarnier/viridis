@@ -1,7 +1,7 @@
 Package: viridis
 Type: Package
 Title: Default Color Maps from 'matplotlib'
-Version: 0.4.0
+Version: 0.4.1
 Authors@R: c(
       person("Simon", "Garnier", email = "garnier@njit.edu", role = c("aut", "cre")),
       person("Noam", "Ross", email = "noam.ross@gmail.com", role = c("ctb", "cph")),
@@ -39,7 +39,8 @@ Suggests:
     svglite (>= 1.2.0),
     testthat,
     covr,
-    rmarkdown
+    rmarkdown,
+    rgdal
 VignetteBuilder: knitr
 URL: https://github.com/sjmgarnier/viridis
 BugReports: https://github.com/sjmgarnier/viridis/issues
