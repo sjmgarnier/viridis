@@ -51,8 +51,8 @@ hex <- data.frame(x = 1.35 * l * c(-sqrt(3) / 2, 0, rep(sqrt(3) / 2, 2), 0, rep(
 theme_hex <-  theme_void() + theme_transparent() +
   theme(axis.ticks.length = unit(0, "mm"))
 
-opt <- c("magma", "inferno", "plasma", "viridis")
-for (i in 1:4) {
+opt <- c("magma", "inferno", "plasma", "viridis", "cividis")
+for (i in 1:5) {
   g <- ggplot() +
     geom_polygon(data = hex, aes(x, y), color = "#99A5Ab", fill = "#242A30", size = 5) +
     geom_polygon(data = small_t, aes(x, y, group = group, fill = d), size = 0) +

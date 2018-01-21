@@ -32,7 +32,7 @@ are as output by \link[viridis]{viridis_pal}. If -1, the order of colors is reve
 
 \item{option}{A character string indicating the colormap option to use. Four
 options are available: "magma" (or "A"), "inferno" (or "B"), "plasma" (or "C"),
-and "viridis" (or "D", the default option).}
+"viridis" (or "D", the default option) and "cividis" (or "E").}
 }
 \description{
 Uses the viridis color scale.
@@ -85,7 +85,8 @@ grid.arrange(
   gg + scale_fill_viridis(option="B") + labs(x="Virdis B", y=NULL),
   gg + scale_fill_viridis(option="C") + labs(x="Virdis C", y=NULL),
   gg + scale_fill_viridis(option="D") + labs(x="Virdis D", y=NULL),
-  ncol=2, nrow=2
+  gg + scale_fill_viridis(option="E") + labs(x="Virdis E", y=NULL),
+  ncol=3, nrow=2
 )
 
 }
