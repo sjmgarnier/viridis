@@ -23,12 +23,12 @@ License: MIT + file LICENSE
 LazyData: TRUE
 Encoding: UTF-8
 Depends:
-    R (>= 2.10),
-    viridisLite (>= 0.2.0)
+    R (>= 2.10)
 Imports:
     stats,
     ggplot2 (>= 1.0.1),
-    gridExtra
+    gridExtra,
+    viridisLite (>= 0.2.0)
 Suggests:
     hexbin (>= 1.27.0),
     scales,
