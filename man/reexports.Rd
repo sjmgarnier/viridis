@@ -10,6 +10,8 @@
 \alias{magma}
 \alias{reexports}
 \alias{plasma}
+\alias{reexports}
+\alias{cividis}
 \title{Objects exported from other packages}
 \keyword{internal}
 \description{
@@ -17,6 +19,6 @@ These objects are imported from other packages. Follow the links
 below to see their documentation.
 
 \describe{
-  \item{viridisLite}{\code{\link[viridisLite]{viridis}}, \code{\link[viridisLite]{inferno}}, \code{\link[viridisLite]{magma}}, \code{\link[viridisLite]{plasma}}}
+  \item{viridisLite}{\code{\link[viridisLite]{viridis}}, \code{\link[viridisLite]{inferno}}, \code{\link[viridisLite]{magma}}, \code{\link[viridisLite]{plasma}}, \code{\link[viridisLite]{cividis}}}
 }}
 

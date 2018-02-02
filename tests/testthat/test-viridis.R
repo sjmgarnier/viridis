@@ -40,10 +40,12 @@ test_that("visual elements are correct", {
   B <- gg + scale_fill_viridis(option="B") + labs(x="Virdis B", y=NULL)
   C <- gg + scale_fill_viridis(option="C") + labs(x="Virdis C", y=NULL)
   D <- gg + scale_fill_viridis(option="D") + labs(x="Virdis D", y=NULL)
+  E <- gg + scale_fill_viridis(option="E") + labs(x="Virdis E", y=NULL)
 
   vdiffr::expect_doppelganger("a", A)
   vdiffr::expect_doppelganger("b", B)
   vdiffr::expect_doppelganger("c", C)
   vdiffr::expect_doppelganger("d", D)
+  vdiffr::expect_doppelganger("e", E)
 
 })

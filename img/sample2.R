@@ -29,21 +29,14 @@ base_graph <- ggplot(choropleth, aes(long, lat, group = group)) +
   theme(axis.line = element_blank(), axis.text = element_blank(),
         axis.ticks = element_blank(), axis.title = element_blank())
 
-optA <- base_graph + scale_fill_viridis("", option = "A") + ggtitle("option A aka 'magma'")
-optB <- base_graph + scale_fill_viridis("", option = "B") + ggtitle("option B aka 'inferno'")
-optC <- base_graph + scale_fill_viridis("", option = "C") + ggtitle("option C aka 'plasma'")
-optD <- base_graph + scale_fill_viridis("", option = "D") + ggtitle("option D aka 'viridis'")
+optA <- base_graph + scale_fill_viridis("", option = "A") + ggtitle("option A aka 'magma'") + theme(plot.margin = unit(c(0, 0, 0, 0), "cm"))
+optB <- base_graph + scale_fill_viridis("", option = "B") + ggtitle("option B aka 'inferno'") + theme(plot.margin = unit(c(0, 0, 0, 0), "cm"))
+optC <- base_graph + scale_fill_viridis("", option = "C") + ggtitle("option C aka 'plasma'") + theme(plot.margin = unit(c(0, 0, 0, 0), "cm"))
+optD <- base_graph + scale_fill_viridis("", option = "D") + ggtitle("option D aka 'viridis'") + theme(plot.margin = unit(c(0, 0, 0, 0), "cm"))
+optE <- base_graph + scale_fill_viridis("", option = "E") + ggtitle("option E aka 'cividis'") + theme(plot.margin = unit(c(0, 0, 0, 0), "cm"))
 
-png("img/sample2.png", width = 2048, height = 1536, res = 150)
-ggdraw() +
-  draw_plot(optA, 0, 0.5, 0.5, 0.5) +
-  draw_plot(optB, 0.5, 0.5, 0.5, 0.5) +
-  draw_plot(optC, 0, 0, 0.5, 0.5) +
-  draw_plot(optD, 0.5, 0, 0.5, 0.5) +
-  draw_text("US unemployment rate by county", x = 0.5, y = 1, size = 20, vjust = 1.5)
+png("img/sample2.png", width = 2048, height = 2336, res = 150)
+plot_grid(optA, optB, optC, optD, optE, ncol = 2) +
+  draw_text("US unemployment rate by county", x = 0.5, y = 1, size = 24, vjust = 1.5)
 dev.off()
-
-
-
-
 
