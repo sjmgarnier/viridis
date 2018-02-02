@@ -13,7 +13,7 @@ cache: packages
 r:
  - oldrel
  - release
- - devel
+ # - devel
 
 r_github_packages:
  - sjmgarnier/viridis
