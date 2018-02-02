@@ -1,7 +1,13 @@
 # R for travis: see documentation at https://docs.travis-ci.com/user/languages/r
 
 language: R
-sudo: false
+sudo: required
+dist: trusty
+addons:
+  apt:
+    packages:
+      - libgdal-dev
+      - libproj-dev
 cache: packages
 
 r:
