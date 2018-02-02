@@ -8,3 +8,4 @@ Dockerfile
 ^\.travis\.yml$
 ^codecov\.yml$
 hex_logo
+README.md
