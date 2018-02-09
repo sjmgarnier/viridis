@@ -24,7 +24,7 @@ LazyData: TRUE
 Encoding: UTF-8
 Depends:
     R (>= 2.10),
-    viridisLite (>= 0.2.0)
+    viridisLite (>= 0.3.0)
 Imports:
     stats,
     ggplot2 (>= 1.0.1),
