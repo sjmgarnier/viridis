@@ -7,8 +7,7 @@
 [![Coverage Status](https://img.shields.io/codecov/c/github/sjmgarnier/viridis/master.svg)](https://codecov.io/github/sjmgarnier/viridis?branch=master)
 
 
-[Matplotlib](http://matplotlib.org/) recently [introduced new color maps]
-(https://matplotlib.org/users/dflt_style_changes.html) for their graphs. They are called
+[Matplotlib](http://matplotlib.org/) recently [introduced new color maps](https://matplotlib.org/users/dflt_style_changes.html) for their graphs. They are called
 `viridis`, `magma`, `inferno`, and `plasma`. `viridis` was made the new default 
 color map of Matplotlib. 
 
