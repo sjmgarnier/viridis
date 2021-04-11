@@ -1,39 +1,43 @@
-#' Viridis palette (discrete)
+#' @title Viridis Color Palettes
 #'
-#' Viridis palette (discrete)
+#' @description A wrapper function around \code{\link[viridisLite]{viridis}} to
+#'  turn it into a palette function compatible with
+#'  \code{\link[ggplot2]{discrete_scale}}.
 #'
-#' @details
+#' @details See \code{\link[viridisLite]{viridis}} and
+#'  \code{\link[viridisLite]{viridis.map}} for more information on the color
+#'  palettes.
 #'
-#' \if{html}{Here is an example of a 20-element palette:
+#' @param alpha The alpha transparency, a number in [0,1], see argument alpha in
+#' \code{\link[grDevices]{hsv}}.
 #'
-#'   \out{<div style="text-align: center">}\figure{sample-palette.png}{options: style="width:474px;max-width:90\%;"}\out{</div>}
+#' @param begin The (corrected) hue in [0,1] at which the color map begins.
 #'
-#'   }
-#' \if{latex}{Here is an example of a 20-element palette:
+#' @param end The (corrected) hue in [0,1] at which the color map ends.
 #'
-#'   \out{\begin{center}}\figure{samplepalette.pdf}\out{\end{center}}
-#'   }
+#' @param direction Sets the order of colors in the scale. If 1, the default,
+#'  colors are ordered from darkest to lightest. If -1, the order of colors is
+#'  reversed.
 #'
-#' See \link[viridisLite]{viridis} for more information on the color scale.
+#' @param option A character string indicating the color map option to use.
+#'  Eight options are available:
+#'  \itemize{
+#'   \item "magma" (or "A")
+#'   \item "inferno" (or "B")
+#'   \item "plasma" (or "C")
+#'   \item "viridis" (or "D")
+#'   \item "cividis" (or "E")
+#'   \item "rocket" (or "F")
+#'   \item "mako" (or "G")
+#'   \item "turbo" (or "H")
+#'  }
 #'
-#' @param alpha pass through parameter to \code{viridis}
-#'
-#' @param begin The (corrected) hue in [0,1] at which the viridis colormap begins.
-#'
-#' @param end The (corrected) hue in [0,1] at which the viridis colormap ends.
-#'
-#' @param direction Sets the order of colors in the scale. If 1, the default, colors
-#' are ordered from darkest to lightest. If -1, the order of colors is reversed.
-#'
-#' @param option A character string indicating the colormap option to use. Four
-#' options are available: "magma" (or "A"), "inferno" (or "B"), "plasma" (or "C"),
-#' "viridis" (or "D", the default option) and "cividis" (or "E").
-#'
-#' @author Bob Rudis \email{bob@@rud.is}
+#' @author Bob Rudis: \email{bob@@rud.is} / \href{https://twitter.com/hrbrmstr}{@@hrbrmstr}
+#' @author Simon Garnier: \email{garnier@@njit.edu} / \href{https://twitter.com/sjmgarnier}{@@sjmgarnier}
 #'
 #' @examples
 #' library(scales)
-#' show_col(viridis_pal()(10))
+#' show_col(viridis_pal()(12))
 #'
 #' @importFrom viridisLite viridis
 #'
@@ -45,57 +49,57 @@ viridis_pal <- function(alpha = 1, begin = 0, end = 1, direction = 1, option= "D
 }
 
 
-#' @rdname scale_viridis
+#' @title Viridis Color Scales for ggplot2
 #'
-#' @importFrom ggplot2 scale_fill_gradientn scale_color_gradientn discrete_scale
-#'
-#' @export
-scale_color_viridis <- function(..., alpha = 1, begin = 0, end = 1, direction = 1,
-                                discrete = FALSE, option = "D") {
-  if (discrete) {
-    discrete_scale("colour", "viridis", viridis_pal(alpha, begin, end, direction, option), ...)
-  } else {
-    scale_color_gradientn(colours = viridisLite::viridis(256, alpha, begin, end, direction, option), ...)
-  }
-}
-
-#' @rdname scale_viridis
-#' @aliases scale_color_viridis
-#' @export
-scale_colour_viridis <- scale_color_viridis
-
-#' Viridis color scales
-#'
-#' Uses the viridis color scale.
+#' @description Scale functions (fill and colour/color) for
+#'  \code{\link[ggplot2]{ggplot2}}.
 #'
 #' For \code{discrete == FALSE} (the default) all other arguments are as to
-#' \link[ggplot2]{scale_fill_gradientn} or \link[ggplot2]{scale_color_gradientn}.
-#' Otherwise the function will return a \code{discrete_scale} with the plot-computed
-#' number of colors.
+#'  \code{\link[ggplot2]{scale_fill_gradientn}} or
+#'  \code{\link[ggplot2]{scale_color_gradientn}}. Otherwise the function will
+#'  return a \code{\link[ggplot2]{discrete_scale}} with the plot-computed number
+#'  of colors.
 #'
-#' See \link[viridisLite]{viridis} for more information on the color scale.
+#' See \code{\link[viridisLite]{viridis}} and
+#'  \code{\link[viridisLite]{viridis.map}} for more information on the color
+#'  palettes.
 #'
-#' @param ... parameters to \code{discrete_scale} or \code{scale_fill_gradientn}
+#' @param ... Parameters to \code{\link[ggplot2]{discrete_scale}} if
+#'  \code{discrete == TRUE}, or \code{\link[ggplot2]{scale_fill_gradientn}}/
+#'  \code{\link[ggplot2]{scale_color_gradientn}} if \code{discrete == FALSE}.
 #'
-#' @param alpha pass through parameter to \code{viridis}
+#' @param alpha The alpha transparency, a number in [0,1], see argument alpha in
+#' \code{\link[grDevices]{hsv}}.
 #'
-#' @param begin The (corrected) hue in [0,1] at which the viridis colormap begins.
+#' @param begin The (corrected) hue in [0,1] at which the color map begins.
 #'
-#' @param end The (corrected) hue in [0,1] at which the viridis colormap ends.
+#' @param end The (corrected) hue in [0,1] at which the color map ends.
 #'
-#' @param direction Sets the order of colors in the scale. If 1, the default, colors
-#' are as output by \link[viridis]{viridis_pal}. If -1, the order of colors is reversed.
+#' @param direction Sets the order of colors in the scale. If 1, the default,
+#'  colors are as output by \code{\link[viridis]{viridis_pal}}. If -1, the order
+#'  of colors is reversed.
 #'
-#' @param discrete generate a discrete palette? (default: \code{FALSE} - generate continuous palette)
+#' @param discrete Generate a discrete palette? (default: \code{FALSE} -
+#'  generate continuous palette).
 #'
-#' @param option A character string indicating the colormap option to use. Four
-#' options are available: "magma" (or "A"), "inferno" (or "B"), "plasma" (or "C"),
-#' "viridis" (or "D", the default option) and "cividis" (or "E").
+#' @param option A character string indicating the color map option to use.
+#'  Eight options are available:
+#'  \itemize{
+#'   \item "magma" (or "A")
+#'   \item "inferno" (or "B")
+#'   \item "plasma" (or "C")
+#'   \item "viridis" (or "D")
+#'   \item "cividis" (or "E")
+#'   \item "rocket" (or "F")
+#'   \item "mako" (or "G")
+#'   \item "turbo" (or "H")
+#'  }
 #'
 #' @rdname scale_viridis
 #'
-#' @author Noam Ross \email{noam.ross@@gmail.com} / \href{https://twitter.com/noamross}{@@noamross} (continuous version),
-#'         Bob Rudis \email{bob@@rud.is} / \href{https://twitter.com/hrbrmstr}{@@hrbrmstr} (combined version)
+#' @author Noam Ross \email{noam.ross@@gmail.com} / \href{https://twitter.com/noamross}{@@noamross}
+#' @author Bob Rudis \email{bob@@rud.is} / \href{https://twitter.com/hrbrmstr}{@@hrbrmstr}
+#' @author Simon Garnier: \email{garnier@@njit.edu} / \href{https://twitter.com/sjmgarnier}{@@sjmgarnier}
 #'
 #' @importFrom ggplot2 scale_fill_gradientn scale_color_gradientn discrete_scale
 #'
@@ -104,20 +108,20 @@ scale_colour_viridis <- scale_color_viridis
 #' @examples
 #' library(ggplot2)
 #'
-#' # ripped from the pages of ggplot2
+#' # Ripped from the pages of ggplot2
 #' p <- ggplot(mtcars, aes(wt, mpg))
-#' p + geom_point(size=4, aes(colour = factor(cyl))) +
-#'     scale_color_viridis(discrete=TRUE) +
+#' p + geom_point(size = 4, aes(colour = factor(cyl))) +
+#'     scale_color_viridis(discrete = TRUE) +
 #'     theme_bw()
 #'
-#' # ripped from the pages of ggplot2
+#' # Ripped from the pages of ggplot2
 #' dsub <- subset(diamonds, x > 5 & x < 6 & y > 5 & y < 6)
-#' dsub$diff <- with(dsub, sqrt(abs(x-y))* sign(x-y))
-#' d <- ggplot(dsub, aes(x, y, colour=diff)) + geom_point()
+#' dsub$diff <- with(dsub, sqrt(abs(x - y)) * sign(x - y))
+#' d <- ggplot(dsub, aes(x, y, colour = diff)) + geom_point()
 #' d + scale_color_viridis() + theme_bw()
 #'
 #'
-#' # from the main viridis example
+#' # From the main viridis example
 #' dat <- data.frame(x = rnorm(10000), y = rnorm(10000))
 #'
 #' ggplot(dat, aes(x = x, y = y)) +
@@ -132,17 +136,20 @@ scale_colour_viridis <- scale_color_viridis
 #'
 #' ggplot(geyser, aes(x = duration, y = waiting)) +
 #'   xlim(0.5, 6) + ylim(40, 110) +
-#'   stat_density2d(aes(fill = ..level..), geom="polygon") +
+#'   stat_density2d(aes(fill = ..level..), geom = "polygon") +
 #'   theme_bw() +
-#'   theme(panel.grid=element_blank()) -> gg
+#'   theme(panel.grid = element_blank()) -> gg
 #'
 #' grid.arrange(
-#'   gg + scale_fill_viridis(option="A") + labs(x="Virdis A", y=NULL),
-#'   gg + scale_fill_viridis(option="B") + labs(x="Virdis B", y=NULL),
-#'   gg + scale_fill_viridis(option="C") + labs(x="Virdis C", y=NULL),
-#'   gg + scale_fill_viridis(option="D") + labs(x="Virdis D", y=NULL),
-#'   gg + scale_fill_viridis(option="E") + labs(x="Virdis E", y=NULL),
-#'   ncol=3, nrow=2
+#'   gg + scale_fill_viridis(option = "A") + labs(x = "Viridis A", y = NULL),
+#'   gg + scale_fill_viridis(option = "B") + labs(x = "Viridis B", y = NULL),
+#'   gg + scale_fill_viridis(option = "C") + labs(x = "Viridis C", y = NULL),
+#'   gg + scale_fill_viridis(option = "D") + labs(x = "Viridis D", y = NULL),
+#'   gg + scale_fill_viridis(option = "E") + labs(x = "Viridis E", y = NULL),
+#'   gg + scale_fill_viridis(option = "F") + labs(x = "Viridis F", y = NULL),
+#'   gg + scale_fill_viridis(option = "G") + labs(x = "Viridis G", y = NULL),
+#'   gg + scale_fill_viridis(option = "H") + labs(x = "Viridis H", y = NULL),
+#'   ncol = 4, nrow = 2
 #' )
 #'
 #' @export
@@ -155,6 +162,23 @@ scale_fill_viridis <- function(..., alpha = 1, begin = 0, end = 1, direction = 1
   }
 
 }
+
+#' @rdname scale_viridis
+#' @importFrom ggplot2 scale_fill_gradientn scale_color_gradientn discrete_scale
+#' @export
+scale_color_viridis <- function(..., alpha = 1, begin = 0, end = 1, direction = 1,
+                                discrete = FALSE, option = "D") {
+  if (discrete) {
+    discrete_scale("colour", "viridis", viridis_pal(alpha, begin, end, direction, option), ...)
+  } else {
+    scale_color_gradientn(colours = viridisLite::viridis(256, alpha, begin, end, direction, option), ...)
+  }
+}
+
+#' @rdname scale_viridis
+#' @aliases scale_color_viridis
+#' @export
+scale_colour_viridis <- scale_color_viridis
 
 
 #' @importFrom viridisLite viridis
@@ -176,3 +200,15 @@ viridisLite::plasma
 #' @importFrom viridisLite cividis
 #' @export
 viridisLite::cividis
+
+#' @importFrom viridisLite mako
+#' @export
+viridisLite::mako
+
+#' @importFrom viridisLite rocket
+#' @export
+viridisLite::rocket
+
+#' @importFrom viridisLite turbo
+#' @export
+viridisLite::turbo

@@ -2,46 +2,52 @@
 % Please edit documentation in R/scales.R
 \name{viridis_pal}
 \alias{viridis_pal}
-\title{Viridis palette (discrete)}
+\title{Viridis Color Palettes}
 \usage{
-viridis_pal(alpha = 1, begin = 0, end = 1, direction = 1,
-  option = "D")
+viridis_pal(alpha = 1, begin = 0, end = 1, direction = 1, option = "D")
 }
 \arguments{
-\item{alpha}{pass through parameter to \code{viridis}}
+\item{alpha}{The alpha transparency, a number in [0,1], see argument alpha in
+\code{\link[grDevices]{hsv}}.}
 
-\item{begin}{The (corrected) hue in [0,1] at which the viridis colormap begins.}
+\item{begin}{The (corrected) hue in [0,1] at which the color map begins.}
 
-\item{end}{The (corrected) hue in [0,1] at which the viridis colormap ends.}
+\item{end}{The (corrected) hue in [0,1] at which the color map ends.}
 
-\item{direction}{Sets the order of colors in the scale. If 1, the default, colors
-are ordered from darkest to lightest. If -1, the order of colors is reversed.}
+\item{direction}{Sets the order of colors in the scale. If 1, the default,
+colors are ordered from darkest to lightest. If -1, the order of colors is
+reversed.}
 
-\item{option}{A character string indicating the colormap option to use. Four
-options are available: "magma" (or "A"), "inferno" (or "B"), "plasma" (or "C"),
-"viridis" (or "D", the default option) and "cividis" (or "E").}
+\item{option}{A character string indicating the color map option to use.
+Eight options are available:
+\itemize{
+ \item "magma" (or "A")
+ \item "inferno" (or "B")
+ \item "plasma" (or "C")
+ \item "viridis" (or "D")
+ \item "cividis" (or "E")
+ \item "rocket" (or "F")
+ \item "mako" (or "G")
+ \item "turbo" (or "H")
+}}
 }
 \description{
-Viridis palette (discrete)
+A wrapper function around \code{\link[viridisLite]{viridis}} to
+ turn it into a palette function compatible with
+ \code{\link[ggplot2]{discrete_scale}}.
 }
 \details{
-\if{html}{Here is an example of a 20-element palette:
-
-  \out{<div style="text-align: center">}\figure{sample-palette.png}{options: style="width:474px;max-width:90\%;"}\out{</div>}
-
-  }
-\if{latex}{Here is an example of a 20-element palette:
-
-  \out{\begin{center}}\figure{samplepalette.pdf}\out{\end{center}}
-  }
-
-See \link[viridisLite]{viridis} for more information on the color scale.
+See \code{\link[viridisLite]{viridis}} and
+ \code{\link[viridisLite]{viridis.map}} for more information on the color
+ palettes.
 }
 \examples{
 library(scales)
-show_col(viridis_pal()(10))
+show_col(viridis_pal()(12))
 
 }
 \author{
-Bob Rudis \email{bob@rud.is}
+Bob Rudis: \email{bob@rud.is} / \href{https://twitter.com/hrbrmstr}{@hrbrmstr}
+
+Simon Garnier: \email{garnier@njit.edu} / \href{https://twitter.com/sjmgarnier}{@sjmgarnier}
 }

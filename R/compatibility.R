@@ -1,18 +1,39 @@
-#' Original 'viridis'and 'cividis' color map
+#' @title Color Map Data
 #'
-#' A dataset containing the original RGB values of the default Matplotlib color
-#'  map ('viridis') and the color vision deficiencies optimized color map
-#'  'cividis'.
-#'  Sources: \url{https://github.com/BIDS/colormap/blob/master/option_d.py} and
-#'  \url{https://github.com/pnnl/cmaputil/blob/master/colormaps/cividis.txt}.
+#' @description A data set containing the RGB values of the color maps included
+#'  in the package. These are:
+#'  \itemize{
+#'   \item 'magma', 'inferno', 'plasma', and 'viridis' as defined in Matplotlib
+#'    for Python. These color maps are designed in such a way that they will
+#'    analytically be perfectly perceptually-uniform, both in regular form and
+#'    also when converted to black-and-white. They are also designed to be
+#'    perceived by readers with the most common form of color blindness. They
+#'    were created by \href{https://github.com/stefanv}{Stéfan van der Walt}
+#'    and \href{https://github.com/njsmith}{Nathaniel Smith};
+#'   \item 'cividis', a corrected version of 'viridis', 'cividis', developed by
+#'    Jamie R. Nuñez, Christopher R. Anderton, and Ryan S. Renslow, and
+#'    originally ported to R by Marco Sciaini. It is designed to be perceived by
+#'    readers with all forms of color blindness;
+#'   \item 'rocket' and 'mako' as defined in Seaborn for Python;
+#'   \item 'turbo', an improved Jet rainbow color map for reducing false detail,
+#'    banding and color blindness ambiguity.
+#'  }
 #'
-#' @format A data frame with 1280 rows and 4 variables:
+#' @references
 #' \itemize{
-#'   \item R: Red value
-#'   \item G: Green value
-#'   \item B: Blue value
+#'    \item 'magma', 'inferno', 'plasma', and 'viridis': https://bids.github.io/colormap/
+#'   \item 'cividis': https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0199239
+#'   \item 'rocket' and 'mako': https://seaborn.pydata.org/index.html
+#'   \item 'turbo': https://ai.googleblog.com/2019/08/turbo-improved-rainbow-colormap-for.html
+#' }
+#'
+#' @format A data frame with 2048 rows and 4 variables:
+#' \itemize{
+#'   \item R: Red value;
+#'   \item G: Green value;
+#'   \item B: Blue value;
 #'   \item opt: The colormap "option" (A: magma; B: inferno; C: plasma;
-#'   D: viridis; E: cividis)
+#'    D: viridis; E: cividis; F: rocket; G: mako; H: turbo).
 #' }
 #'
 #' @export
