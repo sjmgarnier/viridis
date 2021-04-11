@@ -11,7 +11,5 @@ vignettes/*.html
 vignettes/*.pdf
 .Rproj.user
 .RData
-inst/doc
 cran_graphs.R
 cran_graphs2.R
-docs
