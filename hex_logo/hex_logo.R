@@ -5,6 +5,7 @@ library(dplyr)
 library(ggplot2)
 library(viridis)
 library(hexSticker)
+library(svglite)
 
 
 ### BIG TRIANGLE
@@ -69,9 +70,9 @@ for (i in 1:8) {
   print(g)
   dev.off()
 
-  # svg(paste0("hex_logo/", opt[i], ".svg"), width = 181 / 72, height = 209 / 72, bg = "transparent")
-  # print(g)
-  # dev.off()
+  svglite(paste0("hex_logo/", opt[i], ".svg"), width = 181 / 72, height = 209 / 72, bg = "transparent")
+  print(g)
+  dev.off()
 }
 
 
