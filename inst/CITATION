@@ -13,7 +13,7 @@ citEntry(
   number   = "",
   pages    = "",
   note     = note,
-  url      = "https://swarm-lab.github.io/viridis/",
+  url      = "https://sjmgarnier.github.io/viridis/",
   doi      = "",
   doi      = "10.5281/zenodo.4678327",
   textVersion = paste0(
