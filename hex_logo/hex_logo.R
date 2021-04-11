@@ -1,5 +1,6 @@
 library(geometry)
 library(sp)
+library(tibble)
 library(dplyr)
 library(ggplot2)
 library(viridis)
@@ -11,8 +12,7 @@ l <- 1.01
 x <- c(0, -l * sin(-2 * pi / 3), -l * sin(2 * pi / 3), 0) * l
 y <- c(l, l * cos(-2 * pi / 3), l * cos(2 * pi / 3), 1) * l
 
-big_t <- tibble(x =  x,
-                y = y)
+big_t <- tibble(x = x, y = y)
 
 
 ### SMALL TRIANGLES
@@ -48,17 +48,17 @@ hex <- data.frame(x = 1.35 * l * c(-sqrt(3) / 2, 0, rep(sqrt(3) / 2, 2), 0, rep(
 
 
 ### PLOT
-theme_hex <-  theme_void() + theme_transparent() +
+theme_hex <- theme_void() + theme_transparent() +
   theme(axis.ticks.length = unit(0, "mm"))
 
-opt <- c("magma", "inferno", "plasma", "viridis", "cividis")
-for (i in 1:5) {
+opt <- c("magma", "inferno", "plasma", "viridis", "cividis", "mako", "rocket", "turbo")
+for (i in 1:8) {
   g <- ggplot() +
     geom_polygon(data = hex, aes(x, y), color = "#99A5Ab", fill = "#242A30", size = 5) +
     geom_polygon(data = small_t, aes(x, y, group = group, fill = d), size = 0) +
     geom_polygon(data = big_t, aes(x, y), color = "#99A5Ab", alpha = 0, size = 1) +
     annotate(geom = "text", label = opt[i], x = 0, y = 1.5 * min(big_t$y),
-             family = "Open Sans Light", color = "#99A5Ab", size = 8) +
+             family = "Open Sans", color = "#99A5Ab", size = 8) +
     scale_fill_viridis(direction = -1, guide = FALSE, limits = range(small_t$d), option = opt[i]) +
     coord_equal(xlim = range(hex$x), ylim = range(hex$y)) +
     scale_x_continuous(expand = c(0.04, 0)) +
@@ -69,9 +69,9 @@ for (i in 1:5) {
   print(g)
   dev.off()
 
-  svg(paste0("hex_logo/", opt[i], ".svg"), width = 181 / 72, height = 209 / 72, bg = "transparent")
-  print(g)
-  dev.off()
+  # svg(paste0("hex_logo/", opt[i], ".svg"), width = 181 / 72, height = 209 / 72, bg = "transparent")
+  # print(g)
+  # dev.off()
 }
 
 

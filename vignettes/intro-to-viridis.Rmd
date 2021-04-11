@@ -1,5 +1,5 @@
 ---
-title: "The viridis color palettes"
+title: "Introduction to the viridis color maps"
 author:
   - "Bob Rudis, Noam Ross and Simon Garnier"
 date: "`r Sys.Date()`"
@@ -8,7 +8,7 @@ output:
     toc: true
     toc_depth: 1
 vignette: >
-  %\VignetteIndexEntry{Intro to the viridis color palette}
+  %\VignetteIndexEntry{Introduction to the viridis color maps}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -24,7 +24,7 @@ img {
 
 Use the color scales in this package to make plots that are pretty,
 better represent your data, easier to read by those with colorblindness, and
-print well in grey scale.
+print well in gray scale.
 
 Install **viridis** like any R package:
 
@@ -58,25 +58,62 @@ ggplot(data.frame(x = rnorm(10000), y = rnorm(10000)), aes(x = x, y = y)) +
   scale_fill_viridis() + theme_bw()
 ```
 
+---
+
 # Introduction
 
-The [**viridis**](https://cran.r-project.org/package=viridis) package
-brings to R color scales created by [Stéfan van der Walt](https://github.com/stefanv) and [Nathaniel Smith](https://github.com/njsmith) for the Python **matplotlib** library.
+[`viridis`](https://cran.r-project.org/package=viridis), and its companion 
+package [`viridisLite`](https://cran.r-project.org/package=viridisLite) 
+provide a series of color maps that are designed to improve graph readability 
+for readers with common forms of color blindness and/or color vision deficiency. 
+The color maps are also perceptually-uniform, both in regular form and also when 
+converted to black-and-white for printing. 
 
-These color scales are designed to be:
+These color maps are designed to be:
 
-- **Colorful**, spanning as wide a palette as possible so as to make differences easy to see,
-- **Perceptually uniform**, meaning that values close to each other have similar-appearing colors and values far away from each other have more different-appearing colors, consistently across the range of values,
-- **Robust to colorblindness**, so that the above properties hold true for people with common forms of colorblindness, as well as in grey scale printing, and
+- **Colorful**, spanning as wide a palette as possible so as to make differences 
+ easy to see,
+- **Perceptually uniform**, meaning that values close to each other have 
+ similar-appearing colors and values far away from each other have more 
+different-appearing colors, consistently across the range of values,
+- **Robust to colorblindness**, so that the above properties hold true for 
+ people with common forms of colorblindness, as well as in grey scale printing, and
 - **Pretty**, oh so pretty
 
-If you want to know more about the science behind creating these color scales, van
-der Walt and Smith's [talk at SciPy 2015](https://www.youtube.com/watch?list=PLYx7XA2nY5Gcpabmu61kKcToLz0FapmHu&v=xAoljeRJ3lU) (YouTube) is quite interesting. On the project [website](http://bids.github.io/colormap/) you will find more details and a Python tool for creating other scales with similar properties.
+`viridisLite` provides the base functions for generating the color maps in base 
+`R`. The package is meant to be as lightweight and dependency-free as possible 
+for maximum compatibility with all the `R` ecosystem. [`viridis`](https://cran.r-project.org/package=viridis)
+provides additional functionalities, in particular bindings for `ggplot2`.
+
+--- 
 
 # The Color Scales
 
-The package contains four color scales: "Viridis", the primary choice, and three 
-alternatives with similar properties, "magma", "plasma", and "inferno."
+The package contains eight color scales: "viridis", the primary choice, and 
+five alternatives with similar properties - "magma", "plasma", "inferno", 
+"civids", "mako", and "rocket" -, and a rainbow color map - "turbo". 
+
+The color maps `viridis`, `magma`, `inferno`, and `plasma` were created by 
+Stéfan van der Walt ([@stefanv](https://github.com/stefanv)) and Nathaniel Smith ([@njsmith](https://github.com/njsmith)). If you want to know more about the 
+science behind the creation of these color maps, you can watch this 
+[presentation of `viridis`](https://youtu.be/xAoljeRJ3lU) by their authors at 
+[SciPy 2015](http://scipy2015.scipy.org/). 
+
+The color map `cividis` is a corrected version of 'viridis', developed by 
+Jamie R. Nuñez, Christopher R. Anderton, and Ryan S. Renslow, and originally 
+ported to `R` by Marco Sciaini ([@msciain](https://github.com/marcosci)). More 
+info about `cividis` can be found in 
+[this paper](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0199239).
+
+The color maps `mako` and `rocket` were originally created for the `Seaborn` 
+statistical data visualization package for Python. More info about `mako` and 
+`rocket` can be found on the 
+[`Seaborn` website](https://seaborn.pydata.org/tutorial/color_palettes.html).
+
+The color map `turbo` was developed by Anton Mikhailov to address the 
+shortcomings of the Jet rainbow color map such as false detail, banding and 
+color blindness ambiguity. More infor about `turbo` can be found
+[here](https://ai.googleblog.com/2019/08/turbo-improved-rainbow-colormap-for.html).
 
 ```{r for_repeat, include=FALSE}
 n_col <- 128
@@ -94,19 +131,24 @@ library(colorspace)
 library(dichromat)
 ```
 
-```{r show_scales, echo=FALSE,fig.height=3.575}
-par(mfrow=c(5, 1), mar=rep(1, 4))
+```{r show_scales, echo=FALSE, fig.height=3.575}
+par(mfrow=c(8, 1), mar=rep(1, 4))
 img(rev(viridis(n_col)), "viridis")
 img(rev(magma(n_col)), "magma")
 img(rev(plasma(n_col)), "plasma")
 img(rev(inferno(n_col)), "inferno")
 img(rev(cividis(n_col)), "cividis")
+img(rev(mako(n_col)), "mako")
+img(rev(rocket(n_col)), "rocket")
+img(rev(turbo(n_col)), "turbo")
 ```
+
+---
 
 # Comparison
 
-Let's compare the viridis and magma scales against these other commonly used sequential color
-palettes in R:
+Let's compare the viridis and magma scales against these other commonly used 
+sequential color palettes in R:
 
 - Base R palettes: `rainbow.colors`, `heat.colors`, `cm.colors`
 - The default **ggplot2** palette
@@ -132,7 +174,8 @@ large *perceptual range*. It makes as much use of the available color space as
 possible while maintaining uniformity.
 
 Now, let's compare these as they might appear under various forms of colorblindness,
-which can be simulated using the **[dichromat](https://cran.r-project.org/package=dichromat)** package:
+which can be simulated using the **[dichromat](https://cran.r-project.org/package=dichromat)** 
+package:
 
 ### Green-Blind (Deuteranopia)
 
@@ -193,11 +236,14 @@ does not wash out, but it has a low perceptual range - there's not much contrast
 between low and high values.  The "viridis" and "magma" scales do better - they cover a wide perceptual range in brightness in brightness and blue-yellow, and do not rely as much on red-green contrast. They do less well
 under tritanopia (blue-blindness), but this is an extrememly rare form of colorblindness.
 
+--- 
+
 # Usage
 
-The `viridis()` function produces the viridis color scale.  You can choose
+The `viridis()` function produces the `viridis` color scale.  You can choose
 the other color scale options using the `option` parameter or the convenience
-functions `magma()`, `plasma()`, and `inferno()`.
+functions `magma()`, `plasma()`, `inferno()`, `cividis()`, `mako()`, `rocket`()`,
+and `turbo()`.
 
 Here the `inferno()` scale is used for a raster of U.S. max temperature:
 
@@ -214,9 +260,9 @@ image(us, col=inferno(256), asp=1, axes=FALSE, xaxs="i", xaxt='n', yaxt='n', ann
 ```
 
 The package also contains color scale functions for **ggplot**
-plots: `scale_color_viridis()` and `scale_fill_viridis()`.  As with `viridis()`, you can use the other scales with the `option` argument
-in the `ggplot` scales.  Here the "magma" scale is used for a cloropleth
-map of U.S. unemployment:
+plots: `scale_color_viridis()` and `scale_fill_viridis()`. As with `viridis()`, 
+you can use the other scales with the `option` argument in the `ggplot` scales.  
+Here the "magma" scale is used for a cloropleth map of U.S. unemployment:
 
 ```{r, ggplot2}
 unemp <- read.csv("http://datasets.flowingdata.com/unemployment09.csv",
@@ -265,13 +311,6 @@ Here are some examples of viridis being used in the wild:
 [James Curley](https://twitter.com/jalapic) uses **viridis** for matrix plots ([Code](https://gist.github.com/jalapic/9a1c069aa8cee4089c1e)):
 
 [![](http://pbs.twimg.com/media/CQWw9EgWsAAoUi0.png)](https://twitter.com/jalapic/status/650120284901634048/photo/1)
-
-[Jeff Hollister](https://twitter.com/jhollist) uses the viridis as a discrete categorical scale ([Code](http://github.com/USEPA/LakeTrophicModelling/blob/master/vignettes/manuscript.Rmd#cbpalette---c0072b2999999f0e442d55e00)):
-
-
-[![](http://github.com/USEPA/LakeTrophicModelling/blob/master/vignettes/manuscript_files/figure-latex/gis_probability_map-1.jpeg?raw=TRUE)](http://github.com/USEPA/LakeTrophicModelling/blob/master/vignettes/manuscript_files/figure-latex/gis_probability_map-1.jpeg)
-
-
 
 [Christopher Moore](https://twitter.com/lifedispersing) created these contour 
 plots of potential in a dynamic plankton-consumer model:

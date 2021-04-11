@@ -1,8 +1,8 @@
-## ----setup, include=FALSE------------------------------------------------
+## ----setup, include=FALSE-----------------------------------------------------
 library(viridis)
 knitr::opts_chunk$set(echo = TRUE, fig.retina=2, fig.width=7, fig.height=5)
 
-## ----tldr_base, message=FALSE--------------------------------------------
+## ----tldr_base, message=FALSE-------------------------------------------------
 x <- y <- seq(-8*pi, 8*pi, len = 40)
 r <- sqrt(outer(x^2, y^2, "+"))
 filled.contour(cos(r^2)*exp(-r/(2*pi)), 
@@ -10,13 +10,13 @@ filled.contour(cos(r^2)*exp(-r/(2*pi)),
                color.palette=viridis,
                asp=1)
 
-## ---- tldr_ggplot, message=FALSE-----------------------------------------
+## ---- tldr_ggplot, message=FALSE----------------------------------------------
 library(ggplot2)
 ggplot(data.frame(x = rnorm(10000), y = rnorm(10000)), aes(x = x, y = y)) +
   geom_hex() + coord_fixed() +
   scale_fill_viridis() + theme_bw()
 
-## ----for_repeat, include=FALSE-------------------------------------------
+## ----for_repeat, include=FALSE------------------------------------------------
 n_col <- 128
 
 img <- function(obj, nam) {
@@ -24,21 +24,24 @@ img <- function(obj, nam) {
         main = nam, ylab = "", xaxt = "n", yaxt = "n",  bty = "n")
 }
 
-## ----begin, message=FALSE, include=FALSE---------------------------------
+## ----begin, message=FALSE, include=FALSE--------------------------------------
 library(viridis)
 library(scales)
 library(colorspace)
 library(dichromat)
 
-## ----show_scales, echo=FALSE,fig.height=3.575----------------------------
-par(mfrow=c(5, 1), mar=rep(1, 4))
+## ----show_scales, echo=FALSE, fig.height=3.575--------------------------------
+par(mfrow=c(8, 1), mar=rep(1, 4))
 img(rev(viridis(n_col)), "viridis")
 img(rev(magma(n_col)), "magma")
 img(rev(plasma(n_col)), "plasma")
 img(rev(inferno(n_col)), "inferno")
 img(rev(cividis(n_col)), "cividis")
+img(rev(mako(n_col)), "mako")
+img(rev(rocket(n_col)), "rocket")
+img(rev(turbo(n_col)), "turbo")
 
-## ----01_normal, echo=FALSE-----------------------------------------------
+## ----01_normal, echo=FALSE----------------------------------------------------
 par(mfrow=c(7, 1), mar=rep(1, 4))
 img(rev(rainbow(n_col)), "rainbow")
 img(rev(heat.colors(n_col)), "heat")
@@ -48,7 +51,7 @@ img(gradient_n_pal(brewer_pal(type="seq", palette = "YlGnBu")(9))(seq(0, 1, leng
 img(rev(viridis(n_col)), "viridis")
 img(rev(magma(n_col)), "magma")
 
-## ----02_deutan, echo=FALSE-----------------------------------------------
+## ----02_deutan, echo=FALSE----------------------------------------------------
 par(mfrow=c(7, 1), mar=rep(1, 4))
 img(dichromat(rev(rainbow(n_col)), "deutan"), "rainbow")
 img(dichromat(rev(heat.colors(n_col)), "deutan"), "heat")
@@ -58,7 +61,7 @@ img(dichromat(gradient_n_pal(brewer_pal(type="seq", palette = "YlGnBu")(9))(seq(
 img(dichromat(rev(viridis(n_col)), "deutan"), "viridis")
 img(dichromat(rev(magma(n_col)), "deutan"), "magma")
 
-## ----03_protan, echo=FALSE-----------------------------------------------
+## ----03_protan, echo=FALSE----------------------------------------------------
 par(mfrow=c(7, 1), mar=rep(1, 4))
 img(dichromat(rev(rainbow(n_col)), "protan"), "rainbow")
 img(dichromat(rev(heat.colors(n_col)), "protan"), "heat")
@@ -68,7 +71,7 @@ img(dichromat(gradient_n_pal(brewer_pal(type="seq", palette = "YlGnBu")(9))(seq(
 img(dichromat(rev(viridis(n_col)), "protan"), "viridis")
 img(dichromat(rev(magma(n_col)), "protan"), "magma")
 
-## ----04_tritan, echo=FALSE-----------------------------------------------
+## ----04_tritan, echo=FALSE----------------------------------------------------
 par(mfrow=c(7, 1), mar=rep(1, 4))
 img(dichromat(rev(rainbow(n_col)), "tritan"), "rainbow")
 img(dichromat(rev(heat.colors(n_col)), "tritan"), "heat")
@@ -78,7 +81,7 @@ img(dichromat(gradient_n_pal(brewer_pal(type="seq", palette = "YlGnBu")(9))(seq(
 img(dichromat(rev(viridis(n_col)), "tritan"), "viridis")
 img(dichromat(rev(magma(n_col)), "tritan"), "magma")
 
-## ----05_desatureated, echo=FALSE-----------------------------------------
+## ----05_desatureated, echo=FALSE----------------------------------------------
 par(mfrow=c(7, 1), mar=rep(1, 4))
 img(desaturate(rev(rainbow(n_col))), "rainbow")
 img(desaturate(rev(heat.colors(n_col))), "heat")
@@ -88,7 +91,7 @@ img(desaturate(gradient_n_pal(brewer_pal(type="seq", palette = "YlGnBu")(9))(seq
 img(desaturate(rev(viridis(n_col))), "viridis")
 img(desaturate(rev(magma(n_col))), "magma")
 
-## ----tempmap, message=FALSE----------------------------------------------
+## ----tempmap, message=FALSE---------------------------------------------------
 library(rasterVis)
 library(httr)
 par(mfrow=c(1,1), mar=rep(0.5, 4))
@@ -99,7 +102,7 @@ us <- raster("us.tmax_nohads_ll_20150219_float.tif")
 us <- projectRaster(us, crs="+proj=aea +lat_1=29.5 +lat_2=45.5 +lat_0=37.5 +lon_0=-96 +x_0=0 +y_0=0 +ellps=GRS80 +datum=NAD83 +units=m +no_defs")
 image(us, col=inferno(256), asp=1, axes=FALSE, xaxs="i", xaxt='n', yaxt='n', ann=FALSE)
 
-## ---- ggplot2------------------------------------------------------------
+## ---- ggplot2-----------------------------------------------------------------
 unemp <- read.csv("http://datasets.flowingdata.com/unemployment09.csv",
                   header = FALSE, stringsAsFactors = FALSE)
 names(unemp) <- c("id", "state_fips", "county_fips", "name", "year",
@@ -128,7 +131,7 @@ ggplot(choropleth, aes(long, lat, group = group)) +
         axis.ticks = element_blank(), axis.title = element_blank()) +
   scale_fill_viridis(option="magma")
 
-## ----discrete------------------------------------------------------------
+## ----discrete-----------------------------------------------------------------
 p <- ggplot(mtcars, aes(wt, mpg))
 p + geom_point(size=4, aes(colour = factor(cyl))) +
     scale_color_viridis(discrete=TRUE) +

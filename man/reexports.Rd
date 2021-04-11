@@ -4,14 +4,13 @@
 \name{reexports}
 \alias{reexports}
 \alias{viridis}
-\alias{reexports}
 \alias{inferno}
-\alias{reexports}
 \alias{magma}
-\alias{reexports}
 \alias{plasma}
-\alias{reexports}
 \alias{cividis}
+\alias{mako}
+\alias{rocket}
+\alias{turbo}
 \title{Objects exported from other packages}
 \keyword{internal}
 \description{
@@ -19,6 +18,6 @@ These objects are imported from other packages. Follow the links
 below to see their documentation.
 
 \describe{
-  \item{viridisLite}{\code{\link[viridisLite]{viridis}}, \code{\link[viridisLite]{inferno}}, \code{\link[viridisLite]{magma}}, \code{\link[viridisLite]{plasma}}, \code{\link[viridisLite]{cividis}}}
+  \item{viridisLite}{\code{\link[viridisLite:viridis]{cividis}}, \code{\link[viridisLite:viridis]{inferno}}, \code{\link[viridisLite:viridis]{magma}}, \code{\link[viridisLite:viridis]{mako}}, \code{\link[viridisLite:viridis]{plasma}}, \code{\link[viridisLite:viridis]{rocket}}, \code{\link[viridisLite:viridis]{turbo}}, \code{\link[viridisLite]{viridis}}}
 }}
 
