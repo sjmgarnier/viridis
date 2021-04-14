@@ -97,7 +97,7 @@ The color maps `viridis`, `magma`, `inferno`, and `plasma` were created by
 Stéfan van der Walt ([@stefanv](https://github.com/stefanv)) and Nathaniel Smith ([@njsmith](https://github.com/njsmith)). If you want to know more about the 
 science behind the creation of these color maps, you can watch this 
 [presentation of `viridis`](https://youtu.be/xAoljeRJ3lU) by their authors at 
-[SciPy 2015](http://scipy2015.scipy.org/). 
+[SciPy 2015](https://scipy2015.scipy.org/). 
 
 The color map `cividis` is a corrected version of 'viridis', developed by 
 Jamie R. Nuñez, Christopher R. Anderton, and Ryan S. Renslow, and originally 
@@ -152,8 +152,8 @@ sequential color palettes in R:
 
 - Base R palettes: `rainbow.colors`, `heat.colors`, `cm.colors`
 - The default **ggplot2** palette
-- Sequential [colorbrewer](http://colorbrewer2.org/) palettes, both default blues and
-  the more viridis-like yellow-green-blue
+- Sequential [colorbrewer](https://colorbrewer2.org/) palettes, both default 
+  blues and the more viridis-like yellow-green-blue
 
 ```{r 01_normal, echo=FALSE}
 par(mfrow=c(7, 1), mar=rep(1, 4))

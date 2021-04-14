@@ -18,9 +18,8 @@ There were no ERRORs or WARNINGs.
 
 ## Downstream dependencies
 
-Downstream dependencies on CRAN and Bioconductor were checked with 
-'revdepcheck::revdep_check()'. All errors, warnings, and notes were found to be
-unrelated to this package. 
+Downstream dependencies on CRAN were checked with 'revdepcheck::revdep_check()'. 
+No new error, warning, and note were found to be caused by this package. 
 
 ## CRAN team comments
 
