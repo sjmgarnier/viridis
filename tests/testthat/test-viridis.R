@@ -23,6 +23,7 @@ context("colorandfill")
 test_that("visual elements are correct", {
 
   skip_on_cran()
+  skip_if(getRversion() < 4.1)
 
   library(ggplot2)
   library(MASS)

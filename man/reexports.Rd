@@ -11,6 +11,7 @@
 \alias{mako}
 \alias{rocket}
 \alias{turbo}
+\alias{viridis.map}
 \title{Objects exported from other packages}
 \keyword{internal}
 \description{
@@ -18,6 +19,6 @@ These objects are imported from other packages. Follow the links
 below to see their documentation.
 
 \describe{
-  \item{viridisLite}{\code{\link[viridisLite:viridis]{cividis}}, \code{\link[viridisLite:viridis]{inferno}}, \code{\link[viridisLite:viridis]{magma}}, \code{\link[viridisLite:viridis]{mako}}, \code{\link[viridisLite:viridis]{plasma}}, \code{\link[viridisLite:viridis]{rocket}}, \code{\link[viridisLite:viridis]{turbo}}, \code{\link[viridisLite]{viridis}}}
+  \item{viridisLite}{\code{\link[viridisLite:viridis]{cividis}}, \code{\link[viridisLite:viridis]{inferno}}, \code{\link[viridisLite:viridis]{magma}}, \code{\link[viridisLite:viridis]{mako}}, \code{\link[viridisLite:viridis]{plasma}}, \code{\link[viridisLite:viridis]{rocket}}, \code{\link[viridisLite:viridis]{turbo}}, \code{\link[viridisLite]{viridis}}, \code{\link[viridisLite]{viridis.map}}}
 }}
 

@@ -20,7 +20,6 @@ Description: Color maps designed to improve graph readability for readers with
     'ggplot2' bindings can be found at 
     <https://cran.r-project.org/package=viridisLite>.
 License: MIT + file LICENSE
-LazyData: TRUE
 Encoding: UTF-8
 Depends:
     R (>= 2.10),
@@ -46,6 +45,6 @@ Suggests:
     rmarkdown,
     rgdal
 VignetteBuilder: knitr
-URL: http://sjmgarnier.github.io/viridis, https://github.com/sjmgarnier/viridis
+URL: https://sjmgarnier.github.io/viridis/, https://github.com/sjmgarnier/viridis/
 BugReports: https://github.com/sjmgarnier/viridis/issues
 RoxygenNote: 7.1.1
