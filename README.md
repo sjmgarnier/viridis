@@ -5,7 +5,7 @@
 [![rstudio mirror total downloads](http://cranlogs.r-pkg.org/badges/grand-total/viridis?color=yellowgreen)](https://github.com/metacran/cranlogs.app)
 [![R-CMD-check](https://github.com/sjmgarnier/viridis/workflows/R-CMD-check/badge.svg)](https://github.com/sjmgarnier/viridis/actions)
 [![Coverage Status](https://img.shields.io/codecov/c/github/sjmgarnier/viridis/master.svg)](https://codecov.io/github/sjmgarnier/viridis?branch=master)
-[![DOI](https://zenodo.org/badge/44360137.svg)](https://zenodo.org/badge/latestdoi/44360137)
+[![DOI](https://zenodo.org/badge/39225838.svg)](https://zenodo.org/badge/latestdoi/39225838)
 
 
 ## Description
