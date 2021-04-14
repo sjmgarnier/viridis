@@ -212,3 +212,7 @@ viridisLite::rocket
 #' @importFrom viridisLite turbo
 #' @export
 viridisLite::turbo
+
+#' @importFrom viridisLite viridis.map
+#' @export
+viridisLite::viridis.map

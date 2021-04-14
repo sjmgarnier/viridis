@@ -46,6 +46,6 @@ Suggests:
     rmarkdown,
     rgdal
 VignetteBuilder: knitr
-URL: https://sjmgarnier.github.io/viridis, https://github.com/sjmgarnier/viridis
+URL: https://sjmgarnier.github.io/viridis/, https://github.com/sjmgarnier/viridis/
 BugReports: https://github.com/sjmgarnier/viridis/issues
 RoxygenNote: 7.1.1
