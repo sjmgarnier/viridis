@@ -14,7 +14,7 @@ citEntry(
   pages    = "",
   note     = note,
   url      = "https://sjmgarnier.github.io/viridis/",
-  doi      = "",
+  doi      = "10.5281/zenodo.4679424",
   doi      = "10.5281/zenodo.4678327",
   textVersion = paste0(
     "Simon Garnier, Noam Ross, Robert Rudis, Antônio P. Camargo, Marco Sciaini, and Cédric Scherer (", year, "). Rvision - Colorblind-Friendly Color Maps for R. ", note, "."
