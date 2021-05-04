@@ -265,13 +265,14 @@ you can use the other scales with the `option` argument in the `ggplot` scales.
 Here the "magma" scale is used for a cloropleth map of U.S. unemployment:
 
 ```{r, ggplot2}
-unemp <- read.csv("http://datasets.flowingdata.com/unemployment09.csv",
-                  header = FALSE, stringsAsFactors = FALSE)
-names(unemp) <- c("id", "state_fips", "county_fips", "name", "year",
-                  "?", "?", "?", "rate")
-unemp$county <- tolower(gsub(" County, [A-Z]{2}", "", unemp$name))
-unemp$county <- gsub("^(.*) parish, ..$","\\1", unemp$county)
-unemp$state <- gsub("^.*([A-Z]{2}).*$", "\\1", unemp$name)
+# unemp <- read.csv("http://datasets.flowingdata.com/unemployment09.csv",
+#                   header = FALSE, stringsAsFactors = FALSE)
+# names(unemp) <- c("id", "state_fips", "county_fips", "name", "year",
+#                   "?", "?", "?", "rate")
+# unemp$county <- tolower(gsub(" County, [A-Z]{2}", "", unemp$name))
+# unemp$county <- gsub("^(.*) parish, ..$","\\1", unemp$county)
+# unemp$state <- gsub("^.*([A-Z]{2}).*$", "\\1", unemp$name)
+data(unemp)
 
 county_df <- map_data("county", projection = "albers", parameters = c(39, 45))
 names(county_df) <- c("long", "lat", "group", "order", "state_name", "county")
