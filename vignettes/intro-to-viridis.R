@@ -103,13 +103,14 @@ us <- projectRaster(us, crs="+proj=aea +lat_1=29.5 +lat_2=45.5 +lat_0=37.5 +lon_
 image(us, col=inferno(256), asp=1, axes=FALSE, xaxs="i", xaxt='n', yaxt='n', ann=FALSE)
 
 ## ---- ggplot2-----------------------------------------------------------------
-unemp <- read.csv("http://datasets.flowingdata.com/unemployment09.csv",
-                  header = FALSE, stringsAsFactors = FALSE)
-names(unemp) <- c("id", "state_fips", "county_fips", "name", "year",
-                  "?", "?", "?", "rate")
-unemp$county <- tolower(gsub(" County, [A-Z]{2}", "", unemp$name))
-unemp$county <- gsub("^(.*) parish, ..$","\\1", unemp$county)
-unemp$state <- gsub("^.*([A-Z]{2}).*$", "\\1", unemp$name)
+# unemp <- read.csv("http://datasets.flowingdata.com/unemployment09.csv",
+#                   header = FALSE, stringsAsFactors = FALSE)
+# names(unemp) <- c("id", "state_fips", "county_fips", "name", "year",
+#                   "?", "?", "?", "rate")
+# unemp$county <- tolower(gsub(" County, [A-Z]{2}", "", unemp$name))
+# unemp$county <- gsub("^(.*) parish, ..$","\\1", unemp$county)
+# unemp$state <- gsub("^.*([A-Z]{2}).*$", "\\1", unemp$name)
+data(unemp)
 
 county_df <- map_data("county", projection = "albers", parameters = c(39, 45))
 names(county_df) <- c("long", "lat", "group", "order", "state_name", "county")

@@ -1,4 +1,17 @@
-# viridisLite 0.4.0
+# viridisLite 0.6.1
+
+## New features
+
+* N/A. 
+
+## Minor improvements and fixes
+
+* Include unemployment data in package to avoid CRAN check errors when original
+ data is not accessible. 
+
+---
+
+# viridisLite 0.6.0
 
 ## New features
 

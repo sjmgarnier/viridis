@@ -15,3 +15,4 @@ README.md
 ^pkgdown$
 ^revdep$
 cran-comments.md
+^CRAN-RELEASE$
