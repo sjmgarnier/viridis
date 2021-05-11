@@ -1,4 +1,4 @@
-# viridisLite 0.6.1
+# viridis 0.6.1
 
 ## New features
 
@@ -11,7 +11,7 @@
 
 ---
 
-# viridisLite 0.6.0
+# viridis 0.6.0
 
 ## New features
 
