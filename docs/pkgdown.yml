@@ -1,9 +1,9 @@
-pandoc: 2.11.4
+pandoc: 2.14.0.3
 pkgdown: 1.6.1
 pkgdown_sha: ~
 articles:
   intro-to-viridis: intro-to-viridis.html
-last_built: 2021-05-11T05:29Z
+last_built: 2021-10-11T13:16Z
 urls:
   reference: https://sjmgarnier.github.io/viridis/reference
   article: https://sjmgarnier.github.io/viridis/articles
