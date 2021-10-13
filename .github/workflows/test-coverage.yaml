@@ -36,6 +36,11 @@ jobs:
           key: ${{ runner.os }}-${{ hashFiles('.github/R-version') }}-1-${{ hashFiles('.github/depends.Rds') }}
           restore-keys: ${{ runner.os }}-${{ hashFiles('.github/R-version') }}-1-
 
+      - name: Install system dependencies (Mac)
+        if: runner.os == 'macOS'
+        run: |
+          brew install gdal proj geos
+
       - name: Install dependencies
         run: |
           install.packages(c("remotes"))
