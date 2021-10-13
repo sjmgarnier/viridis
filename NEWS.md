@@ -1,3 +1,15 @@
+# viridis 0.6.2
+
+## New features
+
+* N/A. 
+
+## Minor improvements and fixes
+
+* Fix minor check warnings requested by CRAN. 
+
+---
+
 # viridis 0.6.1
 
 ## New features
