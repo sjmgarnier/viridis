@@ -3,7 +3,7 @@ pkgdown: 1.6.1
 pkgdown_sha: ~
 articles:
   intro-to-viridis: intro-to-viridis.html
-last_built: 2021-10-13T11:29Z
+last_built: 2021-10-13T11:36Z
 urls:
   reference: https://sjmgarnier.github.io/viridis/reference
   article: https://sjmgarnier.github.io/viridis/articles
