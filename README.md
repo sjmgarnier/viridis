@@ -62,7 +62,7 @@ The color maps `viridis`, `magma`, `inferno`, and `plasma` were created by
 Stéfan van der Walt ([@stefanv](https://github.com/stefanv)) and Nathaniel Smith ([@njsmith](https://github.com/njsmith)). If you want to know more about the 
 science behind the creation of these color maps, you can watch this 
 [presentation of `viridis`](https://youtu.be/xAoljeRJ3lU) by their authors at 
-[SciPy 2015](https://scipy2015.scipy.org/). 
+SciPy 2015. 
 
 The color map `cividis` is a corrected version of 'viridis', developed by 
 Jamie R. Nuñez, Christopher R. Anderton, and Ryan S. Renslow, and originally 
