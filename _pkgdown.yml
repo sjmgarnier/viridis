@@ -1,12 +1,12 @@
 url: https://sjmgarnier.github.io/viridis
 
 template:
-  params:
+    bootstrap: 5
     bootswatch: simplex
 
 authors:
   Simon Garnier:
-    href: http://www.theswarmlab.com
+    href: https://www.theswarmlab.com
 
 development:
   mode: unreleased
