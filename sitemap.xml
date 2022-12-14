@@ -1,7 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://sjmgarnier.github.io/viridis/404.html</loc>
+  </url>
+  <url>
+    <loc>https://sjmgarnier.github.io/viridis/LICENSE-text.html</loc>
+  </url>
+  <url>
+    <loc>https://sjmgarnier.github.io/viridis/articles/index.html</loc>
+  </url>
+  <url>
+    <loc>https://sjmgarnier.github.io/viridis/articles/intro-to-viridis.html</loc>
+  </url>
+  <url>
+    <loc>https://sjmgarnier.github.io/viridis/authors.html</loc>
+  </url>
+  <url>
     <loc>https://sjmgarnier.github.io/viridis/index.html</loc>
+  </url>
+  <url>
+    <loc>https://sjmgarnier.github.io/viridis/news/index.html</loc>
+  </url>
+  <url>
+    <loc>https://sjmgarnier.github.io/viridis/reference/index.html</loc>
   </url>
   <url>
     <loc>https://sjmgarnier.github.io/viridis/reference/reexports.html</loc>
@@ -14,8 +35,5 @@
   </url>
   <url>
     <loc>https://sjmgarnier.github.io/viridis/reference/viridis_pal.html</loc>
-  </url>
-  <url>
-    <loc>https://sjmgarnier.github.io/viridis/articles/intro-to-viridis.html</loc>
   </url>
 </urlset>
