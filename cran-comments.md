@@ -13,7 +13,10 @@
 
 ## R CMD check results
 
-There were no ERRORs or WARNINGs.
+There were no ERRORs or WARNINGs. There are NOTEs about possibly invalid URLs. 
+They are all related to URLs pointing at Twitter profiles. Twitter does not 
+allow non-logged-in users to access user profiles anymore, preventing the URL
+verification. All URLs have been manually checked and are functional. 
 
 ## Downstream dependencies
 
