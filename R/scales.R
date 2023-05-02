@@ -95,6 +95,11 @@ viridis_pal <- function(alpha = 1, begin = 0, end = 1, direction = 1, option= "D
 #'   \item "turbo" (or "H")
 #'  }
 #'
+#' @param aesthetics Character string or vector of character strings listing the
+#'  name(s) of the aesthetic(s) that this scale works with. This can be useful,
+#'  for example, to apply colour settings to the colour and fill aesthetics at
+#'  the same time, via aesthetics = c("colour", "fill").
+#'
 #' @rdname scale_viridis
 #'
 #' @author Noam Ross \email{noam.ross@@gmail.com} / \href{https://twitter.com/noamross}{@@noamross}

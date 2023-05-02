@@ -26,7 +26,6 @@ Depends:
     R (>= 2.10),
     viridisLite (>= 0.4.0)
 Imports:
-    stats,
     ggplot2 (>= 1.0.1),
     gridExtra
 Suggests:
