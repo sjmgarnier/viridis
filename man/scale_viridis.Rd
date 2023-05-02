@@ -13,7 +13,8 @@ scale_fill_viridis(
   end = 1,
   direction = 1,
   discrete = FALSE,
-  option = "D"
+  option = "D",
+  aesthetics = "fill"
 )
 
 scale_color_viridis(
@@ -23,7 +24,8 @@ scale_color_viridis(
   end = 1,
   direction = 1,
   discrete = FALSE,
-  option = "D"
+  option = "D",
+  aesthetics = "color"
 )
 
 scale_colour_viridis(
@@ -33,7 +35,8 @@ scale_colour_viridis(
   end = 1,
   direction = 1,
   discrete = FALSE,
-  option = "D"
+  option = "D",
+  aesthetics = "color"
 )
 }
 \arguments{
