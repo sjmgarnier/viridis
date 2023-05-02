@@ -43,7 +43,8 @@ Suggests:
     testthat,
     covr,
     rmarkdown,
-    maps
+    maps,
+    terra
 LazyData: true
 VignetteBuilder: knitr
 URL: https://sjmgarnier.github.io/viridis/, https://github.com/sjmgarnier/viridis/
