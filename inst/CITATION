@@ -3,8 +3,8 @@ citHeader("To cite viridis/viridisLite in publications use:")
 year <- sub("-.*", "", meta$Date)
 note <- paste(meta$Package, sprintf("package version %s", meta$Version))
 
-citEntry(
-  entry    = "Manual",
+bibentry(
+  bibtype  = "Manual",
   title    = "{viridis(Lite)} - Colorblind-Friendly Color Maps for R",
   author   = "Garnier, Simon and Ross, Noam and Rudis, Robert and Camargo, Antônio Pedro and Sciaini, Marco and Scherer, Cédric",
   journal  = "",
