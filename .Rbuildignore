@@ -16,3 +16,4 @@ README.md
 ^revdep$
 cran-comments.md
 ^CRAN-RELEASE$
+^CRAN-SUBMISSION$

@@ -14,7 +14,7 @@ bibentry(
   pages    = "",
   note     = note,
   url      = "https://sjmgarnier.github.io/viridis/",
-  doi      = "10.5281/zenodo.4679424",
+  doi      = "10.5281/zenodo.4679423",
   textVersion = paste0(
     "Simon Garnier, Noam Ross, Robert Rudis, Antônio P. Camargo, Marco Sciaini, and Cédric Scherer (", year, "). viridis(Lite) - Colorblind-Friendly Color Maps for R. ", note, "."
   )
