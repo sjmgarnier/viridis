@@ -13,7 +13,8 @@ scale_fill_viridis(
   end = 1,
   direction = 1,
   discrete = FALSE,
-  option = "D"
+  option = "D",
+  aesthetics = "fill"
 )
 
 scale_color_viridis(
@@ -23,7 +24,8 @@ scale_color_viridis(
   end = 1,
   direction = 1,
   discrete = FALSE,
-  option = "D"
+  option = "D",
+  aesthetics = "color"
 )
 
 scale_colour_viridis(
@@ -33,7 +35,8 @@ scale_colour_viridis(
   end = 1,
   direction = 1,
   discrete = FALSE,
-  option = "D"
+  option = "D",
+  aesthetics = "color"
 )
 }
 \arguments{
@@ -67,6 +70,11 @@ Eight options are available:
  \item "mako" (or "G")
  \item "turbo" (or "H")
 }}
+
+\item{aesthetics}{Character string or vector of character strings listing the
+name(s) of the aesthetic(s) that this scale works with. This can be useful,
+for example, to apply colour settings to the colour and fill aesthetics at
+the same time, via aesthetics = c("colour", "fill").}
 }
 \description{
 Scale functions (fill and colour/color) for

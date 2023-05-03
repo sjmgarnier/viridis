@@ -1,8 +1,8 @@
 Package: viridis
 Type: Package
 Title: Colorblind-Friendly Color Maps for R
-Version: 0.6.2
-Date: 2021-10-13
+Version: 0.6.3
+Date: 2023-05-02
 Authors@R: c(
       person("Simon", "Garnier", email = "garnier@njit.edu", role = c("aut", "cre")),
       person("Noam", "Ross", email = "noam.ross@gmail.com", role = c("ctb", "cph")),
@@ -26,7 +26,6 @@ Depends:
     R (>= 2.10),
     viridisLite (>= 0.4.0)
 Imports:
-    stats,
     ggplot2 (>= 1.0.1),
     gridExtra
 Suggests:
@@ -36,8 +35,6 @@ Suggests:
     knitr,
     dichromat,
     colorspace,
-    raster,
-    rasterVis,
     httr,
     mapproj,
     vdiffr,
@@ -45,8 +42,8 @@ Suggests:
     testthat,
     covr,
     rmarkdown,
-    rgdal,
-    maps
+    maps,
+    terra
 LazyData: true
 VignetteBuilder: knitr
 URL: https://sjmgarnier.github.io/viridis/, https://github.com/sjmgarnier/viridis/

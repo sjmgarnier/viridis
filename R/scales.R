@@ -95,6 +95,11 @@ viridis_pal <- function(alpha = 1, begin = 0, end = 1, direction = 1, option= "D
 #'   \item "turbo" (or "H")
 #'  }
 #'
+#' @param aesthetics Character string or vector of character strings listing the
+#'  name(s) of the aesthetic(s) that this scale works with. This can be useful,
+#'  for example, to apply colour settings to the colour and fill aesthetics at
+#'  the same time, via aesthetics = c("colour", "fill").
+#'
 #' @rdname scale_viridis
 #'
 #' @author Noam Ross \email{noam.ross@@gmail.com} / \href{https://twitter.com/noamross}{@@noamross}
@@ -154,11 +159,11 @@ viridis_pal <- function(alpha = 1, begin = 0, end = 1, direction = 1, option= "D
 #'
 #' @export
 scale_fill_viridis <- function(..., alpha = 1, begin = 0, end = 1, direction = 1,
-                               discrete = FALSE, option = "D") {
+                               discrete = FALSE, option = "D", aesthetics = "fill") {
   if (discrete) {
-    discrete_scale("fill", "viridis", viridis_pal(alpha, begin, end, direction, option), ...)
+    discrete_scale(aesthetics, "viridis", viridis_pal(alpha, begin, end, direction, option), ...)
   } else {
-    scale_fill_gradientn(colours = viridisLite::viridis(256, alpha, begin, end, direction, option), ...)
+    scale_fill_gradientn(colours = viridisLite::viridis(256, alpha, begin, end, direction, option), aesthetics = aesthetics, ...)
   }
 
 }
@@ -167,11 +172,11 @@ scale_fill_viridis <- function(..., alpha = 1, begin = 0, end = 1, direction = 1
 #' @importFrom ggplot2 scale_fill_gradientn scale_color_gradientn discrete_scale
 #' @export
 scale_color_viridis <- function(..., alpha = 1, begin = 0, end = 1, direction = 1,
-                                discrete = FALSE, option = "D") {
+                                discrete = FALSE, option = "D", aesthetics = "color") {
   if (discrete) {
-    discrete_scale("colour", "viridis", viridis_pal(alpha, begin, end, direction, option), ...)
+    discrete_scale(aesthetics, "viridis", viridis_pal(alpha, begin, end, direction, option), ...)
   } else {
-    scale_color_gradientn(colours = viridisLite::viridis(256, alpha, begin, end, direction, option), ...)
+    scale_color_gradientn(colours = viridisLite::viridis(256, alpha, begin, end, direction, option), aesthetics = aesthetics, ...)
   }
 }
 

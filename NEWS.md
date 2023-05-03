@@ -1,3 +1,18 @@
+# viridis 0.6.3
+
+## New features
+
+* N/A. 
+
+## Minor improvements and fixes
+
+* Fix scale functions when aesthetics are specified (thanks to Alan O'Callaghan,  https://github.com/Alanocallaghan)
+* Remove deprecated dependencies. 
+* Fix CITATION issues. 
+* Fix check issues. 
+
+---
+
 # viridis 0.6.2
 
 ## New features
