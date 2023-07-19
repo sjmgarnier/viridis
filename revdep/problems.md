@@ -91,11 +91,11 @@ Run `revdepcheck::revdep_details(, "bayesvl")` for more info
 
 <details>
 
-* Version: 0.6.2
+* Version: 0.7.1
 * GitHub: https://github.com/adokter/bioRad
 * Source code: https://github.com/cran/bioRad
-* Date/Publication: 2022-12-17 00:10:02 UTC
-* Number of recursive dependencies: 107
+* Date/Publication: 2023-07-17 18:50:02 UTC
+* Number of recursive dependencies: 127
 
 Run `revdepcheck::revdep_details(, "bioRad")` for more info
 
@@ -105,10 +105,10 @@ Run `revdepcheck::revdep_details(, "bioRad")` for more info
 
 *   checking installed package size ... NOTE
     ```
-      installed size is  5.1Mb
+      installed size is  5.5Mb
       sub-directories of 1Mb or more:
         data      1.6Mb
-        extdata   1.7Mb
+        extdata   2.0Mb
     ```
 
 # c3
@@ -153,45 +153,6 @@ Run `revdepcheck::revdep_details(, "catmaply")` for more info
       installed size is 38.0Mb
       sub-directories of 1Mb or more:
         doc  37.7Mb
-    ```
-
-# cellpypes
-
-<details>
-
-* Version: 0.1.3
-* GitHub: https://github.com/FelixTheStudent/cellpypes
-* Source code: https://github.com/cran/cellpypes
-* Date/Publication: 2022-05-19 07:00:08 UTC
-* Number of recursive dependencies: 177
-
-Run `revdepcheck::revdep_details(, "cellpypes")` for more info
-
-</details>
-
-## In both
-
-*   checking tests ...
-    ```
-      Running ‘testthat.R’
-     ERROR
-    Running the tests in ‘tests/testthat.R’ failed.
-    Last 13 lines of output:
-      ── Error ('test-pseudobulk.R:61:3'): class_to_deseq2 stops gracefully if class has zero cells. ──
-      Error in `class_to_deseq2(dds, meta_data, "T", ~treatment)`: Install DESeq2 to use class_to_deseq2 function.
-      Backtrace:
-          ▆
-       1. ├─testthat::expect_error(...) at test-pseudobulk.R:61:2
-       2. │ └─testthat:::expect_condition_matching(...)
-       3. │   └─testthat:::quasi_capture(...)
-       4. │     ├─testthat (local) .capture(...)
-       5. │     │ └─base::withCallingHandlers(...)
-       6. │     └─rlang::eval_bare(quo_get_expr(.quo), quo_get_env(.quo))
-       7. └─cellpypes::class_to_deseq2(dds, meta_data, "T", ~treatment)
-      
-      [ FAIL 2 | WARN 4 | SKIP 0 | PASS 53 ]
-      Error: Test failures
-      Execution halted
     ```
 
 # chronicle
@@ -260,131 +221,6 @@ Run `revdepcheck::revdep_details(, "clustMD")` for more info
     checkRd: (-1) dtmvnom.Rd:30: Escaped LaTeX specials: \&
     ```
 
-# clustree
-
-<details>
-
-* Version: 0.5.0
-* GitHub: https://github.com/lazappi/clustree
-* Source code: https://github.com/cran/clustree
-* Date/Publication: 2022-06-25 20:50:02 UTC
-* Number of recursive dependencies: 186
-
-Run `revdepcheck::revdep_details(, "clustree")` for more info
-
-</details>
-
-## In both
-
-*   checking package dependencies ... ERROR
-    ```
-    Packages suggested but not available:
-      'SingleCellExperiment', 'SummarizedExperiment'
-    
-    The suggested packages are required for a complete check.
-    Checking can be attempted without them by setting the environment
-    variable _R_CHECK_FORCE_SUGGESTS_ to a false value.
-    
-    See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
-    manual.
-    ```
-
-# cytometree
-
-<details>
-
-* Version: 2.0.2
-* GitHub: https://github.com/sistm/Cytometree
-* Source code: https://github.com/cran/cytometree
-* Date/Publication: 2019-12-04 22:20:19 UTC
-* Number of recursive dependencies: 63
-
-Run `revdepcheck::revdep_details(, "cytometree")` for more info
-
-</details>
-
-## In both
-
-*   checking whether package ‘cytometree’ can be installed ... ERROR
-    ```
-    Installation failed.
-    See ‘/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/checks.noindex/cytometree/new/cytometree.Rcheck/00install.out’ for details.
-    ```
-
-## Installation
-
-### Devel
-
-```
-* installing *source* package ‘cytometree’ ...
-** package ‘cytometree’ successfully unpacked and MD5 sums checked
-** using staged installation
-** libs
-using C++ compiler: ‘Apple clang version 14.0.3 (clang-1403.0.22.14.1)’
-using SDK: ‘MacOSX13.3.sdk’
-clang++ -arch arm64 -std=gnu++17 -I"/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/include" -DNDEBUG  -I'/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/library.noindex/cytometree/Rcpp/include' -I'/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/library.noindex/cytometree/RcppArmadillo/include' -I/opt/homebrew/include    -fPIC  -I/opt/homebrew/include -c FmeasureC.cpp -o FmeasureC.o
-clang++ -arch arm64 -std=gnu++17 -I"/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/include" -DNDEBUG  -I'/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/library.noindex/cytometree/Rcpp/include' -I'/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/library.noindex/cytometree/RcppArmadillo/include' -I/opt/homebrew/include    -fPIC  -I/opt/homebrew/include -c RcppExports.cpp -o RcppExports.o
-clang++ -arch arm64 -std=gnu++17 -dynamiclib -Wl,-headerpad_max_install_names -undefined dynamic_lookup -single_module -multiply_defined suppress -L/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/lib -L/opt/homebrew/lib -o cytometree.so FmeasureC.o RcppExports.o -L/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/lib -lRlapack -L/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/lib -lRblas -L/opt/gfortran/lib/gcc/aarch64-apple-darwin20.0/12.2.0 -L/opt/gfortran/lib -lgfortran -lemutls_w -lquadmath -F/Library/Frameworks/R.framework/Versions/4.3-arm64 -framework R -Wl,-framework -Wl,CoreFoundation
-ld: warning: directory not found for option '-L/opt/gfortran/lib/gcc/aarch64-apple-darwin20.0/12.2.0'
-ld: warning: directory not found for option '-L/opt/gfortran/lib'
-ld: library not found for -lgfortran
-clang: error: linker command failed with exit code 1 (use -v to see invocation)
-make: *** [cytometree.so] Error 1
-ERROR: compilation failed for package ‘cytometree’
-* removing ‘/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/checks.noindex/cytometree/new/cytometree.Rcheck/cytometree’
-
-
-```
-### CRAN
-
-```
-* installing *source* package ‘cytometree’ ...
-** package ‘cytometree’ successfully unpacked and MD5 sums checked
-** using staged installation
-** libs
-using C++ compiler: ‘Apple clang version 14.0.3 (clang-1403.0.22.14.1)’
-using SDK: ‘MacOSX13.3.sdk’
-clang++ -arch arm64 -std=gnu++17 -I"/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/include" -DNDEBUG  -I'/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/library.noindex/cytometree/Rcpp/include' -I'/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/library.noindex/cytometree/RcppArmadillo/include' -I/opt/homebrew/include    -fPIC  -I/opt/homebrew/include -c FmeasureC.cpp -o FmeasureC.o
-clang++ -arch arm64 -std=gnu++17 -I"/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/include" -DNDEBUG  -I'/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/library.noindex/cytometree/Rcpp/include' -I'/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/library.noindex/cytometree/RcppArmadillo/include' -I/opt/homebrew/include    -fPIC  -I/opt/homebrew/include -c RcppExports.cpp -o RcppExports.o
-clang++ -arch arm64 -std=gnu++17 -dynamiclib -Wl,-headerpad_max_install_names -undefined dynamic_lookup -single_module -multiply_defined suppress -L/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/lib -L/opt/homebrew/lib -o cytometree.so FmeasureC.o RcppExports.o -L/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/lib -lRlapack -L/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/lib -lRblas -L/opt/gfortran/lib/gcc/aarch64-apple-darwin20.0/12.2.0 -L/opt/gfortran/lib -lgfortran -lemutls_w -lquadmath -F/Library/Frameworks/R.framework/Versions/4.3-arm64 -framework R -Wl,-framework -Wl,CoreFoundation
-ld: warning: directory not found for option '-L/opt/gfortran/lib/gcc/aarch64-apple-darwin20.0/12.2.0'
-ld: warning: directory not found for option '-L/opt/gfortran/lib'
-ld: library not found for -lgfortran
-clang: error: linker command failed with exit code 1 (use -v to see invocation)
-make: *** [cytometree.so] Error 1
-ERROR: compilation failed for package ‘cytometree’
-* removing ‘/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/checks.noindex/cytometree/old/cytometree.Rcheck/cytometree’
-
-
-```
-# dartR
-
-<details>
-
-* Version: 2.7.2
-* GitHub: NA
-* Source code: https://github.com/cran/dartR
-* Date/Publication: 2022-12-06 10:20:02 UTC
-* Number of recursive dependencies: 297
-
-Run `revdepcheck::revdep_details(, "dartR")` for more info
-
-</details>
-
-## In both
-
-*   checking package dependencies ... ERROR
-    ```
-    Package suggested but not available: ‘pca3d’
-    
-    The suggested packages are required for a complete check.
-    Checking can be attempted without them by setting the environment
-    variable _R_CHECK_FORCE_SUGGESTS_ to a false value.
-    
-    See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
-    manual.
-    ```
-
 # dendextend
 
 <details>
@@ -424,11 +260,11 @@ Run `revdepcheck::revdep_details(, "dendextend")` for more info
 
 <details>
 
-* Version: 1.0.9
+* Version: 1.0.10
 * GitHub: https://github.com/rich-iannone/DiagrammeR
 * Source code: https://github.com/cran/DiagrammeR
-* Date/Publication: 2022-03-05 15:40:21 UTC
-* Number of recursive dependencies: 100
+* Date/Publication: 2023-05-18 14:30:07 UTC
+* Number of recursive dependencies: 99
 
 Run `revdepcheck::revdep_details(, "DiagrammeR")` for more info
 
@@ -488,35 +324,6 @@ Run `revdepcheck::revdep_details(, "dynaSpec")` for more info
 *   checking Rd cross-references ... NOTE
     ```
     Package unavailable to check Rd xrefs: ‘warbleR’
-    ```
-
-# dyngen
-
-<details>
-
-* Version: 1.0.5
-* GitHub: https://github.com/dynverse/dyngen
-* Source code: https://github.com/cran/dyngen
-* Date/Publication: 2022-10-12 15:22:39 UTC
-* Number of recursive dependencies: 204
-
-Run `revdepcheck::revdep_details(, "dyngen")` for more info
-
-</details>
-
-## In both
-
-*   checking package dependencies ... ERROR
-    ```
-    Packages suggested but not available:
-      'SingleCellExperiment', 'SummarizedExperiment'
-    
-    The suggested packages are required for a complete check.
-    Checking can be attempted without them by setting the environment
-    variable _R_CHECK_FORCE_SUGGESTS_ to a false value.
-    
-    See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
-    manual.
     ```
 
 # eclust
@@ -633,11 +440,11 @@ Run `revdepcheck::revdep_details(, "eiExpand")` for more info
 
 <details>
 
-* Version: 0.1.4
+* Version: 0.1.5
 * GitHub: NA
 * Source code: https://github.com/cran/escalation
-* Date/Publication: 2020-10-18 21:40:06 UTC
-* Number of recursive dependencies: 128
+* Date/Publication: 2023-05-29 18:10:02 UTC
+* Number of recursive dependencies: 126
 
 Run `revdepcheck::revdep_details(, "escalation")` for more info
 
@@ -650,11 +457,6 @@ Run `revdepcheck::revdep_details(, "escalation")` for more info
       installed size is 13.7Mb
       sub-directories of 1Mb or more:
         doc  13.1Mb
-    ```
-
-*   checking LazyData ... NOTE
-    ```
-      'LazyData' is specified without a 'data' directory
     ```
 
 # fastai
@@ -706,76 +508,6 @@ Run `revdepcheck::revdep_details(, "FielDHub")` for more info
         help   1.1Mb
     ```
 
-# fields
-
-<details>
-
-* Version: 14.1
-* GitHub: https://github.com/dnychka/fieldsRPackage
-* Source code: https://github.com/cran/fields
-* Date/Publication: 2022-08-12 06:50:06 UTC
-* Number of recursive dependencies: 33
-
-Run `revdepcheck::revdep_details(, "fields")` for more info
-
-</details>
-
-## In both
-
-*   checking whether package ‘fields’ can be installed ... ERROR
-    ```
-    Installation failed.
-    See ‘/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/checks.noindex/fields/new/fields.Rcheck/00install.out’ for details.
-    ```
-
-## Installation
-
-### Devel
-
-```
-* installing *source* package ‘fields’ ...
-** package ‘fields’ successfully unpacked and MD5 sums checked
-** using staged installation
-** libs
-using C compiler: ‘Apple clang version 14.0.3 (clang-1403.0.22.14.1)’
-sh: /opt/gfortran/bin/gfortran: No such file or directory
-using SDK: ‘MacOSX13.3.sdk’
-clang -arch arm64 -I"/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/include" -DNDEBUG   -I/opt/homebrew/include    -fPIC  -I/opt/homebrew/include -c ExponentialUpperC.c -o ExponentialUpperC.o
-clang -arch arm64 -I"/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/include" -DNDEBUG   -I/opt/homebrew/include    -fPIC  -I/opt/homebrew/include -c RdistEarth.c -o RdistEarth.o
-clang -arch arm64 -I"/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/include" -DNDEBUG   -I/opt/homebrew/include    -fPIC  -I/opt/homebrew/include -c addToDiagC.c -o addToDiagC.o
-clang -arch arm64 -I"/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/include" -DNDEBUG   -I/opt/homebrew/include    -fPIC  -I/opt/homebrew/include -c compactToMatC.c -o compactToMatC.o
-clang -arch arm64 -I"/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/include" -DNDEBUG   -I/opt/homebrew/include    -fPIC  -I/opt/homebrew/include -c expfnC.c -o expfnC.o
-/opt/gfortran/bin/gfortran -arch arm64  -fPIC  -Wall -g -O2  -c fieldsF77Code.f -o fieldsF77Code.o
-make: /opt/gfortran/bin/gfortran: No such file or directory
-make: *** [fieldsF77Code.o] Error 1
-ERROR: compilation failed for package ‘fields’
-* removing ‘/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/checks.noindex/fields/new/fields.Rcheck/fields’
-
-
-```
-### CRAN
-
-```
-* installing *source* package ‘fields’ ...
-** package ‘fields’ successfully unpacked and MD5 sums checked
-** using staged installation
-** libs
-using C compiler: ‘Apple clang version 14.0.3 (clang-1403.0.22.14.1)’
-sh: /opt/gfortran/bin/gfortran: No such file or directory
-using SDK: ‘MacOSX13.3.sdk’
-clang -arch arm64 -I"/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/include" -DNDEBUG   -I/opt/homebrew/include    -fPIC  -I/opt/homebrew/include -c ExponentialUpperC.c -o ExponentialUpperC.o
-clang -arch arm64 -I"/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/include" -DNDEBUG   -I/opt/homebrew/include    -fPIC  -I/opt/homebrew/include -c RdistEarth.c -o RdistEarth.o
-clang -arch arm64 -I"/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/include" -DNDEBUG   -I/opt/homebrew/include    -fPIC  -I/opt/homebrew/include -c addToDiagC.c -o addToDiagC.o
-clang -arch arm64 -I"/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/include" -DNDEBUG   -I/opt/homebrew/include    -fPIC  -I/opt/homebrew/include -c compactToMatC.c -o compactToMatC.o
-clang -arch arm64 -I"/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/include" -DNDEBUG   -I/opt/homebrew/include    -fPIC  -I/opt/homebrew/include -c expfnC.c -o expfnC.o
-/opt/gfortran/bin/gfortran -arch arm64  -fPIC  -Wall -g -O2  -c fieldsF77Code.f -o fieldsF77Code.o
-make: /opt/gfortran/bin/gfortran: No such file or directory
-make: *** [fieldsF77Code.o] Error 1
-ERROR: compilation failed for package ‘fields’
-* removing ‘/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/checks.noindex/fields/old/fields.Rcheck/fields’
-
-
-```
 # fitbitViz
 
 <details>
@@ -784,7 +516,7 @@ ERROR: compilation failed for package ‘fields’
 * GitHub: https://github.com/mlampros/fitbitViz
 * Source code: https://github.com/cran/fitbitViz
 * Date/Publication: 2023-01-06 15:30:02 UTC
-* Number of recursive dependencies: 145
+* Number of recursive dependencies: 150
 
 Run `revdepcheck::revdep_details(, "fitbitViz")` for more info
 
@@ -886,76 +618,22 @@ Run `revdepcheck::revdep_details(, "geocmeans")` for more info
 
 ## In both
 
-*   checking whether package ‘geocmeans’ can be installed ... ERROR
+*   checking installed package size ... NOTE
     ```
-    Installation failed.
-    See ‘/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/checks.noindex/geocmeans/new/geocmeans.Rcheck/00install.out’ for details.
+      installed size is  6.8Mb
+      sub-directories of 1Mb or more:
+        doc       1.8Mb
+        extdata   3.0Mb
     ```
 
-## Installation
-
-### Devel
-
-```
-* installing *source* package ‘geocmeans’ ...
-** package ‘geocmeans’ successfully unpacked and MD5 sums checked
-** using staged installation
-** libs
-using C++ compiler: ‘Apple clang version 14.0.3 (clang-1403.0.22.14.1)’
-using C++17
-using SDK: ‘MacOSX13.3.sdk’
-clang++ -arch arm64 -std=gnu++17 -I"/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/include" -DNDEBUG  -I'/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/library.noindex/geocmeans/Rcpp/include' -I'/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/library.noindex/geocmeans/RcppArmadillo/include' -I/opt/homebrew/include    -fPIC  -falign-functions=64 -Wall -g -O2  -c FCM_functions.cpp -o FCM_functions.o
-FCM_functions.cpp:211:9: warning: unused variable 'k' [-Wunused-variable]
-  int i,k,j;
-...
-14 warnings generated.
-clang++ -arch arm64 -std=gnu++17 -I"/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/include" -DNDEBUG  -I'/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/library.noindex/geocmeans/Rcpp/include' -I'/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/library.noindex/geocmeans/RcppArmadillo/include' -I/opt/homebrew/include    -fPIC  -falign-functions=64 -Wall -g -O2  -c shared_functions.cpp -o shared_functions.o
-clang++ -arch arm64 -std=gnu++17 -dynamiclib -Wl,-headerpad_max_install_names -undefined dynamic_lookup -single_module -multiply_defined suppress -L/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/lib -L/opt/homebrew/lib -o geocmeans.so FCM_functions.o GFCM_functions.o RcppExports.o focal_cpp.o jaccard_idx.o moran_for_rasters.o shared_functions.o -L/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/lib -lRlapack -L/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/lib -lRblas -L/opt/gfortran/lib/gcc/aarch64-apple-darwin20.0/12.2.0 -L/opt/gfortran/lib -lgfortran -lemutls_w -lquadmath -F/Library/Frameworks/R.framework/Versions/4.3-arm64 -framework R -Wl,-framework -Wl,CoreFoundation
-ld: warning: directory not found for option '-L/opt/gfortran/lib/gcc/aarch64-apple-darwin20.0/12.2.0'
-ld: warning: directory not found for option '-L/opt/gfortran/lib'
-ld: library not found for -lgfortran
-clang: error: linker command failed with exit code 1 (use -v to see invocation)
-make: *** [geocmeans.so] Error 1
-ERROR: compilation failed for package ‘geocmeans’
-* removing ‘/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/checks.noindex/geocmeans/new/geocmeans.Rcheck/geocmeans’
-
-
-```
-### CRAN
-
-```
-* installing *source* package ‘geocmeans’ ...
-** package ‘geocmeans’ successfully unpacked and MD5 sums checked
-** using staged installation
-** libs
-using C++ compiler: ‘Apple clang version 14.0.3 (clang-1403.0.22.14.1)’
-using C++17
-using SDK: ‘MacOSX13.3.sdk’
-clang++ -arch arm64 -std=gnu++17 -I"/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/include" -DNDEBUG  -I'/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/library.noindex/geocmeans/Rcpp/include' -I'/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/library.noindex/geocmeans/RcppArmadillo/include' -I/opt/homebrew/include    -fPIC  -falign-functions=64 -Wall -g -O2  -c FCM_functions.cpp -o FCM_functions.o
-FCM_functions.cpp:211:9: warning: unused variable 'k' [-Wunused-variable]
-  int i,k,j;
-...
-14 warnings generated.
-clang++ -arch arm64 -std=gnu++17 -I"/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/include" -DNDEBUG  -I'/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/library.noindex/geocmeans/Rcpp/include' -I'/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/library.noindex/geocmeans/RcppArmadillo/include' -I/opt/homebrew/include    -fPIC  -falign-functions=64 -Wall -g -O2  -c shared_functions.cpp -o shared_functions.o
-clang++ -arch arm64 -std=gnu++17 -dynamiclib -Wl,-headerpad_max_install_names -undefined dynamic_lookup -single_module -multiply_defined suppress -L/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/lib -L/opt/homebrew/lib -o geocmeans.so FCM_functions.o GFCM_functions.o RcppExports.o focal_cpp.o jaccard_idx.o moran_for_rasters.o shared_functions.o -L/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/lib -lRlapack -L/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/lib -lRblas -L/opt/gfortran/lib/gcc/aarch64-apple-darwin20.0/12.2.0 -L/opt/gfortran/lib -lgfortran -lemutls_w -lquadmath -F/Library/Frameworks/R.framework/Versions/4.3-arm64 -framework R -Wl,-framework -Wl,CoreFoundation
-ld: warning: directory not found for option '-L/opt/gfortran/lib/gcc/aarch64-apple-darwin20.0/12.2.0'
-ld: warning: directory not found for option '-L/opt/gfortran/lib'
-ld: library not found for -lgfortran
-clang: error: linker command failed with exit code 1 (use -v to see invocation)
-make: *** [geocmeans.so] Error 1
-ERROR: compilation failed for package ‘geocmeans’
-* removing ‘/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/checks.noindex/geocmeans/old/geocmeans.Rcheck/geocmeans’
-
-
-```
 # geouy
 
 <details>
 
-* Version: 0.2.6
+* Version: 0.2.7
 * GitHub: https://github.com/RichDeto/geouy
 * Source code: https://github.com/cran/geouy
-* Date/Publication: 2022-10-05 23:40:02 UTC
+* Date/Publication: 2023-05-17 17:20:02 UTC
 * Number of recursive dependencies: 90
 
 Run `revdepcheck::revdep_details(, "geouy")` for more info
@@ -1091,11 +769,11 @@ Run `revdepcheck::revdep_details(, "heatmaply")` for more info
 
 <details>
 
-* Version: 5.0-1
+* Version: 5.1-0
 * GitHub: NA
 * Source code: https://github.com/cran/Hmisc
-* Date/Publication: 2023-03-08 14:00:02 UTC
-* Number of recursive dependencies: 139
+* Date/Publication: 2023-05-08 08:00:02 UTC
+* Number of recursive dependencies: 172
 
 Run `revdepcheck::revdep_details(, "Hmisc")` for more info
 
@@ -1103,52 +781,12 @@ Run `revdepcheck::revdep_details(, "Hmisc")` for more info
 
 ## In both
 
-*   checking whether package ‘Hmisc’ can be installed ... ERROR
+*   checking R code for possible problems ... NOTE
     ```
-    Installation failed.
-    See ‘/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/checks.noindex/Hmisc/new/Hmisc.Rcheck/00install.out’ for details.
+    html_describe_con: multiple local function definitions for ‘g’ with
+      different formal arguments
     ```
 
-## Installation
-
-### Devel
-
-```
-* installing *source* package ‘Hmisc’ ...
-** package ‘Hmisc’ successfully unpacked and MD5 sums checked
-** using staged installation
-** libs
-using C compiler: ‘Apple clang version 14.0.3 (clang-1403.0.22.14.1)’
-sh: /opt/gfortran/bin/gfortran: No such file or directory
-using SDK: ‘MacOSX13.3.sdk’
-clang -arch arm64 -I"/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/include" -DNDEBUG   -I/opt/homebrew/include    -fPIC  -I/opt/homebrew/include -c Hmisc.c -o Hmisc.o
-/opt/gfortran/bin/gfortran -arch arm64  -fPIC  -Wall -g -O2  -c cidxcn.f -o cidxcn.o
-make: /opt/gfortran/bin/gfortran: No such file or directory
-make: *** [cidxcn.o] Error 1
-ERROR: compilation failed for package ‘Hmisc’
-* removing ‘/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/checks.noindex/Hmisc/new/Hmisc.Rcheck/Hmisc’
-
-
-```
-### CRAN
-
-```
-* installing *source* package ‘Hmisc’ ...
-** package ‘Hmisc’ successfully unpacked and MD5 sums checked
-** using staged installation
-** libs
-using C compiler: ‘Apple clang version 14.0.3 (clang-1403.0.22.14.1)’
-sh: /opt/gfortran/bin/gfortran: No such file or directory
-using SDK: ‘MacOSX13.3.sdk’
-clang -arch arm64 -I"/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/include" -DNDEBUG   -I/opt/homebrew/include    -fPIC  -I/opt/homebrew/include -c Hmisc.c -o Hmisc.o
-/opt/gfortran/bin/gfortran -arch arm64  -fPIC  -Wall -g -O2  -c cidxcn.f -o cidxcn.o
-make: /opt/gfortran/bin/gfortran: No such file or directory
-make: *** [cidxcn.o] Error 1
-ERROR: compilation failed for package ‘Hmisc’
-* removing ‘/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/checks.noindex/Hmisc/old/Hmisc.Rcheck/Hmisc’
-
-
-```
 # httk
 
 <details>
@@ -1202,7 +840,7 @@ Run `revdepcheck::revdep_details(, "industRial")` for more info
 * GitHub: NA
 * Source code: https://github.com/cran/intSDM
 * Date/Publication: 2023-02-17 09:00:02 UTC
-* Number of recursive dependencies: 151
+* Number of recursive dependencies: 149
 
 Run `revdepcheck::revdep_details(, "intSDM")` for more info
 
@@ -1240,10 +878,7 @@ Run `revdepcheck::revdep_details(, "iSEE")` for more info
 
 *   checking package dependencies ... ERROR
     ```
-    Packages required but not available:
-      'SummarizedExperiment', 'SingleCellExperiment'
-    
-    Packages suggested but not available: 'scRNAseq', 'TENxPBMCData', 'scater'
+    Package suggested but not available: ‘scater’
     
     The suggested packages are required for a complete check.
     Checking can be attempted without them by setting the environment
@@ -1295,68 +930,6 @@ Run `revdepcheck::revdep_details(, "lineartestr")` for more info
       'LazyData' is specified without a 'data' directory
     ```
 
-# marqLevAlg
-
-<details>
-
-* Version: 2.0.8
-* GitHub: https://github.com/VivianePhilipps/marqLevAlgParallel
-* Source code: https://github.com/cran/marqLevAlg
-* Date/Publication: 2023-03-22 14:00:05 UTC
-* Number of recursive dependencies: 61
-
-Run `revdepcheck::revdep_details(, "marqLevAlg")` for more info
-
-</details>
-
-## In both
-
-*   checking whether package ‘marqLevAlg’ can be installed ... ERROR
-    ```
-    Installation failed.
-    See ‘/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/checks.noindex/marqLevAlg/new/marqLevAlg.Rcheck/00install.out’ for details.
-    ```
-
-## Installation
-
-### Devel
-
-```
-* installing *source* package ‘marqLevAlg’ ...
-** package ‘marqLevAlg’ successfully unpacked and MD5 sums checked
-** using staged installation
-** libs
-using C compiler: ‘Apple clang version 14.0.3 (clang-1403.0.22.14.1)’
-sh: /opt/gfortran/bin/gfortran: No such file or directory
-using SDK: ‘MacOSX13.3.sdk’
-clang -arch arm64 -I"/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/include" -DNDEBUG   -I/opt/homebrew/include    -fPIC  -I/opt/homebrew/include -c init.c -o init.o
-/opt/gfortran/bin/gfortran -arch arm64  -fPIC  -Wall -g -O2  -c  dmfsd.f90 -o dmfsd.o
-make: /opt/gfortran/bin/gfortran: No such file or directory
-make: *** [dmfsd.o] Error 1
-ERROR: compilation failed for package ‘marqLevAlg’
-* removing ‘/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/checks.noindex/marqLevAlg/new/marqLevAlg.Rcheck/marqLevAlg’
-
-
-```
-### CRAN
-
-```
-* installing *source* package ‘marqLevAlg’ ...
-** package ‘marqLevAlg’ successfully unpacked and MD5 sums checked
-** using staged installation
-** libs
-using C compiler: ‘Apple clang version 14.0.3 (clang-1403.0.22.14.1)’
-sh: /opt/gfortran/bin/gfortran: No such file or directory
-using SDK: ‘MacOSX13.3.sdk’
-clang -arch arm64 -I"/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/include" -DNDEBUG   -I/opt/homebrew/include    -fPIC  -I/opt/homebrew/include -c init.c -o init.o
-/opt/gfortran/bin/gfortran -arch arm64  -fPIC  -Wall -g -O2  -c  dmfsd.f90 -o dmfsd.o
-make: /opt/gfortran/bin/gfortran: No such file or directory
-make: *** [dmfsd.o] Error 1
-ERROR: compilation failed for package ‘marqLevAlg’
-* removing ‘/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/checks.noindex/marqLevAlg/old/marqLevAlg.Rcheck/marqLevAlg’
-
-
-```
 # memoria
 
 <details>
@@ -1377,6 +950,34 @@ Run `revdepcheck::revdep_details(, "memoria")` for more info
     ```
     Problems with news in ‘NEWS.md’:
     No news entries found.
+    ```
+
+# MetricGraph
+
+<details>
+
+* Version: 1.1.2
+* GitHub: https://github.com/davidbolin/MetricGraph
+* Source code: https://github.com/cran/MetricGraph
+* Date/Publication: 2023-07-04 14:23:04 UTC
+* Number of recursive dependencies: 123
+
+Run `revdepcheck::revdep_details(, "MetricGraph")` for more info
+
+</details>
+
+## In both
+
+*   checking package dependencies ... ERROR
+    ```
+    Package suggested but not available: ‘INLA’
+    
+    The suggested packages are required for a complete check.
+    Checking can be attempted without them by setting the environment
+    variable _R_CHECK_FORCE_SUGGESTS_ to a false value.
+    
+    See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
+    manual.
     ```
 
 # mgcViz
@@ -1444,6 +1045,34 @@ Run `revdepcheck::revdep_details(, "moderndive")` for more info
       Note: found 5238 marked UTF-8 strings
     ```
 
+# myClim
+
+<details>
+
+* Version: 1.0.1
+* GitHub: https://github.com/ibot-geoecology/myClim
+* Source code: https://github.com/cran/myClim
+* Date/Publication: 2023-05-08 17:40:02 UTC
+* Number of recursive dependencies: 103
+
+Run `revdepcheck::revdep_details(, "myClim")` for more info
+
+</details>
+
+## In both
+
+*   checking package dependencies ... ERROR
+    ```
+    Package suggested but not available: ‘rTubeDB’
+    
+    The suggested packages are required for a complete check.
+    Checking can be attempted without them by setting the environment
+    variable _R_CHECK_FORCE_SUGGESTS_ to a false value.
+    
+    See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
+    manual.
+    ```
+
 # noaastormevents
 
 <details>
@@ -1472,29 +1101,6 @@ Run `revdepcheck::revdep_details(, "noaastormevents")` for more info
     manual.
     ```
 
-# nullabor
-
-<details>
-
-* Version: 0.3.9
-* GitHub: https://github.com/dicook/nullabor
-* Source code: https://github.com/cran/nullabor
-* Date/Publication: 2020-02-25 21:50:02 UTC
-* Number of recursive dependencies: 79
-
-Run `revdepcheck::revdep_details(, "nullabor")` for more info
-
-</details>
-
-## In both
-
-*   checking dependencies in R code ... NOTE
-    ```
-    Namespaces in Imports field not imported from:
-      ‘forecast’ ‘rlang’ ‘tsibble’ ‘viridis’
-      All declared Imports should be used.
-    ```
-
 # occCite
 
 <details>
@@ -1503,7 +1109,7 @@ Run `revdepcheck::revdep_details(, "nullabor")` for more info
 * GitHub: https://github.com/ropensci/occCite
 * Source code: https://github.com/cran/occCite
 * Date/Publication: 2022-08-05 11:40:02 UTC
-* Number of recursive dependencies: 177
+* Number of recursive dependencies: 176
 
 Run `revdepcheck::revdep_details(, "occCite")` for more info
 
@@ -1538,68 +1144,16 @@ Run `revdepcheck::revdep_details(, "pdSpecEst")` for more info
 
 ## In both
 
-*   checking whether package ‘pdSpecEst’ can be installed ... ERROR
+*   checking C++ specification ... NOTE
     ```
-    Installation failed.
-    See ‘/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/checks.noindex/pdSpecEst/new/pdSpecEst.Rcheck/00install.out’ for details.
+      Specified C++11: please drop specification unless essential
     ```
 
-## Installation
+*   checking LazyData ... NOTE
+    ```
+      'LazyData' is specified without a 'data' directory
+    ```
 
-### Devel
-
-```
-* installing *source* package ‘pdSpecEst’ ...
-** package ‘pdSpecEst’ successfully unpacked and MD5 sums checked
-** using staged installation
-** libs
-using C++ compiler: ‘Apple clang version 14.0.3 (clang-1403.0.22.14.1)’
-using C++11
-using SDK: ‘MacOSX13.3.sdk’
-clang++ -arch arm64 -std=gnu++11 -I"/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/include" -DNDEBUG  -I'/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/library.noindex/pdSpecEst/Rcpp/include' -I'/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/library.noindex/pdSpecEst/RcppArmadillo/include' -I/opt/homebrew/include   -DARMA_DONT_USE_OPENMP -fPIC  -I/opt/homebrew/include -c RcppExports.cpp -o RcppExports.o
-clang++ -arch arm64 -std=gnu++11 -I"/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/include" -DNDEBUG  -I'/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/library.noindex/pdSpecEst/Rcpp/include' -I'/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/library.noindex/pdSpecEst/RcppArmadillo/include' -I/opt/homebrew/include   -DARMA_DONT_USE_OPENMP -fPIC  -I/opt/homebrew/include -c mean_fun.cpp -o mean_fun.o
-In file included from mean_fun.cpp:2:
-...
-          ^
-3 warnings generated.
-clang++ -arch arm64 -std=gnu++11 -dynamiclib -Wl,-headerpad_max_install_names -undefined dynamic_lookup -single_module -multiply_defined suppress -L/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/lib -L/opt/homebrew/lib -o pdSpecEst.so RcppExports.o mean_fun.o transform_fun1.o transform_fun2.o ts_fun.o -L/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/lib -lRlapack -L/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/lib -lRblas -L/opt/gfortran/lib/gcc/aarch64-apple-darwin20.0/12.2.0 -L/opt/gfortran/lib -lgfortran -lemutls_w -lquadmath -F/Library/Frameworks/R.framework/Versions/4.3-arm64 -framework R -Wl,-framework -Wl,CoreFoundation
-ld: warning: directory not found for option '-L/opt/gfortran/lib/gcc/aarch64-apple-darwin20.0/12.2.0'
-ld: warning: directory not found for option '-L/opt/gfortran/lib'
-ld: library not found for -lgfortran
-clang: error: linker command failed with exit code 1 (use -v to see invocation)
-make: *** [pdSpecEst.so] Error 1
-ERROR: compilation failed for package ‘pdSpecEst’
-* removing ‘/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/checks.noindex/pdSpecEst/new/pdSpecEst.Rcheck/pdSpecEst’
-
-
-```
-### CRAN
-
-```
-* installing *source* package ‘pdSpecEst’ ...
-** package ‘pdSpecEst’ successfully unpacked and MD5 sums checked
-** using staged installation
-** libs
-using C++ compiler: ‘Apple clang version 14.0.3 (clang-1403.0.22.14.1)’
-using C++11
-using SDK: ‘MacOSX13.3.sdk’
-clang++ -arch arm64 -std=gnu++11 -I"/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/include" -DNDEBUG  -I'/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/library.noindex/pdSpecEst/Rcpp/include' -I'/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/library.noindex/pdSpecEst/RcppArmadillo/include' -I/opt/homebrew/include   -DARMA_DONT_USE_OPENMP -fPIC  -I/opt/homebrew/include -c RcppExports.cpp -o RcppExports.o
-clang++ -arch arm64 -std=gnu++11 -I"/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/include" -DNDEBUG  -I'/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/library.noindex/pdSpecEst/Rcpp/include' -I'/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/library.noindex/pdSpecEst/RcppArmadillo/include' -I/opt/homebrew/include   -DARMA_DONT_USE_OPENMP -fPIC  -I/opt/homebrew/include -c mean_fun.cpp -o mean_fun.o
-In file included from mean_fun.cpp:2:
-...
-          ^
-3 warnings generated.
-clang++ -arch arm64 -std=gnu++11 -dynamiclib -Wl,-headerpad_max_install_names -undefined dynamic_lookup -single_module -multiply_defined suppress -L/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/lib -L/opt/homebrew/lib -o pdSpecEst.so RcppExports.o mean_fun.o transform_fun1.o transform_fun2.o ts_fun.o -L/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/lib -lRlapack -L/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/lib -lRblas -L/opt/gfortran/lib/gcc/aarch64-apple-darwin20.0/12.2.0 -L/opt/gfortran/lib -lgfortran -lemutls_w -lquadmath -F/Library/Frameworks/R.framework/Versions/4.3-arm64 -framework R -Wl,-framework -Wl,CoreFoundation
-ld: warning: directory not found for option '-L/opt/gfortran/lib/gcc/aarch64-apple-darwin20.0/12.2.0'
-ld: warning: directory not found for option '-L/opt/gfortran/lib'
-ld: library not found for -lgfortran
-clang: error: linker command failed with exit code 1 (use -v to see invocation)
-make: *** [pdSpecEst.so] Error 1
-ERROR: compilation failed for package ‘pdSpecEst’
-* removing ‘/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/checks.noindex/pdSpecEst/old/pdSpecEst.Rcheck/pdSpecEst’
-
-
-```
 # Platypus
 
 <details>
@@ -1620,7 +1174,6 @@ Run `revdepcheck::revdep_details(, "Platypus")` for more info
     ```
     Packages suggested but not available:
       'Matrix.utils', 'monocle3', 'ProjecTILs', 'SeuratWrappers',
-      'SingleCellExperiment', 'slingshot', 'SummarizedExperiment',
       'vanddraabe'
     
     The suggested packages are required for a complete check.
@@ -1726,14 +1279,35 @@ Run `revdepcheck::revdep_details(, "reinsureR")` for more info
       'LazyData' is specified without a 'data' directory
     ```
 
+# rfars
+
+<details>
+
+* Version: 0.3.0
+* GitHub: https://github.com/s87jackson/rfars
+* Source code: https://github.com/cran/rfars
+* Date/Publication: 2023-05-05 09:40:02 UTC
+* Number of recursive dependencies: 94
+
+Run `revdepcheck::revdep_details(, "rfars")` for more info
+
+</details>
+
+## In both
+
+*   checking data for non-ASCII characters ... NOTE
+    ```
+      Note: found 806 marked UTF-8 strings
+    ```
+
 # rKOMICS
 
 <details>
 
-* Version: 1.1
+* Version: 1.3
 * GitHub: NA
 * Source code: https://github.com/cran/rKOMICS
-* Date/Publication: 2021-07-21 11:40:02 UTC
+* Date/Publication: 2023-06-29 22:40:03 UTC
 * Number of recursive dependencies: 136
 
 Run `revdepcheck::revdep_details(, "rKOMICS")` for more info
@@ -1744,7 +1318,7 @@ Run `revdepcheck::revdep_details(, "rKOMICS")` for more info
 
 *   checking installed package size ... NOTE
     ```
-      installed size is 24.7Mb
+      installed size is 24.8Mb
       sub-directories of 1Mb or more:
         extdata  24.0Mb
     ```
@@ -1765,77 +1339,20 @@ Run `revdepcheck::revdep_details(, "RprobitB")` for more info
 
 ## In both
 
-*   checking whether package ‘RprobitB’ can be installed ... ERROR
+*   checking C++ specification ... NOTE
     ```
-    Installation failed.
-    See ‘/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/checks.noindex/RprobitB/new/RprobitB.Rcheck/00install.out’ for details.
+      Specified C++11: please drop specification unless essential
     ```
 
-## Installation
-
-### Devel
-
-```
-* installing *source* package ‘RprobitB’ ...
-** package ‘RprobitB’ successfully unpacked and MD5 sums checked
-** using staged installation
-** libs
-using C++ compiler: ‘Apple clang version 14.0.3 (clang-1403.0.22.14.1)’
-using C++11
-using SDK: ‘MacOSX13.3.sdk’
-clang++ -arch arm64 -std=gnu++11 -I"/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/include" -DNDEBUG  -I'/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/library.noindex/RprobitB/Rcpp/include' -I'/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/library.noindex/RprobitB/RcppArmadillo/include' -I/opt/homebrew/include     -fPIC  -I/opt/homebrew/include -c RcppExports.cpp -o RcppExports.o
-clang++ -arch arm64 -std=gnu++11 -I"/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/include" -DNDEBUG  -I'/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/library.noindex/RprobitB/Rcpp/include' -I'/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/library.noindex/RprobitB/RcppArmadillo/include' -I/opt/homebrew/include     -fPIC  -I/opt/homebrew/include -c class_update.cpp -o class_update.o
-clang++ -arch arm64 -std=gnu++11 -I"/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/include" -DNDEBUG  -I'/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/library.noindex/RprobitB/Rcpp/include' -I'/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/library.noindex/RprobitB/RcppArmadillo/include' -I/opt/homebrew/include     -fPIC  -I/opt/homebrew/include -c distributions.cpp -o distributions.o
-...
-clang++ -arch arm64 -std=gnu++11 -I"/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/include" -DNDEBUG  -I'/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/library.noindex/RprobitB/Rcpp/include' -I'/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/library.noindex/RprobitB/RcppArmadillo/include' -I/opt/homebrew/include     -fPIC  -I/opt/homebrew/include -c gibbs.cpp -o gibbs.o
-clang++ -arch arm64 -std=gnu++11 -I"/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/include" -DNDEBUG  -I'/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/library.noindex/RprobitB/Rcpp/include' -I'/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/library.noindex/RprobitB/RcppArmadillo/include' -I/opt/homebrew/include     -fPIC  -I/opt/homebrew/include -c truncated_normal.cpp -o truncated_normal.o
-clang++ -arch arm64 -std=gnu++11 -dynamiclib -Wl,-headerpad_max_install_names -undefined dynamic_lookup -single_module -multiply_defined suppress -L/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/lib -L/opt/homebrew/lib -o RprobitB.so RcppExports.o class_update.o distributions.o gibbs.o truncated_normal.o -L/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/lib -lRlapack -L/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/lib -lRblas -L/opt/gfortran/lib/gcc/aarch64-apple-darwin20.0/12.2.0 -L/opt/gfortran/lib -lgfortran -lemutls_w -lquadmath -F/Library/Frameworks/R.framework/Versions/4.3-arm64 -framework R -Wl,-framework -Wl,CoreFoundation
-ld: warning: directory not found for option '-L/opt/gfortran/lib/gcc/aarch64-apple-darwin20.0/12.2.0'
-ld: warning: directory not found for option '-L/opt/gfortran/lib'
-ld: library not found for -lgfortran
-clang: error: linker command failed with exit code 1 (use -v to see invocation)
-make: *** [RprobitB.so] Error 1
-ERROR: compilation failed for package ‘RprobitB’
-* removing ‘/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/checks.noindex/RprobitB/new/RprobitB.Rcheck/RprobitB’
-
-
-```
-### CRAN
-
-```
-* installing *source* package ‘RprobitB’ ...
-** package ‘RprobitB’ successfully unpacked and MD5 sums checked
-** using staged installation
-** libs
-using C++ compiler: ‘Apple clang version 14.0.3 (clang-1403.0.22.14.1)’
-using C++11
-using SDK: ‘MacOSX13.3.sdk’
-clang++ -arch arm64 -std=gnu++11 -I"/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/include" -DNDEBUG  -I'/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/library.noindex/RprobitB/Rcpp/include' -I'/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/library.noindex/RprobitB/RcppArmadillo/include' -I/opt/homebrew/include     -fPIC  -I/opt/homebrew/include -c RcppExports.cpp -o RcppExports.o
-clang++ -arch arm64 -std=gnu++11 -I"/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/include" -DNDEBUG  -I'/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/library.noindex/RprobitB/Rcpp/include' -I'/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/library.noindex/RprobitB/RcppArmadillo/include' -I/opt/homebrew/include     -fPIC  -I/opt/homebrew/include -c class_update.cpp -o class_update.o
-clang++ -arch arm64 -std=gnu++11 -I"/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/include" -DNDEBUG  -I'/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/library.noindex/RprobitB/Rcpp/include' -I'/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/library.noindex/RprobitB/RcppArmadillo/include' -I/opt/homebrew/include     -fPIC  -I/opt/homebrew/include -c distributions.cpp -o distributions.o
-...
-clang++ -arch arm64 -std=gnu++11 -I"/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/include" -DNDEBUG  -I'/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/library.noindex/RprobitB/Rcpp/include' -I'/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/library.noindex/RprobitB/RcppArmadillo/include' -I/opt/homebrew/include     -fPIC  -I/opt/homebrew/include -c gibbs.cpp -o gibbs.o
-clang++ -arch arm64 -std=gnu++11 -I"/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/include" -DNDEBUG  -I'/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/library.noindex/RprobitB/Rcpp/include' -I'/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/library.noindex/RprobitB/RcppArmadillo/include' -I/opt/homebrew/include     -fPIC  -I/opt/homebrew/include -c truncated_normal.cpp -o truncated_normal.o
-clang++ -arch arm64 -std=gnu++11 -dynamiclib -Wl,-headerpad_max_install_names -undefined dynamic_lookup -single_module -multiply_defined suppress -L/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/lib -L/opt/homebrew/lib -o RprobitB.so RcppExports.o class_update.o distributions.o gibbs.o truncated_normal.o -L/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/lib -lRlapack -L/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/lib -lRblas -L/opt/gfortran/lib/gcc/aarch64-apple-darwin20.0/12.2.0 -L/opt/gfortran/lib -lgfortran -lemutls_w -lquadmath -F/Library/Frameworks/R.framework/Versions/4.3-arm64 -framework R -Wl,-framework -Wl,CoreFoundation
-ld: warning: directory not found for option '-L/opt/gfortran/lib/gcc/aarch64-apple-darwin20.0/12.2.0'
-ld: warning: directory not found for option '-L/opt/gfortran/lib'
-ld: library not found for -lgfortran
-clang: error: linker command failed with exit code 1 (use -v to see invocation)
-make: *** [RprobitB.so] Error 1
-ERROR: compilation failed for package ‘RprobitB’
-* removing ‘/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/checks.noindex/RprobitB/old/RprobitB.Rcheck/RprobitB’
-
-
-```
 # rSPDE
 
 <details>
 
-* Version: 2.2.0
+* Version: 2.3.2
 * GitHub: https://github.com/davidbolin/rSPDE
 * Source code: https://github.com/cran/rSPDE
-* Date/Publication: 2023-04-12 10:20:02 UTC
-* Number of recursive dependencies: 104
+* Date/Publication: 2023-07-02 21:30:02 UTC
+* Number of recursive dependencies: 109
 
 Run `revdepcheck::revdep_details(, "rSPDE")` for more info
 
@@ -1873,42 +1390,7 @@ Run `revdepcheck::revdep_details(, "scater")` for more info
 
 *   checking package dependencies ... ERROR
     ```
-    Packages required but not available:
-      'SingleCellExperiment', 'SummarizedExperiment', 'densvis'
-    
-    Package suggested but not available: ‘scRNAseq’
-    
-    The suggested packages are required for a complete check.
-    Checking can be attempted without them by setting the environment
-    variable _R_CHECK_FORCE_SUGGESTS_ to a false value.
-    
-    See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
-    manual.
-    ```
-
-# scCustomize
-
-<details>
-
-* Version: 1.1.1
-* GitHub: https://github.com/samuel-marsh/scCustomize
-* Source code: https://github.com/cran/scCustomize
-* Date/Publication: 2023-01-13 15:30:02 UTC
-* Number of recursive dependencies: 286
-
-Run `revdepcheck::revdep_details(, "scCustomize")` for more info
-
-</details>
-
-## In both
-
-*   checking package dependencies ... ERROR
-    ```
-    Packages suggested but not available: 'dittoSeq', 'Nebulosa'
-    
-    The suggested packages are required for a complete check.
-    Checking can be attempted without them by setting the environment
-    variable _R_CHECK_FORCE_SUGGESTS_ to a false value.
+    Package required but not available: ‘densvis’
     
     See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
     manual.
@@ -1922,7 +1404,7 @@ Run `revdepcheck::revdep_details(, "scCustomize")` for more info
 * GitHub: https://github.com/enblacar/SCpubr
 * Source code: https://github.com/cran/SCpubr
 * Date/Publication: 2023-01-18 12:20:02 UTC
-* Number of recursive dependencies: 291
+* Number of recursive dependencies: 290
 
 Run `revdepcheck::revdep_details(, "SCpubr")` for more info
 
@@ -1930,17 +1412,27 @@ Run `revdepcheck::revdep_details(, "SCpubr")` for more info
 
 ## In both
 
-*   checking package dependencies ... ERROR
+*   checking tests ...
     ```
-    Packages suggested but not available:
-      'Nebulosa', 'infercnv', 'UCell', 'AUCell'
-    
-    The suggested packages are required for a complete check.
-    Checking can be attempted without them by setting the environment
-    variable _R_CHECK_FORCE_SUGGESTS_ to a false value.
-    
-    See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
-    manual.
+      Running ‘testthat.R’
+     ERROR
+    Running the tests in ‘tests/testthat.R’ failed.
+    Last 13 lines of output:
+        7.           └─enrichplot:::add_cladelab(...)
+        8.             └─ggplot2:::`+.gg`(...)
+        9.               └─ggplot2:::add_ggplot(e1, e2, e2name)
+       10.                 ├─ggplot2::ggplot_add(object, p, objectname)
+       11.                 └─ggtree:::ggplot_add.cladelab(object, p, objectname)
+       12.                   └─ggtree:::build_cladelabel_df(...)
+       13.                     └─base::mapply(...)
+       14.                       └─ggtree (local) `<fn>`(...)
+       15.                         └─ggtree:::get_cladelabel_position(...)
+       16.                           └─ggtree:::get_cladelabel_position_(...)
+       17.                             └─tidytree:::offspring.tbl_tree(data, node, self_include = TRUE)
+      
+      [ FAIL 1 | WARN 2 | SKIP 440 | PASS 90 ]
+      Error: Test failures
+      Execution halted
     ```
 
 # scUtils
@@ -1964,74 +1456,6 @@ Run `revdepcheck::revdep_details(, "scUtils")` for more info
       'LazyData' is specified without a 'data' directory
     ```
 
-# SFSI
-
-<details>
-
-* Version: 1.2.0
-* GitHub: NA
-* Source code: https://github.com/cran/SFSI
-* Date/Publication: 2022-08-16 15:40:09 UTC
-* Number of recursive dependencies: 62
-
-Run `revdepcheck::revdep_details(, "SFSI")` for more info
-
-</details>
-
-## In both
-
-*   checking whether package ‘SFSI’ can be installed ... ERROR
-    ```
-    Installation failed.
-    See ‘/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/checks.noindex/SFSI/new/SFSI.Rcheck/00install.out’ for details.
-    ```
-
-## Installation
-
-### Devel
-
-```
-* installing *source* package ‘SFSI’ ...
-** package ‘SFSI’ successfully unpacked and MD5 sums checked
-** using staged installation
-** libs
-using C compiler: ‘Apple clang version 14.0.3 (clang-1403.0.22.14.1)’
-using SDK: ‘MacOSX13.3.sdk’
-clang -arch arm64 -I"/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/include" -DNDEBUG  -I'/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/library.noindex/SFSI/float/include' -I/opt/homebrew/include   -I. -fPIC  -I/opt/homebrew/include -c c_utils.c -o c_utils.o
-clang -arch arm64 -I"/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/include" -DNDEBUG  -I'/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/library.noindex/SFSI/float/include' -I/opt/homebrew/include   -I. -fPIC  -I/opt/homebrew/include -c init.c -o init.o
-clang -arch arm64 -dynamiclib -Wl,-headerpad_max_install_names -undefined dynamic_lookup -single_module -multiply_defined suppress -L/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/lib -L/opt/homebrew/lib -o SFSI.so c_utils.o init.o -L/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/lib -lRlapack -L/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/lib -lRblas -L/opt/gfortran/lib/gcc/aarch64-apple-darwin20.0/12.2.0 -L/opt/gfortran/lib -lgfortran -lemutls_w -lquadmath -F/Library/Frameworks/R.framework/Versions/4.3-arm64 -framework R -Wl,-framework -Wl,CoreFoundation
-ld: warning: directory not found for option '-L/opt/gfortran/lib/gcc/aarch64-apple-darwin20.0/12.2.0'
-ld: warning: directory not found for option '-L/opt/gfortran/lib'
-ld: library not found for -lgfortran
-clang: error: linker command failed with exit code 1 (use -v to see invocation)
-make: *** [SFSI.so] Error 1
-ERROR: compilation failed for package ‘SFSI’
-* removing ‘/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/checks.noindex/SFSI/new/SFSI.Rcheck/SFSI’
-
-
-```
-### CRAN
-
-```
-* installing *source* package ‘SFSI’ ...
-** package ‘SFSI’ successfully unpacked and MD5 sums checked
-** using staged installation
-** libs
-using C compiler: ‘Apple clang version 14.0.3 (clang-1403.0.22.14.1)’
-using SDK: ‘MacOSX13.3.sdk’
-clang -arch arm64 -I"/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/include" -DNDEBUG  -I'/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/library.noindex/SFSI/float/include' -I/opt/homebrew/include   -I. -fPIC  -I/opt/homebrew/include -c c_utils.c -o c_utils.o
-clang -arch arm64 -I"/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/include" -DNDEBUG  -I'/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/library.noindex/SFSI/float/include' -I/opt/homebrew/include   -I. -fPIC  -I/opt/homebrew/include -c init.c -o init.o
-clang -arch arm64 -dynamiclib -Wl,-headerpad_max_install_names -undefined dynamic_lookup -single_module -multiply_defined suppress -L/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/lib -L/opt/homebrew/lib -o SFSI.so c_utils.o init.o -L/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/lib -lRlapack -L/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/lib -lRblas -L/opt/gfortran/lib/gcc/aarch64-apple-darwin20.0/12.2.0 -L/opt/gfortran/lib -lgfortran -lemutls_w -lquadmath -F/Library/Frameworks/R.framework/Versions/4.3-arm64 -framework R -Wl,-framework -Wl,CoreFoundation
-ld: warning: directory not found for option '-L/opt/gfortran/lib/gcc/aarch64-apple-darwin20.0/12.2.0'
-ld: warning: directory not found for option '-L/opt/gfortran/lib'
-ld: library not found for -lgfortran
-clang: error: linker command failed with exit code 1 (use -v to see invocation)
-make: *** [SFSI.so] Error 1
-ERROR: compilation failed for package ‘SFSI’
-* removing ‘/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/checks.noindex/SFSI/old/SFSI.Rcheck/SFSI’
-
-
-```
 # SIBER
 
 <details>
@@ -2077,10 +1501,10 @@ Run `revdepcheck::revdep_details(, "SIBER")` for more info
 
 <details>
 
-* Version: 0.5.0
+* Version: 0.5.1.212
 * GitHub: https://github.com/andrewcparnell/simmr
 * Source code: https://github.com/cran/simmr
-* Date/Publication: 2023-03-26 00:00:03 UTC
+* Date/Publication: 2023-06-16 15:00:02 UTC
 * Number of recursive dependencies: 117
 
 Run `revdepcheck::revdep_details(, "simmr")` for more info
@@ -2108,13 +1532,18 @@ using C++ compiler: ‘Apple clang version 14.0.3 (clang-1403.0.22.14.1)’
 using SDK: ‘MacOSX13.3.sdk’
 clang++ -arch arm64 -std=gnu++17 -I"/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/include" -DNDEBUG  -I'/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/library.noindex/simmr/Rcpp/include' -I'/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/library.noindex/simmr/RcppArmadillo/include' -I'/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/library.noindex/simmr/RcppDist/include' -I/opt/homebrew/include    -fPIC  -I/opt/homebrew/include -c RcppExports.cpp -o RcppExports.o
 clang++ -arch arm64 -std=gnu++17 -I"/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/include" -DNDEBUG  -I'/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/library.noindex/simmr/Rcpp/include' -I'/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/library.noindex/simmr/RcppArmadillo/include' -I'/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/library.noindex/simmr/RcppDist/include' -I/opt/homebrew/include    -fPIC  -I/opt/homebrew/include -c run_VB.cpp -o run_VB.o
-clang++ -arch arm64 -std=gnu++17 -dynamiclib -Wl,-headerpad_max_install_names -undefined dynamic_lookup -single_module -multiply_defined suppress -L/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/lib -L/opt/homebrew/lib -o simmr.so RcppExports.o run_VB.o -L/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/lib -lRlapack -L/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/lib -lRblas -L/opt/gfortran/lib/gcc/aarch64-apple-darwin20.0/12.2.0 -L/opt/gfortran/lib -lgfortran -lemutls_w -lquadmath -F/Library/Frameworks/R.framework/Versions/4.3-arm64 -framework R -Wl,-framework -Wl,CoreFoundation
-ld: warning: directory not found for option '-L/opt/gfortran/lib/gcc/aarch64-apple-darwin20.0/12.2.0'
-ld: warning: directory not found for option '-L/opt/gfortran/lib'
-ld: library not found for -lgfortran
-clang: error: linker command failed with exit code 1 (use -v to see invocation)
-make: *** [simmr.so] Error 1
-ERROR: compilation failed for package ‘simmr’
+clang++ -arch arm64 -std=gnu++17 -dynamiclib -Wl,-headerpad_max_install_names -undefined dynamic_lookup -single_module -multiply_defined suppress -L/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/lib -L/opt/homebrew/lib -o simmr.so RcppExports.o run_VB.o -L/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/lib -lRlapack -L/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/lib -lRblas -L/opt/homebrew/opt/gfortran/lib -F/Library/Frameworks/R.framework/Versions/4.3-arm64 -framework R -Wl,-framework -Wl,CoreFoundation
+installing to /Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/checks.noindex/simmr/new/simmr.Rcheck/00LOCK-simmr/00new/simmr/libs
+...
+Error: package or namespace load failed for ‘rjags’:
+ .onLoad failed in loadNamespace() for 'rjags', details:
+  call: dyn.load(file, DLLpath = DLLpath, ...)
+  error: unable to load shared object '/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/library.noindex/simmr/rjags/libs/rjags.so':
+  dlopen(/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/library.noindex/simmr/rjags/libs/rjags.so, 0x000A): Library not loaded: /usr/local/lib/libjags.4.dylib
+  Referenced from: <7F6B5629-D6B5-35D1-BEDC-76C09B11A283> /Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/library.noindex/simmr/rjags/libs/rjags.so
+  Reason: tried: '/usr/local/lib/libjags.4.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/usr/local/lib/libjags.4.dylib' (no such file), '/usr/local/lib/libjags.4.dylib' (no such file), '/Librar
+Execution halted
+ERROR: lazy loading failed for package ‘simmr’
 * removing ‘/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/checks.noindex/simmr/new/simmr.Rcheck/simmr’
 
 
@@ -2130,13 +1559,18 @@ using C++ compiler: ‘Apple clang version 14.0.3 (clang-1403.0.22.14.1)’
 using SDK: ‘MacOSX13.3.sdk’
 clang++ -arch arm64 -std=gnu++17 -I"/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/include" -DNDEBUG  -I'/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/library.noindex/simmr/Rcpp/include' -I'/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/library.noindex/simmr/RcppArmadillo/include' -I'/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/library.noindex/simmr/RcppDist/include' -I/opt/homebrew/include    -fPIC  -I/opt/homebrew/include -c RcppExports.cpp -o RcppExports.o
 clang++ -arch arm64 -std=gnu++17 -I"/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/include" -DNDEBUG  -I'/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/library.noindex/simmr/Rcpp/include' -I'/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/library.noindex/simmr/RcppArmadillo/include' -I'/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/library.noindex/simmr/RcppDist/include' -I/opt/homebrew/include    -fPIC  -I/opt/homebrew/include -c run_VB.cpp -o run_VB.o
-clang++ -arch arm64 -std=gnu++17 -dynamiclib -Wl,-headerpad_max_install_names -undefined dynamic_lookup -single_module -multiply_defined suppress -L/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/lib -L/opt/homebrew/lib -o simmr.so RcppExports.o run_VB.o -L/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/lib -lRlapack -L/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/lib -lRblas -L/opt/gfortran/lib/gcc/aarch64-apple-darwin20.0/12.2.0 -L/opt/gfortran/lib -lgfortran -lemutls_w -lquadmath -F/Library/Frameworks/R.framework/Versions/4.3-arm64 -framework R -Wl,-framework -Wl,CoreFoundation
-ld: warning: directory not found for option '-L/opt/gfortran/lib/gcc/aarch64-apple-darwin20.0/12.2.0'
-ld: warning: directory not found for option '-L/opt/gfortran/lib'
-ld: library not found for -lgfortran
-clang: error: linker command failed with exit code 1 (use -v to see invocation)
-make: *** [simmr.so] Error 1
-ERROR: compilation failed for package ‘simmr’
+clang++ -arch arm64 -std=gnu++17 -dynamiclib -Wl,-headerpad_max_install_names -undefined dynamic_lookup -single_module -multiply_defined suppress -L/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/lib -L/opt/homebrew/lib -o simmr.so RcppExports.o run_VB.o -L/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/lib -lRlapack -L/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/lib -lRblas -L/opt/homebrew/opt/gfortran/lib -F/Library/Frameworks/R.framework/Versions/4.3-arm64 -framework R -Wl,-framework -Wl,CoreFoundation
+installing to /Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/checks.noindex/simmr/old/simmr.Rcheck/00LOCK-simmr/00new/simmr/libs
+...
+Error: package or namespace load failed for ‘rjags’:
+ .onLoad failed in loadNamespace() for 'rjags', details:
+  call: dyn.load(file, DLLpath = DLLpath, ...)
+  error: unable to load shared object '/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/library.noindex/simmr/rjags/libs/rjags.so':
+  dlopen(/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/library.noindex/simmr/rjags/libs/rjags.so, 0x000A): Library not loaded: /usr/local/lib/libjags.4.dylib
+  Referenced from: <7F6B5629-D6B5-35D1-BEDC-76C09B11A283> /Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/library.noindex/simmr/rjags/libs/rjags.so
+  Reason: tried: '/usr/local/lib/libjags.4.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/usr/local/lib/libjags.4.dylib' (no such file), '/usr/local/lib/libjags.4.dylib' (no such file), '/Librar
+Execution halted
+ERROR: lazy loading failed for package ‘simmr’
 * removing ‘/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/checks.noindex/simmr/old/simmr.Rcheck/simmr’
 
 
@@ -2173,10 +1607,10 @@ Run `revdepcheck::revdep_details(, "SimSurvey")` for more info
 
 <details>
 
-* Version: 1.3.0
+* Version: 1.4.0
 * GitHub: https://github.com/tylermorganwall/skpr
 * Source code: https://github.com/cran/skpr
-* Date/Publication: 2023-04-04 19:20:02 UTC
+* Date/Publication: 2023-06-16 16:10:02 UTC
 * Number of recursive dependencies: 135
 
 Run `revdepcheck::revdep_details(, "skpr")` for more info
@@ -2185,68 +1619,13 @@ Run `revdepcheck::revdep_details(, "skpr")` for more info
 
 ## In both
 
-*   checking whether package ‘skpr’ can be installed ... ERROR
+*   checking installed package size ... NOTE
     ```
-    Installation failed.
-    See ‘/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/checks.noindex/skpr/new/skpr.Rcheck/00install.out’ for details.
+      installed size is  6.6Mb
+      sub-directories of 1Mb or more:
+        libs   5.6Mb
     ```
 
-## Installation
-
-### Devel
-
-```
-* installing *source* package ‘skpr’ ...
-** package ‘skpr’ successfully unpacked and MD5 sums checked
-** using staged installation
-** libs
-using C++ compiler: ‘Apple clang version 14.0.3 (clang-1403.0.22.14.1)’
-using SDK: ‘MacOSX13.3.sdk’
-clang++ -arch arm64 -std=gnu++17 -I"/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/include" -DNDEBUG  -I'/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/library.noindex/skpr/Rcpp/include' -I'/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/library.noindex/skpr/RcppEigen/include' -I/opt/homebrew/include    -fPIC  -I/opt/homebrew/include -c RcppExports.cpp -o RcppExports.o
-In file included from RcppExports.cpp:4:
-In file included from /Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/library.noindex/skpr/RcppEigen/include/RcppEigen.h:25:
-In file included from /Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/library.noindex/skpr/RcppEigen/include/RcppEigenForward.h:30:
-...
-                                                ^
-28 warnings generated.
-clang++ -arch arm64 -std=gnu++17 -dynamiclib -Wl,-headerpad_max_install_names -undefined dynamic_lookup -single_module -multiply_defined suppress -L/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/lib -L/opt/homebrew/lib -o skpr.so RcppExports.o exported_optimality.o genOptimalDesign.o genSplitPlotOptimalDesign.o getBlockedOptimalDesign.o nullify_alg.o optimalityfunctions.o -L/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/lib -lRlapack -L/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/lib -lRblas -L/opt/gfortran/lib/gcc/aarch64-apple-darwin20.0/12.2.0 -L/opt/gfortran/lib -lgfortran -lemutls_w -lquadmath -F/Library/Frameworks/R.framework/Versions/4.3-arm64 -framework R -Wl,-framework -Wl,CoreFoundation
-ld: warning: directory not found for option '-L/opt/gfortran/lib/gcc/aarch64-apple-darwin20.0/12.2.0'
-ld: warning: directory not found for option '-L/opt/gfortran/lib'
-ld: library not found for -lgfortran
-clang: error: linker command failed with exit code 1 (use -v to see invocation)
-make: *** [skpr.so] Error 1
-ERROR: compilation failed for package ‘skpr’
-* removing ‘/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/checks.noindex/skpr/new/skpr.Rcheck/skpr’
-
-
-```
-### CRAN
-
-```
-* installing *source* package ‘skpr’ ...
-** package ‘skpr’ successfully unpacked and MD5 sums checked
-** using staged installation
-** libs
-using C++ compiler: ‘Apple clang version 14.0.3 (clang-1403.0.22.14.1)’
-using SDK: ‘MacOSX13.3.sdk’
-clang++ -arch arm64 -std=gnu++17 -I"/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/include" -DNDEBUG  -I'/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/library.noindex/skpr/Rcpp/include' -I'/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/library.noindex/skpr/RcppEigen/include' -I/opt/homebrew/include    -fPIC  -I/opt/homebrew/include -c RcppExports.cpp -o RcppExports.o
-In file included from RcppExports.cpp:4:
-In file included from /Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/library.noindex/skpr/RcppEigen/include/RcppEigen.h:25:
-In file included from /Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/library.noindex/skpr/RcppEigen/include/RcppEigenForward.h:30:
-...
-                                                ^
-28 warnings generated.
-clang++ -arch arm64 -std=gnu++17 -dynamiclib -Wl,-headerpad_max_install_names -undefined dynamic_lookup -single_module -multiply_defined suppress -L/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/lib -L/opt/homebrew/lib -o skpr.so RcppExports.o exported_optimality.o genOptimalDesign.o genSplitPlotOptimalDesign.o getBlockedOptimalDesign.o nullify_alg.o optimalityfunctions.o -L/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/lib -lRlapack -L/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/lib -lRblas -L/opt/gfortran/lib/gcc/aarch64-apple-darwin20.0/12.2.0 -L/opt/gfortran/lib -lgfortran -lemutls_w -lquadmath -F/Library/Frameworks/R.framework/Versions/4.3-arm64 -framework R -Wl,-framework -Wl,CoreFoundation
-ld: warning: directory not found for option '-L/opt/gfortran/lib/gcc/aarch64-apple-darwin20.0/12.2.0'
-ld: warning: directory not found for option '-L/opt/gfortran/lib'
-ld: library not found for -lgfortran
-clang: error: linker command failed with exit code 1 (use -v to see invocation)
-make: *** [skpr.so] Error 1
-ERROR: compilation failed for package ‘skpr’
-* removing ‘/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/checks.noindex/skpr/old/skpr.Rcheck/skpr’
-
-
-```
 # SPARSEMODr
 
 <details>
@@ -2314,84 +1693,6 @@ Run `revdepcheck::revdep_details(, "spectralAnalysis")` for more info
         doc   4.8Mb
     ```
 
-# spectralGraphTopology
-
-<details>
-
-* Version: 0.2.3
-* GitHub: https://github.com/dppalomar/spectralGraphTopology
-* Source code: https://github.com/cran/spectralGraphTopology
-* Date/Publication: 2022-03-14 09:30:02 UTC
-* Number of recursive dependencies: 115
-
-Run `revdepcheck::revdep_details(, "spectralGraphTopology")` for more info
-
-</details>
-
-## In both
-
-*   checking whether package ‘spectralGraphTopology’ can be installed ... ERROR
-    ```
-    Installation failed.
-    See ‘/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/checks.noindex/spectralGraphTopology/new/spectralGraphTopology.Rcheck/00install.out’ for details.
-    ```
-
-## Installation
-
-### Devel
-
-```
-* installing *source* package ‘spectralGraphTopology’ ...
-** package ‘spectralGraphTopology’ successfully unpacked and MD5 sums checked
-** using staged installation
-** libs
-using C++ compiler: ‘Apple clang version 14.0.3 (clang-1403.0.22.14.1)’
-using SDK: ‘MacOSX13.3.sdk’
-clang++ -arch arm64 -std=gnu++17 -I"/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/include" -DNDEBUG  -I'/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/library.noindex/spectralGraphTopology/Rcpp/include' -I'/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/library.noindex/spectralGraphTopology/RcppArmadillo/include' -I'/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/library.noindex/spectralGraphTopology/RcppEigen/include' -I/opt/homebrew/include    -fPIC  -I/opt/homebrew/include -c RcppExports.cpp -o RcppExports.o
-In file included from RcppExports.cpp:4:
-In file included from ./../inst/include/spectralGraphTopology_types.h:3:
-In file included from /Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/library.noindex/spectralGraphTopology/RcppEigen/include/RcppEigen.h:25:
-...
-                                                ^
-20 warnings generated.
-clang++ -arch arm64 -std=gnu++17 -dynamiclib -Wl,-headerpad_max_install_names -undefined dynamic_lookup -single_module -multiply_defined suppress -L/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/lib -L/opt/homebrew/lib -o spectralGraphTopology.so RcppExports.o linalg.o operators.o utils.o -L/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/lib -lRlapack -L/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/lib -lRblas -L/opt/gfortran/lib/gcc/aarch64-apple-darwin20.0/12.2.0 -L/opt/gfortran/lib -lgfortran -lemutls_w -lquadmath -F/Library/Frameworks/R.framework/Versions/4.3-arm64 -framework R -Wl,-framework -Wl,CoreFoundation
-ld: warning: directory not found for option '-L/opt/gfortran/lib/gcc/aarch64-apple-darwin20.0/12.2.0'
-ld: warning: directory not found for option '-L/opt/gfortran/lib'
-ld: library not found for -lgfortran
-clang: error: linker command failed with exit code 1 (use -v to see invocation)
-make: *** [spectralGraphTopology.so] Error 1
-ERROR: compilation failed for package ‘spectralGraphTopology’
-* removing ‘/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/checks.noindex/spectralGraphTopology/new/spectralGraphTopology.Rcheck/spectralGraphTopology’
-
-
-```
-### CRAN
-
-```
-* installing *source* package ‘spectralGraphTopology’ ...
-** package ‘spectralGraphTopology’ successfully unpacked and MD5 sums checked
-** using staged installation
-** libs
-using C++ compiler: ‘Apple clang version 14.0.3 (clang-1403.0.22.14.1)’
-using SDK: ‘MacOSX13.3.sdk’
-clang++ -arch arm64 -std=gnu++17 -I"/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/include" -DNDEBUG  -I'/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/library.noindex/spectralGraphTopology/Rcpp/include' -I'/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/library.noindex/spectralGraphTopology/RcppArmadillo/include' -I'/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/library.noindex/spectralGraphTopology/RcppEigen/include' -I/opt/homebrew/include    -fPIC  -I/opt/homebrew/include -c RcppExports.cpp -o RcppExports.o
-In file included from RcppExports.cpp:4:
-In file included from ./../inst/include/spectralGraphTopology_types.h:3:
-In file included from /Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/library.noindex/spectralGraphTopology/RcppEigen/include/RcppEigen.h:25:
-...
-                                                ^
-20 warnings generated.
-clang++ -arch arm64 -std=gnu++17 -dynamiclib -Wl,-headerpad_max_install_names -undefined dynamic_lookup -single_module -multiply_defined suppress -L/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/lib -L/opt/homebrew/lib -o spectralGraphTopology.so RcppExports.o linalg.o operators.o utils.o -L/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/lib -lRlapack -L/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/lib -lRblas -L/opt/gfortran/lib/gcc/aarch64-apple-darwin20.0/12.2.0 -L/opt/gfortran/lib -lgfortran -lemutls_w -lquadmath -F/Library/Frameworks/R.framework/Versions/4.3-arm64 -framework R -Wl,-framework -Wl,CoreFoundation
-ld: warning: directory not found for option '-L/opt/gfortran/lib/gcc/aarch64-apple-darwin20.0/12.2.0'
-ld: warning: directory not found for option '-L/opt/gfortran/lib'
-ld: library not found for -lgfortran
-clang: error: linker command failed with exit code 1 (use -v to see invocation)
-make: *** [spectralGraphTopology.so] Error 1
-ERROR: compilation failed for package ‘spectralGraphTopology’
-* removing ‘/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/checks.noindex/spectralGraphTopology/old/spectralGraphTopology.Rcheck/spectralGraphTopology’
-
-
-```
 # stacomiR
 
 <details>
@@ -2417,11 +1718,11 @@ Run `revdepcheck::revdep_details(, "stacomiR")` for more info
 
 <details>
 
-* Version: 0.6-1
+* Version: 0.6-2
 * GitHub: https://github.com/r-spatial/stars
 * Source code: https://github.com/cran/stars
-* Date/Publication: 2023-04-06 11:40:02 UTC
-* Number of recursive dependencies: 156
+* Date/Publication: 2023-07-12 18:30:02 UTC
+* Number of recursive dependencies: 163
 
 Run `revdepcheck::revdep_details(, "stars")` for more info
 
@@ -2457,68 +1758,11 @@ Run `revdepcheck::revdep_details(, "StratifiedSampling")` for more info
 
 ## In both
 
-*   checking whether package ‘StratifiedSampling’ can be installed ... ERROR
+*   checking C++ specification ... NOTE
     ```
-    Installation failed.
-    See ‘/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/checks.noindex/StratifiedSampling/new/StratifiedSampling.Rcheck/00install.out’ for details.
+      Specified C++11: please drop specification unless essential
     ```
 
-## Installation
-
-### Devel
-
-```
-* installing *source* package ‘StratifiedSampling’ ...
-** package ‘StratifiedSampling’ successfully unpacked and MD5 sums checked
-** using staged installation
-** libs
-using C++ compiler: ‘Apple clang version 14.0.3 (clang-1403.0.22.14.1)’
-using C++11
-using SDK: ‘MacOSX13.3.sdk’
-clang++ -arch arm64 -std=gnu++11 -I"/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/include" -DNDEBUG -DARMA_DONT_USE_OPENMP -I'/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/library.noindex/StratifiedSampling/RcppArmadillo/include' -I'/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/library.noindex/StratifiedSampling/Rcpp/include' -I/opt/homebrew/include     -fPIC  -I/opt/homebrew/include -c RcppExports.cpp -o RcppExports.o
-clang++ -arch arm64 -std=gnu++11 -I"/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/include" -DNDEBUG -DARMA_DONT_USE_OPENMP -I'/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/library.noindex/StratifiedSampling/RcppArmadillo/include' -I'/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/library.noindex/StratifiedSampling/Rcpp/include' -I/opt/homebrew/include     -fPIC  -I/opt/homebrew/include -c c_bound.cpp -o c_bound.o
-clang++ -arch arm64 -std=gnu++11 -I"/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/include" -DNDEBUG -DARMA_DONT_USE_OPENMP -I'/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/library.noindex/StratifiedSampling/RcppArmadillo/include' -I'/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/library.noindex/StratifiedSampling/Rcpp/include' -I/opt/homebrew/include     -fPIC  -I/opt/homebrew/include -c calibRaking.cpp -o calibRaking.o
-...
-clang++ -arch arm64 -std=gnu++11 -I"/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/include" -DNDEBUG -DARMA_DONT_USE_OPENMP -I'/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/library.noindex/StratifiedSampling/RcppArmadillo/include' -I'/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/library.noindex/StratifiedSampling/Rcpp/include' -I/opt/homebrew/include     -fPIC  -I/opt/homebrew/include -c osod.cpp -o osod.o
-clang++ -arch arm64 -std=gnu++11 -I"/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/include" -DNDEBUG -DARMA_DONT_USE_OPENMP -I'/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/library.noindex/StratifiedSampling/RcppArmadillo/include' -I'/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/library.noindex/StratifiedSampling/Rcpp/include' -I/opt/homebrew/include     -fPIC  -I/opt/homebrew/include -c var_balanced.cpp -o var_balanced.o
-clang++ -arch arm64 -std=gnu++11 -dynamiclib -Wl,-headerpad_max_install_names -undefined dynamic_lookup -single_module -multiply_defined suppress -L/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/lib -L/opt/homebrew/lib -o StratifiedSampling.so RcppExports.o c_bound.o calibRaking.o disj.o distUnitk.o inclprob.o maxent.o osod.o var_balanced.o -L/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/lib -lRlapack -L/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/lib -lRblas -L/opt/gfortran/lib/gcc/aarch64-apple-darwin20.0/12.2.0 -L/opt/gfortran/lib -lgfortran -lemutls_w -lquadmath -F/Library/Frameworks/R.framework/Versions/4.3-arm64 -framework R -Wl,-framework -Wl,CoreFoundation
-ld: warning: directory not found for option '-L/opt/gfortran/lib/gcc/aarch64-apple-darwin20.0/12.2.0'
-ld: warning: directory not found for option '-L/opt/gfortran/lib'
-ld: library not found for -lgfortran
-clang: error: linker command failed with exit code 1 (use -v to see invocation)
-make: *** [StratifiedSampling.so] Error 1
-ERROR: compilation failed for package ‘StratifiedSampling’
-* removing ‘/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/checks.noindex/StratifiedSampling/new/StratifiedSampling.Rcheck/StratifiedSampling’
-
-
-```
-### CRAN
-
-```
-* installing *source* package ‘StratifiedSampling’ ...
-** package ‘StratifiedSampling’ successfully unpacked and MD5 sums checked
-** using staged installation
-** libs
-using C++ compiler: ‘Apple clang version 14.0.3 (clang-1403.0.22.14.1)’
-using C++11
-using SDK: ‘MacOSX13.3.sdk’
-clang++ -arch arm64 -std=gnu++11 -I"/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/include" -DNDEBUG -DARMA_DONT_USE_OPENMP -I'/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/library.noindex/StratifiedSampling/RcppArmadillo/include' -I'/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/library.noindex/StratifiedSampling/Rcpp/include' -I/opt/homebrew/include     -fPIC  -I/opt/homebrew/include -c RcppExports.cpp -o RcppExports.o
-clang++ -arch arm64 -std=gnu++11 -I"/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/include" -DNDEBUG -DARMA_DONT_USE_OPENMP -I'/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/library.noindex/StratifiedSampling/RcppArmadillo/include' -I'/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/library.noindex/StratifiedSampling/Rcpp/include' -I/opt/homebrew/include     -fPIC  -I/opt/homebrew/include -c c_bound.cpp -o c_bound.o
-clang++ -arch arm64 -std=gnu++11 -I"/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/include" -DNDEBUG -DARMA_DONT_USE_OPENMP -I'/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/library.noindex/StratifiedSampling/RcppArmadillo/include' -I'/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/library.noindex/StratifiedSampling/Rcpp/include' -I/opt/homebrew/include     -fPIC  -I/opt/homebrew/include -c calibRaking.cpp -o calibRaking.o
-...
-clang++ -arch arm64 -std=gnu++11 -I"/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/include" -DNDEBUG -DARMA_DONT_USE_OPENMP -I'/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/library.noindex/StratifiedSampling/RcppArmadillo/include' -I'/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/library.noindex/StratifiedSampling/Rcpp/include' -I/opt/homebrew/include     -fPIC  -I/opt/homebrew/include -c osod.cpp -o osod.o
-clang++ -arch arm64 -std=gnu++11 -I"/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/include" -DNDEBUG -DARMA_DONT_USE_OPENMP -I'/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/library.noindex/StratifiedSampling/RcppArmadillo/include' -I'/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/library.noindex/StratifiedSampling/Rcpp/include' -I/opt/homebrew/include     -fPIC  -I/opt/homebrew/include -c var_balanced.cpp -o var_balanced.o
-clang++ -arch arm64 -std=gnu++11 -dynamiclib -Wl,-headerpad_max_install_names -undefined dynamic_lookup -single_module -multiply_defined suppress -L/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/lib -L/opt/homebrew/lib -o StratifiedSampling.so RcppExports.o c_bound.o calibRaking.o disj.o distUnitk.o inclprob.o maxent.o osod.o var_balanced.o -L/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/lib -lRlapack -L/Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/lib -lRblas -L/opt/gfortran/lib/gcc/aarch64-apple-darwin20.0/12.2.0 -L/opt/gfortran/lib -lgfortran -lemutls_w -lquadmath -F/Library/Frameworks/R.framework/Versions/4.3-arm64 -framework R -Wl,-framework -Wl,CoreFoundation
-ld: warning: directory not found for option '-L/opt/gfortran/lib/gcc/aarch64-apple-darwin20.0/12.2.0'
-ld: warning: directory not found for option '-L/opt/gfortran/lib'
-ld: library not found for -lgfortran
-clang: error: linker command failed with exit code 1 (use -v to see invocation)
-make: *** [StratifiedSampling.so] Error 1
-ERROR: compilation failed for package ‘StratifiedSampling’
-* removing ‘/Users/simon/Library/CloudStorage/GoogleDrive-garnier@njit.edu/My Drive/Work/research/software/R/viridis/revdep/checks.noindex/StratifiedSampling/old/StratifiedSampling.Rcheck/StratifiedSampling’
-
-
-```
 # SUMMER
 
 <details>
@@ -2579,10 +1823,10 @@ Run `revdepcheck::revdep_details(, "surveyvoi")` for more info
 
 <details>
 
-* Version: 1.8.7
+* Version: 1.10.0
 * GitHub: https://github.com/Trackage/trip
 * Source code: https://github.com/cran/trip
-* Date/Publication: 2022-12-14 09:10:02 UTC
+* Date/Publication: 2023-06-29 14:30:02 UTC
 * Number of recursive dependencies: 115
 
 Run `revdepcheck::revdep_details(, "trip")` for more info
@@ -2596,15 +1840,15 @@ Run `revdepcheck::revdep_details(, "trip")` for more info
     Running examples in ‘trip-Ex.R’ failed
     The error most likely occurred in:
     
-    > ### Name: trackDistance
-    > ### Title: Determine distances along a track
-    > ### Aliases: trackDistance trackDistance.default trackDistance.trip
-    > 
-    > ### ** Examples
-    > 
-    >  d <- data.frame(x=1:10, y=rnorm(10), tms=Sys.time() + 1:10, id=gl(2, 5))
+    > ### Name: trip-methods
+    > ### Title: Function to handle animal track data, organized as 'trip'
+    > ###   objects
+    > ### Aliases: trip-methods trip trip,SpatialPointsDataFrame,ANY-method
+    > ###   trip,SpatialPointsDataFrame,TimeOrderedRecords-method
+    > ###   trip,ANY,TimeOrderedRecords-method trip,trip,ANY-method
+    > ###   trip,grouped_df,ANY-method trip,data.frame,ANY-method
     ...
-    >  angles <- trackAngle(walrus818)
+    > mi_dat_polar <- reproj(mi_dat, "+proj=stere +lat_0=-90 +lon_0=154 +datum=WGS84")
     proj_create_operation_factory_context: Cannot find proj.db
     pj_obj_create: Cannot find proj.db
     pj_obj_create: Cannot find proj.db
@@ -2612,7 +1856,7 @@ Run `revdepcheck::revdep_details(, "trip")` for more info
     proj_as_proj_string: Cannot find proj.db
     Error in proj4::ptransform(x, source, target, ...) : 
       Unknown error (code 2)
-    Calls: trackAngle -> trackAngle.trip -> reproj -> reproj.trip
+    Calls: reproj -> reproj.trip
     Execution halted
     ```
 
@@ -2636,7 +1880,7 @@ Run `revdepcheck::revdep_details(, "trip")` for more info
        16.     └─reproj:::reproj.matrix(xy, target = target, source = x@proj4string@projargs)
        17.       └─proj4::ptransform(x, source, target, ...)
       
-      [ FAIL 6 | WARN 0 | SKIP 0 | PASS 90 ]
+      [ FAIL 6 | WARN 10 | SKIP 0 | PASS 88 ]
       Error: Test failures
       Execution halted
     ```
@@ -2684,40 +1928,17 @@ Run `revdepcheck::revdep_details(, "TSstudio")` for more info
 
 ## In both
 
+*   checking dependencies in R code ... WARNING
+    ```
+    Namespace in Imports field not imported from: ‘forecastHybrid’
+      All declared Imports should be used.
+    Missing or unexported object: ‘future::multiprocess’
+    ```
+
 *   checking package subdirectories ... NOTE
     ```
     Problems with news in ‘NEWS.md’:
       Cannot extract version info from the following section titles:
         Updates for the development version (0.1.0.9000) on Github
-    ```
-
-*   checking dependencies in R code ... NOTE
-    ```
-    Namespace in Imports field not imported from: ‘forecastHybrid’
-      All declared Imports should be used.
-    ```
-
-# xQTLbiolinks
-
-<details>
-
-* Version: 1.2.2
-* GitHub: https://github.com/dingruofan/xQTLbiolinks
-* Source code: https://github.com/cran/xQTLbiolinks
-* Date/Publication: 2022-08-27 13:50:02 UTC
-* Number of recursive dependencies: 138
-
-Run `revdepcheck::revdep_details(, "xQTLbiolinks")` for more info
-
-</details>
-
-## In both
-
-*   checking package dependencies ... ERROR
-    ```
-    Package required but not available: ‘SummarizedExperiment’
-    
-    See section ‘The DESCRIPTION file’ in the ‘Writing R Extensions’
-    manual.
     ```
 
