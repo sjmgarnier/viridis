@@ -1,7 +1,7 @@
 ## Test environments
 
-* local OS X 13.3.1, R 4.3.0, ARM
-* local OS X 13.3.1, R-devel, ARM
+* local OS X 13.4.1, R 4.3.1, ARM
+* local OS X 13.4.1, R-devel, ARM
 * Github Actions "windows-latest (release)"
 * Github Actions "macOS-latest (release)"
 * Github Actions "ubuntu-22.04-latest (release)"
@@ -21,29 +21,19 @@ verification. All URLs have been manually checked and are functional.
 ## Downstream dependencies
 
 Downstream dependencies on CRAN and Bioconductor were checked with 
-'revdepcheck::revdep_check()'. We checked 196 reverse dependencies (194 from 
+'revdepcheck::revdep_check()'. We checked 200 reverse dependencies (198 from 
 CRAN + 2 from Bioconductor), comparing R CMD check results across CRAN and dev 
 versions of this package.
 
  * We saw 0 new problems
- * We failed to check 12 packages
+ * We failed to check 2 packages
 
 Issues with CRAN packages are summarised below.
 
 ### Failed to check
 
-* cytometree            (NA)
-* fields                (NA)
-* geocmeans             (NA)
-* Hmisc                 (NA)
-* marqLevAlg            (NA)
-* pdSpecEst             (NA)
-* RprobitB              (NA)
-* SFSI                  (NA)
-* simmr                 (NA)
-* skpr                  (NA)
-* spectralGraphTopology (NA)
-* StratifiedSampling    (NA)
+* nullabor (NA)
+* simmr    (NA)
 
 ## CRAN team comments
 
