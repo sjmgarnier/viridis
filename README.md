@@ -77,5 +77,5 @@ statistical data visualization package for Python. More info about `mako` and
 
 The color map `turbo` was developed by Anton Mikhailov to address the 
 shortcomings of the Jet rainbow color map such as false detail, banding and 
-color blindness ambiguity. More infor about `turbo` can be found
+color blindness ambiguity. More info about `turbo` can be found
 [here](https://ai.googleblog.com/2019/08/turbo-improved-rainbow-colormap-for.html).
