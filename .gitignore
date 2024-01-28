@@ -8,3 +8,7 @@ vignettes/*.pdf
 .RData
 cran_graphs.R
 cran_graphs2.R
+.vscode
+revdep/checks.noindex
+revdep/library.noindex
+revdep/data.sqlite

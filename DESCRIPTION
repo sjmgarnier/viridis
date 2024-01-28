@@ -1,8 +1,8 @@
 Package: viridis
 Type: Package
 Title: Colorblind-Friendly Color Maps for R
-Version: 0.6.4
-Date: 2023-07-19
+Version: 0.6.5
+Date: 2024-01-28
 Authors@R: c(
       person("Simon", "Garnier", email = "garnier@njit.edu", role = c("aut", "cre")),
       person("Noam", "Ross", email = "noam.ross@gmail.com", role = c("ctb", "cph")),
@@ -48,4 +48,4 @@ LazyData: true
 VignetteBuilder: knitr
 URL: https://sjmgarnier.github.io/viridis/, https://github.com/sjmgarnier/viridis/
 BugReports: https://github.com/sjmgarnier/viridis/issues
-RoxygenNote: 7.2.3
+RoxygenNote: 7.3.1

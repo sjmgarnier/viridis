@@ -139,9 +139,9 @@ grid.arrange(
 
 }
 \author{
-Noam Ross \email{noam.ross@gmail.com} / \href{https://twitter.com/noamross}{@noamross}
+Noam Ross \email{noam.ross@gmail.com}
 
-Bob Rudis \email{bob@rud.is} / \href{https://twitter.com/hrbrmstr}{@hrbrmstr}
+Bob Rudis \email{bob@rud.is}
 
-Simon Garnier: \email{garnier@njit.edu} / \href{https://twitter.com/sjmgarnier}{@sjmgarnier}
+Simon Garnier: \email{garnier@njit.edu}
 }

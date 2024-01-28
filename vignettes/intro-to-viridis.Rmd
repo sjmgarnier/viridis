@@ -305,11 +305,11 @@ p + geom_point(size=4, aes(colour = factor(cyl))) +
 
 Here are some examples of viridis being used in the wild:
 
-[James Curley](https://twitter.com/jalapic) uses **viridis** for matrix plots ([Code](https://gist.github.com/jalapic/9a1c069aa8cee4089c1e)):
+James Curley uses **viridis** for matrix plots ([Code](https://gist.github.com/jalapic/9a1c069aa8cee4089c1e)):
 
-[![](http://pbs.twimg.com/media/CQWw9EgWsAAoUi0.png)](https://twitter.com/jalapic/status/650120284901634048/photo/1)
+[![](http://pbs.twimg.com/media/CQWw9EgWsAAoUi0.png)](http://pbs.twimg.com/media/CQWw9EgWsAAoUi0.png)
 
-[Christopher Moore](https://twitter.com/lifedispersing) created these contour 
-plots of potential in a dynamic plankton-consumer model:
+Christopher Moore created these contour plots of potential in a dynamic 
+plankton-consumer model:
 
-[![](http://pbs.twimg.com/media/CQWTy7wWcAAa-gu.jpg)](https://twitter.com/lifedispersing/status/650088228016508928/photo/1)
+[![](http://pbs.twimg.com/media/CQWTy7wWcAAa-gu.jpg)](http://pbs.twimg.com/media/CQWTy7wWcAAa-gu.jpg)

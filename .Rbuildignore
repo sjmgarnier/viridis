@@ -17,3 +17,4 @@ README.md
 cran-comments.md
 ^CRAN-RELEASE$
 ^CRAN-SUBMISSION$
+.vscode
