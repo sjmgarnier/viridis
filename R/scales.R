@@ -32,8 +32,8 @@
 #'   \item "turbo" (or "H")
 #'  }
 #'
-#' @author Bob Rudis: \email{bob@@rud.is} / \href{https://twitter.com/hrbrmstr}{@@hrbrmstr}
-#' @author Simon Garnier: \email{garnier@@njit.edu} / \href{https://twitter.com/sjmgarnier}{@@sjmgarnier}
+#' @author Bob Rudis: \email{bob@@rud.is} 
+#' @author Simon Garnier: \email{garnier@@njit.edu} 
 #'
 #' @examples
 #' library(scales)
@@ -102,9 +102,9 @@ viridis_pal <- function(alpha = 1, begin = 0, end = 1, direction = 1, option= "D
 #'
 #' @rdname scale_viridis
 #'
-#' @author Noam Ross \email{noam.ross@@gmail.com} / \href{https://twitter.com/noamross}{@@noamross}
-#' @author Bob Rudis \email{bob@@rud.is} / \href{https://twitter.com/hrbrmstr}{@@hrbrmstr}
-#' @author Simon Garnier: \email{garnier@@njit.edu} / \href{https://twitter.com/sjmgarnier}{@@sjmgarnier}
+#' @author Noam Ross \email{noam.ross@@gmail.com} 
+#' @author Bob Rudis \email{bob@@rud.is} 
+#' @author Simon Garnier: \email{garnier@@njit.edu} 
 #'
 #' @importFrom ggplot2 scale_fill_gradientn scale_color_gradientn discrete_scale
 #'

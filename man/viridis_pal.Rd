@@ -47,7 +47,7 @@ show_col(viridis_pal()(12))
 
 }
 \author{
-Bob Rudis: \email{bob@rud.is} / \href{https://twitter.com/hrbrmstr}{@hrbrmstr}
+Bob Rudis: \email{bob@rud.is}
 
-Simon Garnier: \email{garnier@njit.edu} / \href{https://twitter.com/sjmgarnier}{@sjmgarnier}
+Simon Garnier: \email{garnier@njit.edu}
 }
